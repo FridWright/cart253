@@ -30,7 +30,7 @@ function draw() {
 
     // Draw a pyramid
     // How many levels for the pyramid
-    const levels = 10;
+    const levels = 100;
     // Loop through every level (backwards)
     for (let level = levels; level > 0; level--) {
         // Draw this layer
@@ -38,7 +38,7 @@ function draw() {
         // Set the grey shade of the level based on its number
         // e.g. level 1 will get a shade of 10 (dark gray), 
         // level 10 will be 255(white)
-        const shade = map(level, 1, levels, 30, 255);
+        const shade = map(level, 100, levels, 300, 255);
         // No line around the levels
         noStroke();
         // Set the fill colour to our shade (RGB)

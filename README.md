@@ -1,2 +1,2 @@
 # cart253
-This is the coursework for Frid Wright at cart253
+This is Frid Wright's coursework for cart253

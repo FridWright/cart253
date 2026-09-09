@@ -53,12 +53,12 @@ function draw() {
         pop();
     }
 
-    // Draw a red circle at the position of the mouse
+    // Draw a teal circle at the position of the mouse
     push();
     // No line around the shape
     noStroke();
-    // Make it red (RGB)
-    fill(255, 0, 0);
+    // Make it teal (RGB)
+    fill(0, 128, 128);
     // Draw a 100x100 circle at the mouse position
     ellipse(mouseX, mouseY, 100, 100);
     pop();

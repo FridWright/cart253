@@ -25,8 +25,8 @@ function setup() {
  * at the position of the user's cursor
 */
 function draw() {
-    // Make the background black (specified as RGB)
-    background(34, 139, 34);
+    // Make the background maroon (specified as RGB)
+    background(128, 0, 0);
 
     // Draw a pyramid
     // How many levels for the pyramid

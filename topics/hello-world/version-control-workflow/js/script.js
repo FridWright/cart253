@@ -21,7 +21,7 @@ function setup() {
 }
 
 /**
- * Draws a top-down view of a pyramid and also a red circle
+ * Draws a top-down view of a pyramid and also a teal circle
  * at the position of the user's cursor
 */
 function draw() {
@@ -60,6 +60,6 @@ function draw() {
     // Make it teal (RGB)
     fill(0, 128, 128);
     // Draw a 100x100 circle at the mouse position
-    ellipse(mouseX, mouseY, 100, 100);
+    ellipse(mouseX, mouseY, 50, 100);
     pop();
 }

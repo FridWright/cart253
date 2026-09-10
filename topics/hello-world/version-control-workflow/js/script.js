@@ -13,7 +13,7 @@
  * Create a canvas, hides the cursor
 */
 function setup() {
-    // A 640x480 canvas
+    // A 640x640 canvas
     createCanvas(640, 640);
 
     // Don't show the cursor

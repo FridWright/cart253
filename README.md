@@ -1,6 +1,10 @@
-# cart253
-This is Frid Wright's coursework for cart253
+# **CART 253** Course Website for *Frid Wright*
 
-# CART 253 Course Website - Fridrikka Wright
+<img src="images/bannerimage2.jpg" alt="Banner" width="500">
+<p> The purpose of this website is to collect my prototyping work for this course. <p>
 
-![Banner](Documents/GitHub/cart253/images/bannerimage.jpg)
+1. First item  
+    
+2. Second item    
+
+3. Third item

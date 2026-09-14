@@ -3,10 +3,10 @@
 <img src="images/bannerimage2.jpg" alt="Banner" width="500">
 <p> The purpose of this website is to collect my prototyping work for this course. <p>
 
-<p> Linked works will added below: <p>
+<p> Linked works will added below as created: <p>
 
-1. First item  
+1. First item  	[title](https://www.example.com)
     
-2. Second item    
+2. Second item    	[title](https://www.example.com)
 
-3. Third item
+3. Third item	[title](https://www.example.com)

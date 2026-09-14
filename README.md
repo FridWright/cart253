@@ -5,8 +5,8 @@
 
 <p> Linked works will added below as created: <p>
 
-1. Reflective Journal 	[title](https://www.example.com)
+1. Reflective Journal 	[click here](journal.md)
     
-2. Second item    	[title](https://www.example.com)
+2. ///   	[title](https://www.example.com)
 
-3. Third item	[title](https://www.example.com)
+3. ///	[title](https://www.example.com)

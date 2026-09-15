@@ -3,7 +3,7 @@
 <img src="images/bannerimage2.jpg" alt="Banner" width="500">
 
 
-<p> The purpose of this website is to collect my Prototyping work for this course and provide a link to the Reflective Journal. <p>
+The purpose of this website is to collect my Prototyping work for this course & to provide a link to the *Reflective Journal.*
 
 *Linked works will added below as created:*
 

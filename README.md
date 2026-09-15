@@ -7,6 +7,6 @@
 
 1. **Reflective Journal** 	[click here](journal.md)
     
-2. Coming Soon   	[⏰](https://www.example.com)
+2. Coming Soon- **Prototyping: Instructions**   	[⏰](prototyping-instructions.md)
 
 3. Coming Soon	[⏰](https://www.example.com)

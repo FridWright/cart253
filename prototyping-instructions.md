@@ -1,5 +1,5 @@
 # **Prototyping: Instructions** 
-## project by *Frid Wright*
+> ## by *Frid Wright* __/09/2026
 
 
 ### 1. Prototype One
@@ -9,6 +9,7 @@
 ### 2. Prototype Two
 [![Prototype Two](imagelink)](repository link)
 * **Description:** ________
+
 ### 3. Prototype Three
 [![Prototype Three](imagelink)](repository link)
 * **Description:** ________

@@ -11,6 +11,6 @@
  
  My goal for this course is to build something interesting, functional, maybe even cool, however simple the final product may be. The beginner simplicity may elicit an intial internal struggle due to not being able to actualize my artistic intentions into code, as I am used to more flowery freeform mediums. Will focus more on function and design, over beauty, to start. *Let's see*!
  
-2. ### <u>Second Journal Entry</u>
+2. ### <u>Second Journal Entry ⏰</u>
 
-3. ### <u>Third Journal Entry</u>
+3. ### <u>Third Journal Entry ⏰</u>

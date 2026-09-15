@@ -1,5 +1,5 @@
 # Instructions Challenge
-## Creating a Landscape
+## Draw a Landscape
 
 > Fridrikka Wright & ___
 

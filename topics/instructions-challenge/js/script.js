@@ -1,9 +1,8 @@
 /**
- * Title of Project
- * Author Name
+ * Instructions Challenge - Draw a Landscape
+ * Fridrikka Wright & ___
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * This is a drawing of a ____ landscape.
  */
 
 "use strict";

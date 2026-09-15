@@ -1,6 +1,8 @@
 # **CART 253** Course Website for *Frid Wright*
 
 <img src="images/bannerimage2.jpg" alt="Banner" width="500">
+
+
 <p> The purpose of this website is to collect my Prototyping work for this course and provide a link to the Reflective Journal. <p>
 
 *Linked works will added below as created:*
@@ -24,3 +26,8 @@
 9. *Coming Soon*- **Prototyping: Data**[⏰](https://www.example.com)
 
 10. *Coming Soon*- **Prototyping: Polish**[⏰](https://www.example.com)
+
+
+<br><br><br>
+
+><sub>*Banner Image: The Snowy Day (Ezra Keats) 1962.*</sub>

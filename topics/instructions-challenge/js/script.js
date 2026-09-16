@@ -1,15 +1,13 @@
 /**
  * Instructions Challenge - Draw a Landscape
- * Fridrikka Wright & ___
+ * Fridrikka Wright
  * 
- * This is a drawing of a ____ landscape.
+ * This is a drawing of a Lunar landscape.
  */
 
 "use strict";
 
-/**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
+
 function setup() {
 
     // Creates a canvas 800 pixels wide and 600 pixels high.
@@ -17,10 +15,6 @@ function setup() {
 
 }
 
-
-/**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
-*/
 function draw() {
 
     // Make a dark blue background.
@@ -36,12 +30,34 @@ function draw() {
     circle(400, 700, 700);
 
 
-    // Create a star.
+    // Create star #1.
     push();
     translate(width * 0.5, height * 0.5);
     rotate(frameCount / 50.0);
     star(0, 0, 80, 100, 40);
     pop();
+
+    // Create star #2.
+    push();
+    translate(width * 0.2, height * 0.2);
+    rotate(frameCount / 50.0);
+    star(120, 120, 80, 10, 40);
+    pop();
+
+    // Create star #3.
+    push();
+    translate(width * 0.3, height * 0.3);
+    rotate(frameCount / 50.0);
+    star(300, 300, 80, 80, 40);
+    pop();
+
+    // Create star #4.
+    push();
+    translate(width * 0.5, height * 0.5);
+    rotate(frameCount / 50.0);
+    star(0, 0, 80, 100, 40);
+    pop();
+
 
 
 }

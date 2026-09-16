@@ -30,6 +30,7 @@ function draw() {
     circle(400, 700, 700);
 
 
+
     // Create star #1.
     push();
     translate(width * 0.5, height * 0.5);
@@ -37,8 +38,11 @@ function draw() {
     star(0, 0, 80, 100, 40);
     pop();
 
+
+
     // Create star #2.
     push();
+    stroke(" #CC5500") // burnt orange
     translate(width * 0.2, height * 0.2);
     rotate(frameCount / 50.0);
     star(120, 120, 80, 10, 40);
@@ -46,6 +50,7 @@ function draw() {
 
     // Create star #3.
     push();
+    stroke("#00C0A3");
     translate(width * 0.3, height * 0.3);
     rotate(frameCount / 40.0);
     star(300, 300, 80, 80, 40);
@@ -57,10 +62,10 @@ function draw() {
     rotate(frameCount / 30.0);
     star(30, 100, 100, 80, 50);
     pop();
-
-
-
 }
+
+
+
 
 // Rotate the star.
 function star(x, y, radius1, radius2, npoints) {

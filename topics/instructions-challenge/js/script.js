@@ -31,22 +31,24 @@ function draw() {
     circle(400, 700, 700);
 
 
+    // Draw an eye reference from: https://p5js.org/examples/Shapes-And-Color-Shape-Primitives/
+
     // Draw ellipse as outer eye shape
     // x, y, width, height
-    ellipse(400, 500, 300, 100);
+    ellipse(400, 510, 300, 100);
 
     // Draw circle as pupil
     // x, y, diameter
-    circle(560, 100, 100);
+    circle(400, 510, 150);
 
-    // Draw arc (compare to ellipse()) as eyelid
-    // x, y, width, height, start angle, stop angle, mode
-    arc(540, 100, 300, 100, 180, 360, CHORD);
+
 
 
     // Reference for stars from: https://archive.p5js.org/examples/form-star.html
+
     // Create star #1.
     push();
+    stroke("orange"); //orange
     translate(width * 0.5, height * 0.5);
     rotate(frameCount / 50.0);
     star(0, 0, 80, 100, 40);

@@ -30,7 +30,7 @@ function draw() {
     circle(400, 700, 700);
 
 
-
+    // Reference for stars from: https://archive.p5js.org/examples/form-star.html
     // Create star #1.
     push();
     translate(width * 0.5, height * 0.5);
@@ -39,10 +39,9 @@ function draw() {
     pop();
 
 
-
     // Create star #2.
     push();
-    stroke(" #CC5500") // burnt orange
+    stroke(" #FFCA37") // light yellow
     translate(width * 0.2, height * 0.2);
     rotate(frameCount / 50.0);
     star(120, 120, 80, 10, 40);
@@ -50,7 +49,7 @@ function draw() {
 
     // Create star #3.
     push();
-    stroke("#00C0A3");
+    stroke("#23627F"); // aqua blue
     translate(width * 0.3, height * 0.3);
     rotate(frameCount / 40.0);
     star(300, 300, 80, 80, 40);
@@ -58,6 +57,7 @@ function draw() {
 
     // Create star #4.
     push();
+    stroke("red"); // red
     translate(width * 0.1, height * 0.01);
     rotate(frameCount / 30.0);
     star(30, 100, 100, 80, 50);
@@ -67,7 +67,8 @@ function draw() {
 
 
 
-// Rotate the star.
+// Rotate the stars.
+// Reference for star rotation from: https://archive.p5js.org/examples/form-star.html
 function star(x, y, radius1, radius2, npoints) {
     let angle = TWO_PI / npoints;
     let halfAngle = angle / 2.0;

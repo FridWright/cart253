@@ -13,6 +13,7 @@ function setup() {
     // Creates a canvas 800 pixels wide and 600 pixels high.
     createCanvas(800, 600);
 
+
 }
 
 function draw() {
@@ -28,6 +29,19 @@ function draw() {
     strokeWeight(20); //large outline    
 
     circle(400, 700, 700);
+
+
+    // Draw ellipse as outer eye shape
+    // x, y, width, height
+    ellipse(400, 500, 300, 100);
+
+    // Draw circle as pupil
+    // x, y, diameter
+    circle(560, 100, 100);
+
+    // Draw arc (compare to ellipse()) as eyelid
+    // x, y, width, height, start angle, stop angle, mode
+    arc(540, 100, 300, 100, 180, 360, CHORD);
 
 
     // Reference for stars from: https://archive.p5js.org/examples/form-star.html

@@ -27,5 +27,11 @@ function draw() {
     background(0, 0, 50);
 
     // Large circle as a lunar surface at bottom middle.
+    fill("beige"); //beige
+
+    stroke("orange"); //orange outline 
+
+    strokeWeight(20); //large outline    
+
     circle(400, 700, 700);
 }

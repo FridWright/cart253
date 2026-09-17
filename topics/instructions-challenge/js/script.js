@@ -8,6 +8,7 @@
 "use strict";
 
 
+
 function setup() {
 
     // Creates a canvas 800 pixels wide and 600 pixels high.
@@ -24,22 +25,27 @@ function draw() {
     // Large circle as a lunar surface at bottom middle.
     fill("beige"); //beige
 
+
     stroke("orange"); //orange outline 
 
     strokeWeight(20); //large outline    
 
-    circle(400, 700, 700);
+    circle(400, 800, 700);
 
 
-    // Draw an eye reference from: https://p5js.org/examples/Shapes-And-Color-Shape-Primitives/
+    // Draw a shape (eye/planet) reference from: https://p5js.org/examples/Shapes-And-Color-Shape-Primitives/
 
-    // Draw ellipse as outer eye shape
+    // Draw ellipse as outer planet rings.
     // x, y, width, height
-    ellipse(400, 510, 300, 100);
+    push();
+    stroke("purple"); //orange
+    translate(width * 0.1, height * 0.1);
+    rotate(frameCount / 50);
+    ellipse(500, 510, 300, 100);
 
-    // Draw circle as pupil
+    // Draw circle as planet centre.
     // x, y, diameter
-    circle(400, 510, 150);
+    circle(500, 510, 150);
 
 
 
@@ -58,30 +64,35 @@ function draw() {
     // Create star #2.
     push();
     stroke(" #FFCA37") // light yellow
-    translate(width * 0.2, height * 0.2);
-    rotate(frameCount / 50.0);
-    star(120, 120, 80, 10, 40);
+    translate(width * 0.5, height * 0.5);
+    rotate(frameCount / 80.0);
+    star(120, 120, 80, 50, 10);
     pop();
 
     // Create star #3.
     push();
     stroke("#23627F"); // aqua blue
-    translate(width * 0.3, height * 0.3);
-    rotate(frameCount / 40.0);
-    star(300, 300, 80, 80, 40);
+    translate(width * 0.5, height * 0.5);
+    rotate(frameCount / 60.0);
+    star(300, 300, 80, 80, 60);
     pop();
 
     // Create star #4.
     push();
     stroke("red"); // red
-    translate(width * 0.1, height * 0.01);
-    rotate(frameCount / 30.0);
     star(30, 100, 100, 80, 50);
     pop();
+
+    // Create star #5.
+    push();
+    stroke("#6999edc7"); // medium blue
+    translate(width * 0.5, height * 0.5);
+    rotate(frameCount / 50.0);
+    star(200, 10, 80, 100, 20);
+    pop();
+
+
 }
-
-
-
 
 // Rotate the stars.
 // Reference for star rotation from: https://archive.p5js.org/examples/form-star.html
@@ -99,5 +110,8 @@ function star(x, y, radius1, radius2, npoints) {
     }
     endShape(CLOSE);
 }
+
+
+
 
 

@@ -3,19 +3,18 @@
 
 > Fridrikka Wright
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://fridwright.github.io/cart253/topics/instructions-challenge/)
 
 ## Description of Challenge
 
-> Draw a landscape: help to understand the key ideas of writing instructions in JavaScript by using the drawing functions of p5 to do some drawing.
-
-> *Examples elements could include but are not limited to: hills, mountains, lunar surface, sky, sun, clouds, moon, animals, dwellings, etc.*
+1. Draw a landscape: help to understand the key ideas of writing instructions in JavaScript by using the drawing functions of p5 to do some drawing.
+2. *Examples elements could include but are not limited to: hills, mountains, lunar surface, sky, sun, clouds, moon, animals, dwellings, etc.*
 
 > **This is a space animation from the viewpoint of a lunar surface, watching different stars and planets orbit a red star.**
 
 ## Landscape
 
-> ![Screenshot of Animation](lunar_landscape_screenshot.png)
+![Screenshot of Animation](assets/images/lunar_landscape_screenshot.png)
 
 ## Attribution
 

@@ -1,1 +1,1 @@
-1. Instructions In-Class Challenge: https://fridwright.github.io/cart253/topics/instructions-challenge/
+>1. **"Instructions"** In-Class Challenge: https://fridwright.github.io/cart253/topics/instructions-challenge/

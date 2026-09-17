@@ -95,7 +95,7 @@ function draw() {
 }
 
 // Rotate the stars.
-// Reference for star rotation from: https://archive.p5js.org/examples/form-star.html
+// Formula for star rotation from: https://archive.p5js.org/examples/form-star.html
 function star(x, y, radius1, radius2, npoints) {
     let angle = TWO_PI / npoints;
     let halfAngle = angle / 2.0;

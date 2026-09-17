@@ -77,7 +77,7 @@ function draw() {
     star(300, 300, 80, 80, 60);
     pop();
 
-    // Create star #4.
+    // Create star/sun #4.
     push();
     stroke("red"); // red
     star(30, 100, 100, 80, 50);

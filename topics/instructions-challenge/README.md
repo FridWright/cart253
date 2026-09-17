@@ -1,7 +1,7 @@
 # Instructions Challenge
 ## Draw a Landscape
 
-> Fridrikka Wright & ___
+> Fridrikka Wright
 
 [View this project online](URL_FOR_THE_RUNNING_PROJECT)
 
@@ -11,9 +11,11 @@
 
 > *Examples elements could include but are not limited to: hills, mountains, lunar surface, sky, sun, clouds, moon, animals, dwellings, etc.*
 
+> **This is a space animation from the viewpoint of a lunar surface, watching different stars and planets orbit a red star.**
+
 ## Landscape
 
-> ![Image of a clown face](./assets/images/clown.png)
+> ![Screenshot of Animation](lunar_landscape_screenshot.png)
 
 ## Attribution
 

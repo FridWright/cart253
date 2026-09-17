@@ -9,7 +9,7 @@ The purpose of this website is to collect my Prototyping work for this course & 
 
 1. **Reflective Journal** 	[click here](journal.md)
     
-2. **Links to all In-Class Challenges** [clickhere] (challenges.md)
+2. **Links to all In-Class Challenges** [clickhere](challenges.md) 
 
 3. *Coming Soon*- **Prototyping: Instructions**   	[⏰](prototyping-instructions.md)
 

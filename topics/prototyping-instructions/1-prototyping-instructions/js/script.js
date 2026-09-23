@@ -16,9 +16,11 @@ function setup() {
     // Set background colour to black.
     background(0);
     // Describe shape strokes and fill colour.
-    stroke(1);
+    stroke(255);
     strokeWeight(1);
     fill(50, 200, 50);
+
+    text('lime balls', 100, 100);
 
 }
 
@@ -36,4 +38,6 @@ function draw() {
     circle(200, 300, 60)
     // Draw fourth circle. (x, y, diameter)
     circle(400, 400, 70)
+
+
 }

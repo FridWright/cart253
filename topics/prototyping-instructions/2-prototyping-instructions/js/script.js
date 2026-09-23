@@ -21,7 +21,7 @@ function setup() {
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Drawing a quadrant with different fill colours.
 */
 function draw() {
 

@@ -1,15 +1,15 @@
 /**
- * Title of Project
- * Author Name
+ * Prototyping - Instructions #2 (____)
+ * Fridrikka Wright
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * This is the second drawing for the Prototyping - Instructions project.
  */
+//This project uses[p5.js](https://p5js.org) in help with ____.
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Setup: Create the canvas, text and describe shape attributes and colours. 
 */
 function setup() {
 

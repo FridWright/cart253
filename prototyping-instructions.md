@@ -9,9 +9,10 @@
 
 ## Deliverables
 
-### 1. Prototype One
-[![Prototype One](imagelink)](repository link)
-* **Description:** ________
+### 1. Prototype One - Lime Balls
+<img src="topics/prototyping-instructions/lime-balls/assets/images/lime-balls.png">
+
+* [view here](https://fridwright.github.io/cart253/topics/prototyping-instructions/lime-balls/)
 
 ### 2. Prototype Two
 [![Prototype Two](imagelink)](repository link)

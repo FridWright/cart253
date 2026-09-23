@@ -50,4 +50,18 @@ function draw() {
     fill('pink');
     rect(width / 2, height / 2, width / 2, height / 2);
 
+    // CREATING SECOND SET OF SMALLER RECTANGLES
+
+    // Draw SMALL rectangle 1 (upper left)
+    stroke(255, 255, 255);
+    strokeWeight(5);
+    fill('black');
+    rect(0, 0, width / 4, height / 4);
+
+    // Draw SMALLER rectangle 1 (upper left)
+    stroke(255, 255, 255);
+    strokeWeight(5);
+    fill('black');
+    rect(80, 80, width / 8, height / 8);
+
 }

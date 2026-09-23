@@ -54,7 +54,15 @@ function draw() {
     circle(310, 350, 50);
 
     // Switch to a yellow lemon ball.
+
+    // Designate text size.
+    textSize(18);
+    // Add text "lemon ball".
+
     fill(255, 225, 0);
-    circle(150, 400, 50);
+    text('lemon ball', 70, 350);
+    stroke(255);
+    strokeWeight(1);
+    circle(140, 390, 50);
 
 }

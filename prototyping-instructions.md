@@ -9,18 +9,21 @@
 
 ## Deliverables
 
-### 1. Prototype One - Lime Balls
+### 1. Prototype One - Lime Balls [view here](https://fridwright.github.io/cart253/topics/prototyping-instructions/lime-balls/)
+
 <img src="topics/prototyping-instructions/lime-balls/assets/images/lime-balls.png">
 
-* [view here](https://fridwright.github.io/cart253/topics/prototyping-instructions/lime-balls/)
 
-### 2. Prototype Two - Quadrant
-[![Prototype Two](imagelink)](repository link)
-* [view here](https://fridwright.github.io/cart253/topics/prototyping-instructions/quadrant/)
+
+### 2. Prototype Two - Quadrant [view here](https://fridwright.github.io/cart253/topics/prototyping-instructions/quadrant/)
+
+[INSERT IMAGE HERE]
+
+
 
 ### 3. Prototype Three
-[![Prototype Three](imagelink)](repository link)
-* **Description:** ________
+
+[INSERT IMAGE HERE]
 
 
 

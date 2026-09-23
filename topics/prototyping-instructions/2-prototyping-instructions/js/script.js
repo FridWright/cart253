@@ -26,10 +26,10 @@ function setup() {
 function draw() {
 
     // Draw rectangle 1 (upper left)
-    rectangle(200, 300, 100)
-    stroke(255)
-    strokeWeight(2)
-    fill(0)
+    rect(200, 300, 100)
+    stroke(255, 255, 255)
+    strokeWeight(5)
+    fill('orange')
     // Draw rectangle 2 (upper right)
 
     // Draw rectangle 3 (lower left)

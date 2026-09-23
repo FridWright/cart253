@@ -32,4 +32,8 @@ function draw() {
     circle(200, 200, 50)
     // Draw second circle. (x, y, diameter)
     circle(400, 200, 60)
+    // Draw third circle. (x, y, diameter)
+    circle(200, 300, 60)
+    // Draw fourth circle. (x, y, diameter)
+    circle(400, 400, 70)
 }

@@ -52,6 +52,8 @@ function draw() {
     circle(350, 500, 60);
     // Draw seventh circle. (x, y, diameter)
     circle(310, 350, 50);
+    // Draw eighth circle. (x, y, diameter)
+    circle(315, 150, 45);
 
 
     // Switch to a yellow lemon ball.

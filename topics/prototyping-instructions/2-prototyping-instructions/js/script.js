@@ -12,7 +12,9 @@
  * Setup: Create the canvas, text and describe shape attributes and colours. 
 */
 function setup() {
-
+    // Create canvas size 400 x 600
+    createCanvas(400, 600);
+    background(color, [a])
 }
 
 

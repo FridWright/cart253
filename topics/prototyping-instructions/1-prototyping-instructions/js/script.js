@@ -53,16 +53,19 @@ function draw() {
     // Draw seventh circle. (x, y, diameter)
     circle(310, 350, 50);
 
+
     // Switch to a yellow lemon ball.
 
     // Designate text size.
     textSize(18);
-    // Add text "lemon ball".
 
+    // Add text "lemon ball" in yellow.
     fill(255, 225, 0);
     text('lemon ball', 70, 350);
     stroke(255);
-    strokeWeight(1);
+    strokeWeight(0);
+
+    // Draw lemonball circle. (x, y, diameter)
     circle(140, 390, 50);
 
 }

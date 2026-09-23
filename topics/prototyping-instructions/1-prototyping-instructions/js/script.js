@@ -1,5 +1,5 @@
 /**
- * Prototyping - Instructions #1
+ * Prototyping - Instructions #1 (Lime Balls)
  * Fridrikka Wright
  * 
  * This is the first drawing for the Prototyping - Instructions project.
@@ -35,7 +35,10 @@ function setup() {
 */
 
 function draw() {
-    // Draw first circle. (x, y, diameter)
+    // Set the lime colour for the lime balls.
+    fill(50, 200, 50);
+
+    // Draw first lime ball. (x, y, diameter)
     circle(200, 200, 50);
     // Draw second circle. (x, y, diameter)
     circle(400, 200, 60);
@@ -50,5 +53,8 @@ function draw() {
     // Draw seventh circle. (x, y, diameter)
     circle(310, 350, 50);
 
+    // Switch to a yellow lemon ball.
+    fill(255, 225, 0);
+    circle(150, 400, 50);
 
 }

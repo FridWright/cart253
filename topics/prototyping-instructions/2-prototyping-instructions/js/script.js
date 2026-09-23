@@ -14,7 +14,9 @@
 function setup() {
     // Create canvas size 400 x 600
     createCanvas(400, 600);
-    background(color, [a])
+    // Canvas background colour
+    background(235, 236, 240);
+
 }
 
 
@@ -22,5 +24,16 @@ function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
+
+    // Draw rectangle 1 (upper left)
+    rectangle(200, 300, 100)
+    stroke(255)
+    strokeWeight(2)
+    fill(0)
+    // Draw rectangle 2 (upper right)
+
+    // Draw rectangle 3 (lower left)
+
+    // Draw rectangle 4 (lower right)
 
 }

@@ -8,7 +8,7 @@
 "use strict";
 
 /**
- * Setup: Create the canvas, text and describe shape attributes. 
+ * Setup: Create the canvas, text and describe shape attributes and colours. 
 */
 function setup() {
 
@@ -31,7 +31,7 @@ function setup() {
 
 
 /**
- * Draw some circular lime balls. 
+ * Draw some circular lime balls and one yellow lemon ball. 
 */
 
 function draw() {

@@ -8,9 +8,10 @@
 "use strict";
 
 /**
- * Setup: Create the canvas and describe shape attributes. 
+ * Setup: Create the canvas, text and describe shape attributes. 
 */
 function setup() {
+
     //  Create a 500 x 500 canvas (width x height).
     createCanvas(500, 500);
     // Set background colour to black.
@@ -20,24 +21,34 @@ function setup() {
     strokeWeight(1);
     fill(50, 200, 50);
 
+    // Designate text size.
+    textSize(32);
+    // Add text "lime balls".
     text('lime balls', 100, 100);
+
 
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Draw some circular lime balls. 
 */
 
 function draw() {
     // Draw first circle. (x, y, diameter)
-    circle(200, 200, 50)
+    circle(200, 200, 50);
     // Draw second circle. (x, y, diameter)
-    circle(400, 200, 60)
+    circle(400, 200, 60);
     // Draw third circle. (x, y, diameter)
-    circle(200, 300, 60)
+    circle(200, 300, 60);
     // Draw fourth circle. (x, y, diameter)
-    circle(400, 400, 70)
+    circle(400, 400, 70);
+    // Draw fifth circle. (x, y, diameter)
+    circle(300, 250, 60);
+    // Draw sixth circle. (x, y, diameter)
+    circle(350, 500, 60);
+    // Draw seventh circle. (x, y, diameter)
+    circle(310, 350, 50);
 
 
 }

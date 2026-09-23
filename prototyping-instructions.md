@@ -14,9 +14,9 @@
 
 * [view here](https://fridwright.github.io/cart253/topics/prototyping-instructions/lime-balls/)
 
-### 2. Prototype Two
+### 2. Prototype Two - Quadrant
 [![Prototype Two](imagelink)](repository link)
-* **Description:** ________
+* [view here](https://fridwright.github.io/cart253/topics/prototyping-instructions/quadrant/)
 
 ### 3. Prototype Three
 [![Prototype Three](imagelink)](repository link)

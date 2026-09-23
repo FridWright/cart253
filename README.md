@@ -11,7 +11,7 @@ The purpose of this website is to collect my Prototyping work for this course & 
     
 2. **Links to all In-Class Challenges** [click here](challenges.md) 
 
-3. *Coming Soon*- **Prototyping: Instructions**   	[⏰](prototyping-instructions.md)
+3. **Prototyping: Instructions**  	[click here](prototyping-instructions.md)
 
 4. *Coming Soon*- **Prototyping: Variables**[⏰](https://www.example.com)
 

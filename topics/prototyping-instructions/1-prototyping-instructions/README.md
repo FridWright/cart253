@@ -1,6 +1,6 @@
-# TITLE OF PROJECT
+PROTOTYPING - INSTRUCTIONS #1
 
-AUTHOR NAME
+Fridrikka Wright
 
 [View this project online](URL_FOR_THE_RUNNING_PROJECT)
 

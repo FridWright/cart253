@@ -1,17 +1,20 @@
 /**
- * Title of Project
- * Author Name
+ * Prototyping - Instructions #1
+ * Fridrikka Wright
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * This is the first drawing for the Prototyping - Instructions project.
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Setup: Create the canvas and describe shape attributes. 
 */
 function setup() {
+    //  Create a 500 x 500 canvas (width x height).
+    createCanvas(500, 500);
+    // Set background colour to black.
+    background(0);
 
 }
 

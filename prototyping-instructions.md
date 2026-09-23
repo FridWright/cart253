@@ -1,5 +1,5 @@
 # **Prototyping: Instructions** 
-> ## by *Frid Wright* __/09/2026
+> ## by *Frid Wright* 22/09/2026
 
 ## Objectives
 1. Get comfortable with starting, coding, and distributing your work

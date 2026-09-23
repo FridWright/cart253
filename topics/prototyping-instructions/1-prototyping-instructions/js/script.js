@@ -15,6 +15,10 @@ function setup() {
     createCanvas(500, 500);
     // Set background colour to black.
     background(0);
+    // Describe shape strokes and fill colour.
+    stroke(1);
+    strokeWeight(1);
+    fill(50, 200, 50);
 
 }
 
@@ -22,6 +26,10 @@ function setup() {
 /**
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
-function draw() {
 
+function draw() {
+    // Draw first circle. (x, y, diameter)
+    circle(200, 200, 50)
+    // Draw second circle. (x, y, diameter)
+    circle(400, 200, 60)
 }

@@ -26,3 +26,11 @@ let mrFurious = {
     }
 };
 
+// The Sky
+let sky = {
+    fill: {
+        r: 160,
+        g: 180,
+        b: 200
+    }
+};

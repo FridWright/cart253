@@ -45,6 +45,9 @@ let bird = {
         r: 135,
         g: 206,
         b: 235
+    },
+    velocity: {
+        x: 1
     }
 };
 
@@ -88,5 +91,8 @@ function draw() {
     fill(bird.fill.r, bird.fill.g, bird.fill.b);
     ellipse(bird.x, bird.y, bird.size);
     pop();
+
+    // Moving the bird
+    bird.x = bird.x + bird.velocity.x;
 
 }

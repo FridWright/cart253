@@ -1,9 +1,7 @@
 /**
  * This is the In-Class Variables Challenge for Fridrikka Wright
- * that uses the template by:
- * 
-
-/**
+ * that uses the template for/by:
+ 
  * Mr. Furious
  * Pippin Barr
  *
@@ -94,5 +92,10 @@ function draw() {
 
     // Moving the bird
     bird.x = bird.x + bird.velocity.x;
+
+    // Make Mr. Furious shake and become bigger til he takes up the screen
+    mrFurious.x = mrFurious.x + random(-2, 2);
+    mrFurious.y = mrFurious.y + random(-2, 2);
+    mrFurious.size = mrFurious.size + 0.5;
 
 }

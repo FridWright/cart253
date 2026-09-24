@@ -1,22 +1,22 @@
-# TITLE OF PROJECT
+# In-Class Challenge: Variables AKA *Mr. Furious*
 
-AUTHOR NAME
+> Fridrikka Wright
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+> [View this project online](https://fridwright.github.io/cart253/topics/variables-challenge/)
+
+<img src="assets/images/mrfurious.png">
+
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+> Using p5 variables, and building some of our own, to explore colour change, movement, velocity, and create a character named Mr. Furious who shakes with rage because he presumably hates birds (?) 😀
 
 ## Attribution
 
-This bit should attribute any code, assets or other elements used taken from other sources. For example:
-
-> - This project uses [p5.js](https://p5js.org).
+> The template for this project is from Pippin Barr. 
+> - This project also uses [p5.js](https://p5js.org).
 
 
 ## License
-
-This bit could include the license you want to apply to your work. For example:
 
 > This project is licensed under a Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en)) license with the exception of libraries and other components with their own licenses.

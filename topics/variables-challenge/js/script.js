@@ -36,6 +36,17 @@ let sky = {
     }
 };
 
+// The Bird
+let bird = {
+    x: 0,
+    y: 80,
+    size: 20,
+    fill: {
+        r: 135,
+        g: 206,
+        b: 235
+    }
+};
 
 
 /**
@@ -70,5 +81,12 @@ function draw() {
     sky.fill.r = sky.fill.r - 1;
     sky.fill.g = sky.fill.g - 1;
     sky.fill.b = sky.fill.b - 1;
+
+    // Drawing a bird
+    push();
+    noStroke();
+    fill(bird.fill.r, bird.fill.g, bird.fill.b);
+    ellipse(bird.x, bird.y, bird.size);
+    pop();
 
 }

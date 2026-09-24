@@ -13,7 +13,7 @@
 
 ## Attribution
 
-> The template for this project is from Pippin Barr. 
+> - The template for this project is from Pippin Barr. 
 > - This project also uses [p5.js](https://p5js.org).
 
 

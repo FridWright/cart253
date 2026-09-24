@@ -66,5 +66,9 @@ function draw() {
     mrFurious.fill.g = mrFurious.fill.g - 0.5;
     mrFurious.fill.b = mrFurious.fill.b - 0.5;
 
+    // Change Sky from blue to black over time
+    sky.fill.r = sky.fill.r - 1;
+    sky.fill.g = sky.fill.g - 1;
+    sky.fill.b = sky.fill.b - 1;
 
 }

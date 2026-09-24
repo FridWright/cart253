@@ -34,3 +34,13 @@ let sky = {
         b: 200
     }
 };
+
+
+
+/**
+ * Create the canvas
+ */
+function setup() {
+    // Create a 400 x 400 canvas
+    createCanvas(400, 400);
+}

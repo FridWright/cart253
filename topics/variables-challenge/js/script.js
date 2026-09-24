@@ -44,3 +44,11 @@ function setup() {
     // Create a 400 x 400 canvas
     createCanvas(400, 400);
 }
+
+/**
+ * Draw (and update) Mr. Furious
+ */
+function draw() {
+
+    // Draw the Sky
+    background(sky.fill.r, sky.fill.g, sky.fill.b);

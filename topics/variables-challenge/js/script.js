@@ -12,7 +12,7 @@
 
 "use strict";
 
-// Our friend Mr. Furious
+// Mr. Furious
 let mrFurious = {
     // Position and size
     x: 200,
@@ -28,6 +28,7 @@ let mrFurious = {
 
 // The Sky
 let sky = {
+    // Sky colour
     fill: {
         r: 160,
         g: 180,
@@ -45,6 +46,7 @@ function setup() {
     createCanvas(400, 400);
 }
 
+
 /**
  * Draw (and update) Mr. Furious
  */
@@ -59,5 +61,10 @@ function draw() {
     fill(mrFurious.fill.r, mrFurious.fill.g, mrFurious.fill.b);
     ellipse(mrFurious.x, mrFurious.y, mrFurious.size);
     pop();
+
+    // Have Mr. Furious to turn red over time
+    mrFurious.fill.g = mrFurious.fill.g - 0.5;
+    mrFurious.fill.b = mrFurious.fill.b - 0.5;
+
 
 }

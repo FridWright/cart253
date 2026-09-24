@@ -52,3 +52,12 @@ function draw() {
 
     // Draw the Sky
     background(sky.fill.r, sky.fill.g, sky.fill.b);
+
+    // Draw Mr. Furious as a coloured circle
+    push();
+    noStroke();
+    fill(mrFurious.fill.r, mrFurious.fill.g, mrFurious.fill.b);
+    ellipse(mrFurious.x, mrFurious.y, mrFurious.size);
+    pop();
+
+}

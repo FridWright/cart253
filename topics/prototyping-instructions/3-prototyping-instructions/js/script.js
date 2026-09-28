@@ -37,7 +37,10 @@ function draw() {
     // Draw a starry night sky for the top half cool coloured sky background.
     // FROM P5.JS (https://editor.p5js.org/asenyildiz/sketches/0Fdwfsskh)
 
-    // Draw 200 random stars
+    //STOP THE STARS FROM MOVING
+    randomSeed(42);
+
+    // Draw 200 stars
     noStroke();
     for (let i = 0; i < 200; i++) {
         let x = random(width);

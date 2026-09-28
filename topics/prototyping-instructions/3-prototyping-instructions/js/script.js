@@ -43,9 +43,27 @@ function draw() {
         ['pink', 1]
     ], millis() / 10000 % 1);
 
-    // Draw bottom half rectangle.
-    fill(bottomColour);
-    rect(0, height / 2, width, height / 2);
+
+    // SET WAVELIKE 'NOISE' FOR BOTTOM HALF
+    // FROM P5.JS NOISE REFERENCE: https://p5js.org/reference/p5/noise/
+
+    let noiseLevel = 60;   // Height variance of the wave edge
+    let noiseScale = 0.01; // Scale of the waves
+
+    stroke(bottomColour);
+    strokeWeight(2);
+
+    // Loop across the entire width of the screen
+    for (let x = 0; x <= width; x += 1) {
+        let nx = noiseScale * x;
+        let nt = noiseScale * frameCount * 1.5; // Wave animation speed
+
+        // Calculate wave Y starting position near the middle
+        let waveY = (height / 2) + (noise(nx, nt) * noiseLevel - noiseLevel / 2);
+
+        // Draw line from the wave top all the way down to the bottom
+        line(x, waveY, x, height);
+    }
 
 
     // SUN AND CRESCENT MOON.
@@ -65,21 +83,4 @@ function draw() {
     // SET WAVELIKE 'NOISE' FOR BOTTOM HALF
     // FROM P5.JS NOISE REFERENCE: https://p5js.org/reference/p5/noise/
 
-    // Set the noise level and scale.
-    let noiseLevel = 100;
-    let noiseScale = 0.002;
-
-    // Iterate from left to right.
-    for (let x = 0; x < 100; x += 1) {
-        // Scale the input coordinates.
-        let nx = noiseScale * x;
-        let nt = noiseScale * frameCount;
-
-        // Compute the noise value.
-        let y = noiseLevel * noise(nx, nt);
-
-        // Draw the line.
-        line(x, 0, x, y);
-    }
 }
-

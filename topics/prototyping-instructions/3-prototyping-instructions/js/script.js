@@ -22,7 +22,7 @@ function draw() {
 
     // Use p5.js paletteLerp guide
 
-    // Top half of the the background (night sky) 
+    // Top half of the the background (cool sky) 
     noStroke();
     fill(paletteLerp([
         ['blue', 0],
@@ -35,9 +35,7 @@ function draw() {
     rect(0, height / 2, width, height / 2);
 
 
-
-
-    // Bottom half of the the background (sunset sky)
+    // Bottom half of the the background (warm sky)
 
     background(paletteLerp([
         ['yellow', 0],
@@ -51,9 +49,14 @@ function draw() {
 
     // Draw sun at bottom of screen
     noStroke()
-    fill('dark orange')
+    fill('orange')
     ellipse(300, 600, 300, [300])
 
+    // Draw moon at to phalf of screen
+    strokeWeight(20);
+    stroke('white');
+    ellipse(300, 0, 300, 300);
+    noFill()
 
 }
 

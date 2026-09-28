@@ -52,11 +52,12 @@ function draw() {
     fill('orange')
     ellipse(300, 600, 300, [300])
 
-    // Draw moon at to phalf of screen
-    strokeWeight(20);
-    stroke('white');
+    // Draw moon at top half of screen
+    strokeWeight(30);
+    stroke('beige');
+    noFill();
     ellipse(300, 0, 300, 300);
-    noFill()
+
 
 }
 

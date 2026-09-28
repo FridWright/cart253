@@ -4,7 +4,7 @@
  * 
  * This is the second drawing for the Prototyping - Instructions project.
  */
-//This project uses[p5.js](https://p5js.org) in help with ____.
+//This project uses[p5.js](https://p5js.org).
 
 "use strict";
 
@@ -72,6 +72,8 @@ function draw() {
     fill('blue');
     ellipse(100, 450, 70, 70);
 
+
+
     // CONCENTRIC CIRLES
 
     // Create one large circle #1 in the middle of the canvas.
@@ -95,5 +97,28 @@ function draw() {
     ellipse(200, 300, 30, 30);
 
 
+
+
+    // DRAW SMALL WHITE CIRCLES IN THE CORNERS
+
+    // White circle top right corner.
+    fill('white');
+    stroke('pink');
+    ellipse(50, 50, 40, 40);
+
+    // White circle top left corner.
+    fill('white');
+    stroke('green');
+    ellipse(350, 50, 40, 40);
+
+    // White circle bottom left corner.
+    fill('white');
+    stroke('blue');
+    ellipse(50, 550, 40, 40);
+
+    // White circle bottom right corner. 
+    fill('white');
+    stroke('orange');
+    ellipse(350, 550, 40, 40);
 
 }

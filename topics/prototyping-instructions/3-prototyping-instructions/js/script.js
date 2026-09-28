@@ -59,7 +59,7 @@ function draw() {
         let nt = noiseScale * frameCount * 1.5; // Wave animation speed
 
         // Calculate wave Y starting position near the middle
-        let waveY = (height / 1.2) + (noise(nx, nt) * noiseLevel - noiseLevel / 2);
+        let waveY = (height / 1.5) + (noise(nx, nt) * noiseLevel - noiseLevel / 2);
 
         // Draw line from the wave top all the way down to the bottom
         line(x, waveY, x, height);

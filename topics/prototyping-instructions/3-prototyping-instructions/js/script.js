@@ -21,7 +21,7 @@ function draw() {
 
     // Uses p5.js paletteLerp guide (https://p5js.org/reference/p5/paletteLerp/)
 
-    // Top half of the the background (cool sky) 
+    // Top half of the the background (cool sky) that cycles through four colours.
     let topColour = paletteLerp([
         ['blue', 0],
         ['navy', 0.4],
@@ -32,10 +32,25 @@ function draw() {
     // Draw top half background rectangle.
     noStroke();
     fill(topColour);
-    rect(0, 0, width, height);
+    rect(0, 0, width, 500);
+
+    // Draw a starry night sky for the top half cool coloured sky background.
+    // FROM P5.JS (https://editor.p5js.org/asenyildiz/sketches/0Fdwfsskh)
+
+    // Draw 200 random stars
+    noStroke();
+    for (let i = 0; i < 200; i++) {
+        let x = random(width);
+        let y = random(height);
+        let starSize = random(1, 3);
+        let alpha = random(100, 255); // Random brightness
+
+        fill(255, 255, 255, alpha);
+        ellipse(x, y, starSize, starSize);
+    }
 
 
-    // Bottom half of the the background (warm sky)
+    // Bottom half of the the background (warm sky) that cycles through 4 colours.
     let bottomColour = paletteLerp([
         ['yellow', 0],
         ['orange', 0.05],
@@ -45,6 +60,7 @@ function draw() {
 
 
     // SET WAVELIKE 'NOISE' FOR BOTTOM HALF
+    // Bottom half of warm sky becomes like an ocean. 
     // FROM P5.JS NOISE REFERENCE: https://p5js.org/reference/p5/noise/
 
     let noiseLevel = 100;   // Height variance of the wave edge
@@ -79,8 +95,5 @@ function draw() {
     noFill();
     ellipse(300, 0, 300, 300);
 
-
-    // SET WAVELIKE 'NOISE' FOR BOTTOM HALF
-    // FROM P5.JS NOISE REFERENCE: https://p5js.org/reference/p5/noise/
-
 }
+

@@ -15,12 +15,11 @@ function setup() {
     // Create canvas size 600 x 600
     createCanvas(600, 600);
 
-
 }
 
 function draw() {
 
-    // Use p5.js paletteLerp guide
+    // Uses p5.js paletteLerp guide (https://p5js.org/reference/p5/paletteLerp/)
 
     // Top half of the the background (cool sky) 
     let topColour = paletteLerp([
@@ -48,6 +47,9 @@ function draw() {
     fill(bottomColour);
     rect(0, height / 2, width, height / 2);
 
+
+    // SUN AND CRESCENT MOON.
+
     // Draw sun at bottom of screen
     noStroke()
     fill('orange')
@@ -60,5 +62,28 @@ function draw() {
     ellipse(300, 0, 300, 300);
 
 
-}
+    // ADD A TEXTURED CLOUDY OVERLAY FILTER
 
+    // Set the noise level and scale.
+    let noiseLevel = 255;
+    let noiseScale = 0.009;
+
+    // Iterate from top to bottom.
+    for (let y = 0; y < 100; y += 1) {
+        // Iterate from left to right.
+        for (let x = 0; x < width; x += 1) {
+            // Scale the input coordinates.
+            let nx = noiseScale * x;
+            let ny = noiseScale * y;
+            let nt = noiseScale * frameCount;
+
+            // Compute the noise value.
+            let c = noiseLevel * noise(nx, ny, nt);
+
+            // Draw the point.
+            stroke(c);
+            point(x, y);
+        }
+
+    }
+}

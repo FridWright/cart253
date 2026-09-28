@@ -1,5 +1,5 @@
 /**
- * Prototyping - Instructions #2 (____)
+ * Prototyping - Instructions #2 (Quadrant)
  * Fridrikka Wright
  * 
  * This is the second drawing for the Prototyping - Instructions project.

@@ -17,7 +17,7 @@
 
 ### 2. Prototype Two - Quadrant [view here](https://fridwright.github.io/cart253/topics/prototyping-instructions/quadrant/)
 
-[INSERT IMAGE HERE]
+<img src="topics/prototyping-instructions/quadrant/assets/images/quadrant.png">
 
 
 

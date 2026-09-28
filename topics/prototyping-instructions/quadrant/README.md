@@ -1,17 +1,17 @@
-PROTOTYPING - INSTRUCTIONS #2 (______)
+PROTOTYPING - INSTRUCTIONS #2 (Quadrant)
 
 Fridrikka Wright
 
-[View this project online](______)
+[View this project online](https://fridwright.github.io/cart253/topics/prototyping-instructions/quadrant/)
 
 ## Description
 
-CHANGE
+A drawing of a quadrant and circles that uses the colours green, pink, blue, orange, and white. 
 
 ## Attribution
 
 
-> - This project uses [p5.js](https://p5js.org) in help with CHANGE
+> - This project uses [p5.js](https://p5js.org) 
 
 ## License
 

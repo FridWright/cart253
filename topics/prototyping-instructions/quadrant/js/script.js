@@ -50,25 +50,23 @@ function draw() {
     fill('pink');
     rect(width / 2, height / 2, width / 2, height / 2);
 
-    // CREATING SECOND SET OF SMALLER RECTANGLES
 
-    // Draw SMALL rectangle 1 (upper left)
-    stroke(255, 255, 255);
-    strokeWeight(5);
-    fill('black');
-    rect(0, 0, width / 4, height / 4);
 
-    // Draw SMALLER rectangle 1 (upper left)
-    stroke(255, 255, 255);
-    strokeWeight(5);
-    fill('black');
-    rect(80, 80, width / 8, height / 8);
+
 
     // Create circles to go inside the four quadrants. 
 
-    // Top left circle
-    ellipse(100, 150, 20, [20])
-    // Top right circle.
-    ellipse(300, 450, 20, 20)
+    // Top left circle.
+    ellipse(100, 150, 40, 40);
+    fill('pink');
+    // Top right circle. 
+    ellipse(300, 150, 40, 40);
+    fill('green');
+    // Bottom right circle.
+    ellipse(300, 450, 40, 40);
+    fill('orange');
+    // Bottom left circle.
+    ellipse(100, 450, 40, 40);
+    fill('blue');
 
 }

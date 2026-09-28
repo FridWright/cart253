@@ -57,16 +57,20 @@ function draw() {
     // Create circles to go inside the four quadrants. 
 
     // Top left circle.
-    ellipse(100, 150, 40, 40);
     fill('pink');
+    ellipse(100, 150, 40, 40);
+
     // Top right circle. 
-    ellipse(300, 150, 40, 40);
     fill('green');
+    ellipse(300, 150, 40, 40);
+
     // Bottom right circle.
-    ellipse(300, 450, 40, 40);
     fill('orange');
+    ellipse(300, 450, 40, 40);
+
     // Bottom left circle.
-    ellipse(100, 450, 40, 40);
     fill('blue');
+    ellipse(100, 450, 40, 40);
+
 
 }

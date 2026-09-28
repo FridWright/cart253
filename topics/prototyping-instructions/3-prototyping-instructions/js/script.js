@@ -32,7 +32,7 @@ function draw() {
     // Draw top half background rectangle.
     noStroke();
     fill(topColour);
-    rect(0, 0, width, height / 2);
+    rect(0, 0, width, height);
 
 
     // Bottom half of the the background (warm sky)

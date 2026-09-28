@@ -1,12 +1,12 @@
-PROTOTYPING - INSTRUCTIONS #2 (Quadrant)
+PROTOTYPING - INSTRUCTIONS #3 (Night Waves)
 
 Fridrikka Wright
 
-[View this project online](https://fridwright.github.io/cart253/topics/prototyping-instructions/quadrant/)
+[View this project online] (https://fridwright.github.io/cart253/topics/prototyping-instructions/night-waves/)
 
 ## Description
 
-A drawing of a quadrant and circles that uses the colours green, pink, blue, orange, and white. 
+A drawing of a ocean landscape with fiery sunset waves, an orange sun on the horizon, and stars in a cool toned night sky that cycles colour. 
 
 ## Attribution
 

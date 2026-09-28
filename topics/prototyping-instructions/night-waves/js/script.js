@@ -1,5 +1,5 @@
 /**
- * Prototyping - Instructions #3 (___)
+ * Prototyping - Instructions #3 (Night Waves)
  * Fridrikka Wright
  * 
  * This is the third drawing for the Prototyping - Instructions project.
@@ -33,6 +33,7 @@ function draw() {
     noStroke();
     fill(topColour);
     rect(0, 0, width, 500);
+
 
     // Draw a starry night sky for the top half cool coloured sky background.
     // FROM P5.JS (https://editor.p5js.org/asenyildiz/sketches/0Fdwfsskh)

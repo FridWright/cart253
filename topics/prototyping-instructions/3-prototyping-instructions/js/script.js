@@ -23,13 +23,12 @@ function draw() {
     // Use p5.js paletteLerp guide
 
     // Top half of the the background (cool sky) 
-    noStroke();
-    fill(paletteLerp([
+    let topColour = paletteLerp([
         ['blue', 0],
         ['navy', 0.4],
         ['purple', 0.8],
         ['darkblue', 1]
-    ], (millis() / 8000) % 1));
+    ], (millis() / 8000) % 1);
 
     // Draw top half background rectangle.
     rect(0, height / 2, width, height / 2);

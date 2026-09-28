@@ -62,28 +62,24 @@ function draw() {
     ellipse(300, 0, 300, 300);
 
 
-    // ADD A TEXTURED CLOUDY OVERLAY FILTER
+    // SET WAVELIKE 'NOISE' FOR BOTTOM HALF
+    // FROM P5.JS NOISE REFERENCE: https://p5js.org/reference/p5/noise/
 
     // Set the noise level and scale.
-    let noiseLevel = 255;
-    let noiseScale = 0.009;
+    let noiseLevel = 100;
+    let noiseScale = 0.002;
 
-    // Iterate from top to bottom.
-    for (let y = 0; y < 100; y += 1) {
-        // Iterate from left to right.
-        for (let x = 0; x < width; x += 1) {
-            // Scale the input coordinates.
-            let nx = noiseScale * x;
-            let ny = noiseScale * y;
-            let nt = noiseScale * frameCount;
+    // Iterate from left to right.
+    for (let x = 0; x < 100; x += 1) {
+        // Scale the input coordinates.
+        let nx = noiseScale * x;
+        let nt = noiseScale * frameCount;
 
-            // Compute the noise value.
-            let c = noiseLevel * noise(nx, ny, nt);
+        // Compute the noise value.
+        let y = noiseLevel * noise(nx, nt);
 
-            // Draw the point.
-            stroke(c);
-            point(x, y);
-        }
-
+        // Draw the line.
+        line(x, 0, x, y);
     }
 }
+

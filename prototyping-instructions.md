@@ -21,9 +21,9 @@
 
 
 
-### 3. Prototype Three
+### 3. Prototype Three - Night Waves [view here](https://fridwright.github.io/cart253/topics/prototyping-instructions/night-waves)
 
-[INSERT IMAGE HERE]
+<img src="topics/prototyping-instructions/night-waves/assets/images/night-waves.png">
 
 
 

@@ -47,7 +47,7 @@ function draw() {
     // SET WAVELIKE 'NOISE' FOR BOTTOM HALF
     // FROM P5.JS NOISE REFERENCE: https://p5js.org/reference/p5/noise/
 
-    let noiseLevel = 60;   // Height variance of the wave edge
+    let noiseLevel = 100;   // Height variance of the wave edge
     let noiseScale = 0.01; // Scale of the waves
 
     stroke(bottomColour);
@@ -59,7 +59,7 @@ function draw() {
         let nt = noiseScale * frameCount * 1.5; // Wave animation speed
 
         // Calculate wave Y starting position near the middle
-        let waveY = (height / 2) + (noise(nx, nt) * noiseLevel - noiseLevel / 2);
+        let waveY = (height / 1.2) + (noise(nx, nt) * noiseLevel - noiseLevel / 2);
 
         // Draw line from the wave top all the way down to the bottom
         line(x, waveY, x, height);

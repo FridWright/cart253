@@ -31,19 +31,21 @@ function draw() {
     ], (millis() / 8000) % 1);
 
     // Draw top half background rectangle.
+    noStroke()
     rect(0, height / 2, width, height / 2);
 
 
     // Bottom half of the the background (warm sky)
 
-    background(paletteLerp([
+    let bottomColour = paletteLerp([
         ['yellow', 0],
         ['orange', 0.05],
         ['red', 0.25],
         ['pink', 1]
-    ], millis() / 10000 % 1));
+    ], millis() / 10000 % 1);
 
     // Draw bottom half rectangle.
+    noStroke()
     rect(0, 0, width, height / 2);
 
     // Draw sun at bottom of screen

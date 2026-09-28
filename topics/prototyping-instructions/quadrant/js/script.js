@@ -72,19 +72,24 @@ function draw() {
     fill('blue');
     ellipse(100, 450, 70, 70);
 
+    // CONCENTRIC CIRLES
+
     // Create one large circle #1 in the middle of the canvas.
     fill('blue');
     ellipse(200, 300, 200, 200);
 
     // Create next smaller concentric inner circle #2
+    fill('green');
     ellipse(200, 300, 150, 150);
 
-
     // Create next smaller concentric inner circle #3
+    fill('pink');
     ellipse(200, 300, 100, 100);
 
     // Create next smaller concentric inner circle #4
+    fill('orange');
     ellipse(200, 300, 50, 50);
+
 
 
 }

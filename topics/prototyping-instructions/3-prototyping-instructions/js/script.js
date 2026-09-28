@@ -14,15 +14,30 @@
 function setup() {
     // Create canvas size 600 x 600
     createCanvas(600, 600);
-    // Canvas background colour
-    background('black');
+
 
 }
 
 function draw() {
 
     // Use p5.js paletteLerp guide
-    // The background goes from white to red to green to blue fill
+
+    // Top half of the the background (night sky) 
+    noStroke();
+    fill(paletteLerp([
+        ['blue', 0],
+        ['navy', 0.4],
+        ['purple', 0.8],
+        ['darkblue', 1]
+    ], (millis() / 8000) % 1));
+
+    // Draw top half background rectangle.
+    rect(0, height / 2, width, height / 2);
+
+
+
+
+    // Bottom half of the the background (sunset sky)
 
     background(paletteLerp([
         ['yellow', 0],
@@ -31,8 +46,11 @@ function draw() {
         ['pink', 1]
     ], millis() / 10000 % 1));
 
+    // Draw bottom half rectangle.
+    rect(0, 0, width, height / 2);
 
     // Draw sun at bottom of screen
+    noStroke()
     fill('dark orange')
     ellipse(300, 600, 300, [300])
 

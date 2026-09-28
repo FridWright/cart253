@@ -58,19 +58,23 @@ function draw() {
 
     // Top left circle.
     fill('pink');
-    ellipse(100, 150, 40, 40);
+    ellipse(100, 150, 70, 70);
 
     // Top right circle. 
     fill('green');
-    ellipse(300, 150, 40, 40);
+    ellipse(300, 150, 70, 70);
 
     // Bottom right circle.
     fill('orange');
-    ellipse(300, 450, 40, 40);
+    ellipse(300, 450, 70, 70);
 
     // Bottom left circle.
     fill('blue');
-    ellipse(100, 450, 40, 40);
+    ellipse(100, 450, 70, 70);
+
+    // Create one large circle in the middle of the canvas.
+    fill('black');
+    ellipse(200, 300, 100, 100)
 
 
 }

@@ -64,4 +64,11 @@ function draw() {
     fill('black');
     rect(80, 80, width / 8, height / 8);
 
+    // Create circles to go inside the four quadrants. 
+
+    // Top left circle
+    ellipse(100, 150, 20, [20])
+    // Top right circle.
+    ellipse(300, 450, 20, 20)
+
 }

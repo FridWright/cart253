@@ -31,12 +31,12 @@ function draw() {
     ], (millis() / 8000) % 1);
 
     // Draw top half background rectangle.
-    noStroke()
-    rect(0, height / 2, width, height / 2);
+    noStroke();
+    fill(topColour);
+    rect(0, 0, width, height / 2);
 
 
     // Bottom half of the the background (warm sky)
-
     let bottomColour = paletteLerp([
         ['yellow', 0],
         ['orange', 0.05],
@@ -45,13 +45,13 @@ function draw() {
     ], millis() / 10000 % 1);
 
     // Draw bottom half rectangle.
-    noStroke()
-    rect(0, 0, width, height / 2);
+    fill(bottomColour);
+    rect(0, height / 2, width, height / 2);
 
     // Draw sun at bottom of screen
     noStroke()
     fill('orange')
-    ellipse(300, 600, 300, [300])
+    ellipse(300, 600, 300, 300)
 
     // Draw moon at top half of screen
     strokeWeight(30);

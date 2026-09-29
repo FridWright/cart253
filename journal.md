@@ -11,6 +11,8 @@
  
  My goal for this course is to build something interesting, functional, maybe even cool, however simple the final product may be. The beginner simplicity may elicit an intial internal struggle due to not being able to actualize my artistic intentions into code, as I am used to more flowery freeform mediums. Will focus more on function and design, over beauty, to start. *Let's see*!
  
-2. ### <u>Second Journal Entry ⏰</u>
+2. ### <u>Second Journal Entry ⏰</u> *28/09/2026*
+This journal entry reflects on my process across the three drawings created for the Prototyping: Instructions assignment. My first drawing, *Lime Balls*, was an exercise in basic shapes, fill colors and text, which I hope to build on later by adding bouncing physics to the lime/lemon balls. My second drawing, *Quadrants*, focused on spatial symmetry and canvas partitioning with rect(), creating concentric circles, and practicing the use of positioning variables (width / 2, height / 2). In a future edit, I want to make it interactive by swapping quadrant colors based on mouse movement or an audio. My third drawing, *Night Waves*, was the most technically complex, and I utilized many references from the p5.js library to create a sea/sky scape. I used paletteLerp() for sky colour transitions, noise() for animated lower waves, and randomSeed() to lock a flickering starry sky in place without the flickering. In the future, I want to explore custom vector geometry using vertex() and bezierVertex() to draw a true crescent moon -*along other more complex shapes*- for all these drawings. 
+
 
 3. ### <u>Third Journal Entry ⏰</u>

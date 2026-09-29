@@ -27,4 +27,4 @@
 
 
 
-> ## Link to Reflective Journal: [click here](journal.md)
+> ## Link to Reflective Journal: 📚[click here](journal.md)

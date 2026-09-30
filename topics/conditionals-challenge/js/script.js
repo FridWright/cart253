@@ -2,22 +2,16 @@
  * Conditionals Challenge - In Class Challenge
  * Fridrikka Wright
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+*This will be a program in which the user can push a circle
+ * on the canvas using their own circle.
  */
+
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
-/**
- * Circle Master
- * Pippin Barr
- *
- * This will be a program in which the user can push a circle
- * on the canvas using their own circle.
- */
+ * Configure the puck, user and target 
+**/
 
 
 // Puck configuration
@@ -41,26 +35,24 @@ const target = {
     x: 300,
     y: 100,
     size: 80,
-    fill: "orange"
+    fill: "red",
+    activeFill: "green",
+    idleFill: "red"
 };
 
 /**
- * Create the canvas
+ * Create canvas
  */
 function setup() {
     createCanvas(400, 400);
 }
 
 
-
-
-
-
 /**
  * Move the user circle, check for overlap, draw the two circles
  */
 function draw() {
-    background("#aaaaaa");
+    background("blue");
 
     // Move elements
     moveUser();
@@ -108,7 +100,6 @@ function movePuck() {
 }
 
 
-
 /**
  * Sets the user position to the mouse position
  */
@@ -118,9 +109,23 @@ function moveUser() {
 }
 
 
+/**
+ * Checks if the puck overlaps the target and updates target colour
+ */
 
+function checkTarget() {
+    const d = dist(puck.x, puck.y, target.x, target.y);
+    const minDistance = (puck.size + target.size) / 2;
 
+    // Green when puck overlaps
+    if (d < minDistance) {
+        target.fill = target.activeFill;
 
+        // Red when no overlap
+    } else {
+        target.fill = target.idleFill;
+    }
+}
 
 
 /**

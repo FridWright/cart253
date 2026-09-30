@@ -33,4 +33,7 @@ function setup() {
 function draw() {
     background("#ffe599")
 
+    // Center coordinates
+    let centerX = width / 2;
+    let centerY = height / 2;
 }

@@ -33,7 +33,7 @@ const user = {
 // Target configuration
 const target = {
     x: 300,
-    y: 100,
+    y: 300,
     size: 80,
     fill: "red",
     activeFill: "green",
@@ -164,4 +164,14 @@ function drawTarget() {
     fill(target.fill);
     ellipse(target.x, target.y, target.size);
     pop();
+
+
+    // Draw border for canvas
+    push();
+    noFill();
+    stroke("black");
+    strokeWeight(20);
+    rect(0, 0, 600, 600);
+    pop();
+
 }

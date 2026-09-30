@@ -48,6 +48,7 @@ function draw() {
 
     // Move user circle
     moveUser();
+    movePuck();
 
     // Draw the user and puck
     drawUser();

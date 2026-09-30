@@ -1,0 +1,23 @@
+/**
+ * Prototyping - Variables THREE (____)
+ * Fridrikka Wright
+ * 
+ * This is the third project for the Prototyping - VAriables assignment. 
+ */
+
+"use strict";
+
+/**
+ * OH LOOK I DIDN'T DESCRIBE SETUP!!
+*/
+function setup() {
+
+}
+
+
+/**
+ * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+*/
+function draw() {
+
+}

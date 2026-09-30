@@ -10,9 +10,20 @@
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
+
+// Variables:
+
+// Core size = current width/height of the circle
+let coreSize = 200;
+// Define the boundary limits for how small circle can be
+let minSize = 180;
+// Define the boundary limits for how large circle can be
+let maxSize = 350;
+// Determines rate of circle growth/shrinkage
+let pulseSpeed = 2;
+
 function setup() {
     createCanvas(600, 600)
-
 }
 
 

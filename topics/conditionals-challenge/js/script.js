@@ -88,7 +88,7 @@ function movePuck() {
 
     // Speed for the puck movement
     if (d < minDistance) {
-        const speed = 2;
+        const speed = 5;
 
 
         // Push puck RIGHT if user is to the left of the puck

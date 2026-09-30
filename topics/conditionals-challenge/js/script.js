@@ -18,7 +18,7 @@
 const puck = {
     x: 200,
     y: 200,
-    size: 100,
+    size: 75,
     fill: "red"
 };
 
@@ -44,7 +44,7 @@ const target = {
  * Create canvas
  */
 function setup() {
-    createCanvas(400, 400);
+    createCanvas(600, 600);
 }
 
 
@@ -52,7 +52,7 @@ function setup() {
  * Move elements
  */
 function draw() {
-    background("blue");
+    background("173, 216, 230");
 
     // Move elements
     moveUser();

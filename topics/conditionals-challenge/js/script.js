@@ -49,7 +49,7 @@ function setup() {
 
 
 /**
- * Move the user circle, check for overlap, draw the two circles
+ * Move elements
  */
 function draw() {
     background("blue");
@@ -58,12 +58,23 @@ function draw() {
     moveUser();
     movePuck();
 
-    // Draw all elements
-    drawUser();
-    drawPuck();
-    drawTarget();
+    // Check overlap states
+    checkTarget();
 
+    // Draw all elements
+    drawTarget();
+    drawPuck();
+    drawUser();
 }
+
+/**
+ * Sets the user position to the mouse position
+ */
+function moveUser() {
+    user.x = mouseX;
+    user.y = mouseY;
+}
+
 
 
 /**
@@ -100,14 +111,6 @@ function movePuck() {
 }
 
 
-/**
- * Sets the user position to the mouse position
- */
-function moveUser() {
-    user.x = mouseX;
-    user.y = mouseY;
-}
-
 
 /**
  * Checks if the puck overlaps the target and updates target colour
@@ -118,10 +121,12 @@ function checkTarget() {
     const minDistance = (puck.size + target.size) / 2;
 
     // Green when puck overlaps
+
     if (d < minDistance) {
         target.fill = target.activeFill;
 
         // Red when no overlap
+
     } else {
         target.fill = target.idleFill;
     }
@@ -147,5 +152,16 @@ function drawPuck() {
     noStroke();
     fill(puck.fill);
     ellipse(puck.x, puck.y, puck.size);
+    pop();
+}
+
+/**
+ * Displays the target circle
+ */
+function drawTarget() {
+    push();
+    noStroke();
+    fill(target.fill);
+    ellipse(target.x, target.y, target.size);
     pop();
 }

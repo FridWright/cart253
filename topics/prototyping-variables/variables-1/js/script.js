@@ -48,6 +48,10 @@ function draw() {
         pulseSpeed = pulseSpeed * -1;
     }
 
+    // Calculate distance between mouse and center
+    let d = dist(mouseX, mouseY, centerX, centerY);
+
+
 
     // Outer responsive aura circle
     noFill();

@@ -69,14 +69,31 @@ function movePuck() {
     // Check if user and puck overlap
     const d = dist(user.x, user.y, puck.x, puck.y);
     const minDistance = (user.size + puck.size) / 2;
+
+
+    // Speed for the puck movement
+    if (d < minDistance) {
+        const speed = 2;
+
+
+        // Push puck RIGHT if user is to the left of the puck
+        if (user.x < puck.x) {
+            puck.x += speed;
+        }
+        // Push puck LEFT if user is to the right of the puck
+        if (user.x > puck.x) {
+            puck.x -= speed;
+        }
+        // Push puck DOWN if user is above the puck
+        if (user.y < puck.y) {
+            puck.y += speed;
+        }
+        // Push puck UP if user is below the puck
+        if (user.y > puck.y) {
+            puck.y -= speed;
+        }
+    }
 }
-
-// Speed for the puck movement
-if (d < minDistance) {
-    const speed = 2;
-}
-
-
 
 
 

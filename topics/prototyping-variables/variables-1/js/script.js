@@ -11,6 +11,7 @@
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
 function setup() {
+    createCanvas(600, 600)
 
 }
 

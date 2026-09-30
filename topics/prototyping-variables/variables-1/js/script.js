@@ -37,7 +37,10 @@ function draw() {
     let centerX = width / 2;
     let centerY = height / 2;
 
-    // Make the circle size grow or shrink each frame
+
+    // Variables- Circle Movements
+
+    // Make the circle size expand and contract
     coreSize += pulseSpeed;
 
     // Reverse growth direction when hitting boundaries
@@ -46,7 +49,13 @@ function draw() {
     }
 
 
-    // Main core circle
+    // Outer responsive aura circle
+    noFill();
+    stroke("#f6b26b")
+    strokeWeight(4);
+    ellipse(centerX, centerY, auraSize, auraSize);
+
+    // Main core inner circle
     fill("#e69138");
     noStroke();
     ellipse(centerX, centerY, coreSize, coreSize);

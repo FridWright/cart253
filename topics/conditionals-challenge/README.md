@@ -2,8 +2,9 @@
 
 Fridrikka Wright
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://fridwright.github.io/cart253/topics/conditionals-challenge/)
 
+<img src="assets/images/conditionals-challenge.png"> 
 ## Description
 
 This is a program in which the user can push a around a red puck(1) with their black puck, and if they move red puck(1) onto the other red puck(2) in center screen, it will turn green!

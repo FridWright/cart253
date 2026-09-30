@@ -19,18 +19,29 @@
  * on the canvas using their own circle.
  */
 
+
+// Puck configuration
 const puck = {
     x: 200,
     y: 200,
     size: 100,
-    fill: "#ff0000"
+    fill: "red"
 };
 
+// User configuration
 const user = {
     x: undefined, // will be mouseX
     y: undefined, // will be mouseY
     size: 75,
-    fill: "#000000"
+    fill: "black"
+};
+
+// Target configuration
+const target = {
+    x: 300,
+    y: 100,
+    size: 80,
+    fill: "orange"
 };
 
 /**
@@ -55,9 +66,10 @@ function draw() {
     moveUser();
     movePuck();
 
-    // Draw the user and puck
+    // Draw all elements
     drawUser();
     drawPuck();
+    drawTarget();
 
 }
 

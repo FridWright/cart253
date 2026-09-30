@@ -2,7 +2,7 @@
  * Conditionals Challenge - In Class Challenge
  * Fridrikka Wright
  * 
-*This will be a program in which the user can push a circle
+ * This will be a program in which the user can push a circle
  * on the canvas using their own circle.
  */
 
@@ -12,7 +12,6 @@
 /**
  * Configure the puck, user and target 
 **/
-
 
 // Puck configuration
 const puck = {
@@ -166,7 +165,9 @@ function drawTarget() {
     pop();
 
 
-    // Draw border for canvas
+    /**
+    * Draws border for canvas
+    */
     push();
     noFill();
     stroke("black");

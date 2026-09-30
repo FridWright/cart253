@@ -28,7 +28,7 @@ function setup() {
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ *Draw background and center circles
 */
 function draw() {
     background("#ffe599")
@@ -36,6 +36,15 @@ function draw() {
     // Center coordinates
     let centerX = width / 2;
     let centerY = height / 2;
+
+    // Make the circle size grow or shrink each frame
+    coreSize += pulseSpeed;
+
+    // Reverse growth direction when hitting boundaries
+    if (coreSize > maxSize || coreSize < minSize) {
+        pulseSpeed = pulseSpeed * -1;
+    }
+
 
     // Main core circle
     fill("#e69138");

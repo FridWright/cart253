@@ -54,6 +54,19 @@ function draw() {
 
 
 
+    // Change colour of single follower circle when pulled around
+    /// Map distance (0 to 200px) to a factor between 0 and 1
+    let colorProgress = map(d, 0, 200, 0, 1, true);
+
+    // Blend from white (when still) to purple (when pulled)
+    /// lerpColor reference from https://p5js.org/reference/p5/lerpColor/
+    let circleColor = lerpColor(
+        color("white"),  // Still color
+        color("purple"),  // Pulled color
+        colorProgress
+    );
+
+
     // Draw shapes (circle, tether line, anchor point)
 
     /// Connecting tether line
@@ -67,7 +80,7 @@ function draw() {
     ellipse(mouseX, mouseY, 8, 8);
 
     /// Single follower circle
-    fill("white");
+    fill(circleColor);
     noStroke();
     ellipse(followerX, followerY, followerSize, followerSize);
 

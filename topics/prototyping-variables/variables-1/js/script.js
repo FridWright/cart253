@@ -8,7 +8,7 @@
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Create canvas and define the variables for the circles
 */
 
 // Variables:
@@ -28,7 +28,7 @@ function setup() {
 
 
 /**
- *Draw background and center circles
+ *Draw background, center circles, and variables for the circle movements
 */
 function draw() {
     background("#ffe599")

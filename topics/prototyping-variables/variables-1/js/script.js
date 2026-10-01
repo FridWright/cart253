@@ -23,7 +23,7 @@ let maxSize = 350;
 let pulseSpeed = 2;
 
 function setup() {
-    createCanvas(600, 600)
+    createCanvas(600, 600);
 }
 
 
@@ -51,7 +51,16 @@ function draw() {
     // Calculate distance between mouse and center
     let d = dist(mouseX, mouseY, centerX, centerY);
 
+    // Default aura size
+    let auraSize = coreSize + 40;
 
+    // If mouse is near, expand aura size
+    if (d < 150) {
+        auraSize = coreSize + 90;
+    }
+
+
+    // DRAW THE CIRCLES
 
     // Outer responsive aura circle
     noFill();

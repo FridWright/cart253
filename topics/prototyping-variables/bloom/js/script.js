@@ -24,17 +24,19 @@ function draw() {
 
     // Center coordinates for positioning
     let centerX = width / 2;
+    // Flower positioning
+    let flowerY = 250;
     // Y position of the flowerpot base
     let potY = 500;
 
     // 1. Draw the green stem in the center
     stroke("green");
     strokeWeight(8);
-    line(centerX, 250, centerX, potY);
+    line(centerX, flowerY, centerX, potY);
 
     // Draw the flower 
 
-    //LAYER ONE:
+    // LAYER ONE: Back Petals (overlapping red circles around center)
     fill("#82164A");
     noStroke();
     // Top-Left
@@ -47,7 +49,7 @@ function draw() {
     ellipse(centerX + 40, flowerY + 40, 90, 90);
 
 
-    // LAYER TWO: Petals (overlapping pink circles around center)
+    // LAYER TWO: Front Petals (overlapping pink circles around center)
     fill("#E773AB");
     noStroke();
     // Left petal

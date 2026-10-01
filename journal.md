@@ -22,11 +22,15 @@ My third drawing, *Night Waves*, was the most technically complex, and I utilize
 
 
 3. ### <u>Third Journal Entry</u> *30/09/2026*
-Discussing the three prorotypes for the [Prototyping: Variables assignment.](https://github.com/FridWright/cart253/blob/main/prototyping-variables.md)
+This journal entry reflects on my process of the [Prototyping: Variables assignment.](https://github.com/FridWright/cart253/blob/main/prototyping-variables.md)
 
-My first prototype, *Stereo Rings*, explores 
-*Tether*-
-*Un-named*-
+My first prototype, *Stereo Rings*, features a pulsing visualizer built from nested concentric circles that continuously expand and contract. I used animation variables (coreSize, pulseSpeed, minSize, maxSize) with directional boundary checks (if (coreSize > maxSize || coreSize < minSize)) to create the pulsing loop. Proportional multipliers (0.75, 0.5, 0.25) scale the inner ellipse() rings dynamically, while dist() calculates cursor proximity to expand the outer stroke aura (auraSize) when the mouse hovers nearby.
+
+My second prototype, *Tether*, is a follower circle connected to the mouse cursor by a visual tether that lags behind and reacts dynamically to movement speed. I implemented smooth delay using linear easing math (followerX += (mouseX - followerX) * easing), calculated mouse-to-follower distance with dist(), and used line() for the connecting tether. The follower (ellipse()) dynamically inflates in size based on distance while changing color from white to purple using map() and lerpColor(). 
+
+The third prototype, *Bloom*, is an interactive growth sketch where a flower sprouts and blooms when watering the pot. It is built using variables (flowerY, petalSize) modified inside mousePressed() upon clicking the pot's quad() collision area, noCursor() combined with custom triangle() and ellipse() shapes for the water-drop cursor, and layered ellipse() shapes for proportional petal expansion.
+
+Throughout the *Prototyping: Variables* Assignment, I relied heavily on p5.js references and found it essential for implementing functions like dist(), lerpColor(), and mousePressed().
 
 4. ### <u>Third Journal Entry ⏰</u>
 

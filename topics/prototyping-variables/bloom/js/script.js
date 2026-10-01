@@ -53,7 +53,7 @@ function draw() {
     // Calculate Dynamic offsets of petal sizes
     let backOffset = petalSize * 0.45;
     let frontOffset = petalSize * 0.6;
-    let coreSize = petalSize * 0.75;
+    let coreSize = petalSize * 0.50;
 
 
     // Draw the flower, stem and pot
@@ -96,7 +96,7 @@ function draw() {
     fill("#ffd966");
     stroke("#E8B825");
     strokeWeight(5)
-    ellipse(centerX, flowerY, 30, 30);
+    ellipse(centerX, flowerY, coreSize, coreSize);
 
 
     // Draw flower Pot

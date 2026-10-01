@@ -2,7 +2,7 @@
  * Prototyping - Variables (Bloom)
  * Fridrikka Wright
  * 
- * This is the third project for the Prototyping - VAriables assignment. 
+ * This is the third project for the Prototyping - Variables assignment. 
  */
 
 "use strict";
@@ -26,13 +26,14 @@ let maxPetalSize = 90;
 
 
 /**
- * Set up the canvas
+ * Set up the canvas and hide cursor
 */
 
 function setup() {
     // Create 400 x 600 canvas
     createCanvas(400, 600)
     // Hide standard arrow cursor
+    /// Reference for noCursor from https://p5js.org/reference/p5/noCursor/
     noCursor();
 }
 
@@ -43,7 +44,6 @@ function setup() {
 
 function draw() {
     background("black")
-
 
     // Center coordinates for positioning
     let centerX = width / 2;
@@ -64,21 +64,21 @@ function draw() {
     line(centerX, flowerY, centerX, potY - 20);
 
 
-    // LAYER ONE: Back Petals (overlapping red circles around center)
+    // LAYER 1: Back Petals (overlapping red circles around center)
     fill("#82164A");
     stroke("#CF346E");
     strokeWeight(5);
     // Top-Left
-    ellipse(centerX - 40, flowerY - 40, 90, 90);
+    ellipse(centerX - backOffset, flowerY - backOffset, petalSize, petalSize);
     // Top-Right
-    ellipse(centerX + 40, flowerY - 40, 90, 90);
+    ellipse(centerX + backOffset, flowerY - backOffset, petalSize, petalSize);
     // Bottom-Left
-    ellipse(centerX - 40, flowerY + 40, 90, 90);
+    ellipse(centerX - backOffset, flowerY + backOffset, petalSize, petalSize);
     // Bottom-Right
-    ellipse(centerX + 40, flowerY + 40, 90, 90);
+    ellipse(centerX + backOffset, flowerY + backOffset, petalSize, petalSize);
 
 
-    // LAYER TWO: Front Petals (overlapping pink circles around center)
+    // LAYER 2: Front Petals (overlapping pink circles around center)
     fill("#E773AB");
     stroke("#F79EBD");
     strokeWeight(5);
@@ -117,14 +117,15 @@ function draw() {
     // Add text on flower pot
     fill("white")
     noStroke()
-    text("water me!", 168, 530);
     textSize(15);
+    text("water me!", 168, 530);
 
 
     // CURSOR: Water drop cursor
     fill("#3498db");
     noStroke()
     // Teardrop shape (top triangle + bottom circle)
+    /// Reference for triangle from https://p5js.org/reference/p5/triangle/
     triangle(mouseX - 12, mouseY, mouseX + 12, mouseY, mouseX, mouseY - 20);
     ellipse(mouseX, mouseY + 4, 24, 24);
 
@@ -133,6 +134,7 @@ function draw() {
 
 /**
  * Grows the flower when clicking on the flowerpot
+ *  // Reference from mousePressed from https://p5js.org/reference/p5/mousePressed/
 */
 function mousePressed() {
     let centerX = width / 2;

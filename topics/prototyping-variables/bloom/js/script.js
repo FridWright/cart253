@@ -38,7 +38,8 @@ function draw() {
 
     // LAYER ONE: Back Petals (overlapping red circles around center)
     fill("#82164A");
-    noStroke();
+    stroke("#CF346E");
+    strokeWeight(5);
     // Top-Left
     ellipse(centerX - 40, flowerY - 40, 90, 90);
     // Top-Right
@@ -51,7 +52,8 @@ function draw() {
 
     // LAYER TWO: Front Petals (overlapping pink circles around center)
     fill("#E773AB");
-    noStroke();
+    stroke("#F79EBD");
+    strokeWeight(5);
     // Left petal
     ellipse(centerX - 55, flowerY, 90, 90);
     // Right petal
@@ -71,7 +73,7 @@ function draw() {
     // LAYER 4: Flower Pot
     fill("#B07130");
     stroke("#8C5924");
-    strokeWeight(2);
+    strokeWeight(10);
     quad(
         // Top-left
         centerX - 50, potY - 100,

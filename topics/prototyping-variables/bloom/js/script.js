@@ -31,4 +31,31 @@ function draw() {
     stroke("green");
     strokeWeight(8);
     line(centerX, 250, centerX, potY);
+
+    // Draw the flower 
+
+    //LAYER ONE:
+    fill("#82164A");
+    noStroke();
+    // Top-Left
+    ellipse(centerX - 40, flowerY - 40, 90, 90);
+    // Top-Right
+    ellipse(centerX + 40, flowerY - 40, 90, 90);
+    // Bottom-Left
+    ellipse(centerX - 40, flowerY + 40, 90, 90);
+    // Bottom-Right
+    ellipse(centerX + 40, flowerY + 40, 90, 90);
+
+
+    // LAYER TWO: Petals (overlapping pink circles around center)
+    fill("#E773AB");
+    noStroke();
+    // Left petal
+    ellipse(centerX - 55, flowerY, 90, 90);
+    // Right petal
+    ellipse(centerX + 55, flowerY, 90, 90);
+    // Top petal
+    ellipse(centerX, flowerY - 55, 90, 90);
+    // Bottom petal
+    ellipse(centerX, flowerY + 55, 90, 90);
 }

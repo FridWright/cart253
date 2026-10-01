@@ -73,5 +73,11 @@ function draw() {
     noStroke();
     ellipse(centerX, centerY, coreSize, coreSize);
 
+    // Coloured inner ring #1
+
+    // Coloured inner ring #2
+
+    // Coloured inner ring #3
+
 
 }

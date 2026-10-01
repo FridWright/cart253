@@ -41,8 +41,13 @@ function draw() {
     followerY += (mouseY - followerY) * easing;
 
 
-    // Base size 40, grows larger as distance between cursor/anchor 
-    // point and single follower circle increases
+
+    // Calculate distance between cursor and follower
+    /// Distance reference from https://p5js.org/reference/p5/dist/
+    let d = dist(mouseX, mouseY, followerX, followerY);
+
+    // Base size 40, 
+    // Grows larger as distance between cursor/anchor point and single follower circle increases
     followerSize = 40 + (d * 0.5);
 
 

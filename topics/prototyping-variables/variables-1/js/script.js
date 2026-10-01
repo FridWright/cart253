@@ -64,7 +64,7 @@ function draw() {
 
     // Outer responsive aura circle
     noFill();
-    stroke("#f6b26b")
+    stroke("#ffd966")
     strokeWeight(4);
     ellipse(centerX, centerY, auraSize, auraSize);
 
@@ -73,11 +73,14 @@ function draw() {
     noStroke();
     ellipse(centerX, centerY, coreSize, coreSize);
 
-    // Coloured inner ring #1
+    // #1 Coloured inner ring 3/4 of main core size
+    fill("#f6b26b");
+    ellipse(centerX, centerY, coreSize * 0.75, coreSize * 0.75);
 
-    // Coloured inner ring #2
+    // #2 Coloured inner ring 1/2 of main core size
 
-    // Coloured inner ring #3
+
+    // #3 Coloured inner ring 1/4 of main core size
 
 
 }

@@ -24,7 +24,7 @@ My third drawing, *Night Waves*, was the most technically complex, and I utilize
 3. ### <u>Third Journal Entry</u> *30/09/2026*
 Discussing the three prorotypes for the [Prototyping: Variables assignment.](https://github.com/FridWright/cart253/blob/main/prototyping-variables.md)
 
-*Stereo Rings*-
+My first prototype, *Stereo Rings*, explores 
 *Tether*-
 *Un-named*-
 

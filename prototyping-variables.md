@@ -22,7 +22,7 @@
 
 
 
-### 3. Prototype Three - Bloom [view here]((https://fridwright.github.io/cart253/topics/prototyping-variables/bloom/))
+### 3. Prototype Three - Bloom [view here](https://fridwright.github.io/cart253/topics/prototyping-variables/bloom/)
 
 <img src="topics/prototyping-variables/bloom/assets/images/bloom.png">
 

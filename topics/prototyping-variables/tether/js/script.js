@@ -1,5 +1,5 @@
 /**
- * Prototyping - Variables TWO (_____)
+ * Prototyping - Variables (Tether)
  * Fridrikka Wright
  * 
  * This is the second project for the Prototyping - Variables assignment. 
@@ -10,9 +10,11 @@
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
-function setup() {
 
+function setup() {
+    createCanvas(600, 600);
 }
+
 
 
 /**

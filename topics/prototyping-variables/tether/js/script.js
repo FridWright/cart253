@@ -11,8 +11,12 @@
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
 
+// 1. Position tracking
+let followerX = 400;
+let followerY = 400;
+
 function setup() {
-    createCanvas(600, 600);
+    createCanvas(800, 800);
 }
 
 
@@ -21,7 +25,7 @@ function setup() {
 */
 function draw() {
 
-    // Background
+    // Background colour
     background("black")
 
 

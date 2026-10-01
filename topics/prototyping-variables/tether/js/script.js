@@ -19,6 +19,10 @@ let followerY = 400;
 /// Easing factor reference from https://editor.p5js.org/aferriss/sketches/H1ain8JFG
 let easing = 0.05;
 
+// 3. Base size variable
+let followerSize = 40;
+
+
 function setup() {
     createCanvas(800, 800);
 }
@@ -35,6 +39,14 @@ function draw() {
     // Easing formula movement in regards to mouse cursor
     followerX += (mouseX - followerX) * easing;
     followerY += (mouseY - followerY) * easing;
+
+
+    // Base size 40, grows larger as distance between cursor/anchor 
+    // point and single follower circle increases
+    followerSize = 40 + (d * 0.5);
+
+
+
 
 
     // Draw shapes (circle, tether line, anchor point)

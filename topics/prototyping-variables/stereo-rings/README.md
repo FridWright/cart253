@@ -1,16 +1,17 @@
-# Prototyping - Variables (Project One)
+# Prototyping - Variables (Stereo Rings)
 
 Fridrikka Wright
 
 [View this project online](URL_FOR_THE_RUNNING_PROJECT)
 
+<img src="topics/prototyping-variables/"
+
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+This project is a expanding and contracting set of concentric circles with an outer "aura" ring. This aura ring slightly expands when the mouse is near it. 
+
 
 ## Attribution
-
-This bit should attribute any code, assets or other elements used taken from other sources. For example:
 
 > - This project uses [p5.js](https://p5js.org).
 

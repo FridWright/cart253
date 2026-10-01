@@ -1,5 +1,5 @@
 /**
- * Prototyping - Variables 1 (_____)
+ * Prototyping - Variables 1 (Stereo Rings)
  * Fridrikka Wright
  * 
  * This is the first project for the Prototyping - Variables assignment.
@@ -8,7 +8,7 @@
 "use strict";
 
 /**
- * Create canvas and define the variables for the circles
+ * Create canvas and define the size/speed variables for the circles
 */
 
 // Variables:
@@ -29,6 +29,7 @@ function setup() {
 
 /**
  *Draw background, center circles, and variables for the circle movements
+    // Reference for 'if' from https://p5js.org/reference/p5/if/
 */
 function draw() {
     background("#ffe599")
@@ -38,7 +39,7 @@ function draw() {
     let centerY = height / 2;
 
 
-    // Variables- Circle Movements
+    /// Variables- Circle Movements
 
     // Make the circle size expand and contract
     coreSize += pulseSpeed;
@@ -49,6 +50,7 @@ function draw() {
     }
 
     // Calculate distance between mouse and center
+    // Reference for 'dist()' from https://p5js.org/reference/p5/dist/
     let d = dist(mouseX, mouseY, centerX, centerY);
 
     // Default aura size
@@ -68,7 +70,7 @@ function draw() {
     strokeWeight(4);
     ellipse(centerX, centerY, auraSize, auraSize);
 
-    // Main inner center circle 
+    // Main core center circle (largest)
     fill("#ffd966");
     noStroke();
     ellipse(centerX, centerY, coreSize, coreSize);

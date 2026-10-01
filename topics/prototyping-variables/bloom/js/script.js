@@ -96,7 +96,7 @@ function draw() {
     fill("#ffd966");
     stroke("#E8B825");
     strokeWeight(5)
-    ellipse(centerX, flowerY, 70, 70);
+    ellipse(centerX, flowerY, 30, 30);
 
 
     // Draw flower Pot

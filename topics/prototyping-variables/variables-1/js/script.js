@@ -78,7 +78,8 @@ function draw() {
     ellipse(centerX, centerY, coreSize * 0.75, coreSize * 0.75);
 
     // #2 Coloured inner ring 1/2 of main core size
-
+    fill("#f1c232");
+    ellipse(centerX, centerY, coreSize * 0.5, coreSize * 0.5);
 
     // #3 Coloured inner ring 1/4 of main core size
 

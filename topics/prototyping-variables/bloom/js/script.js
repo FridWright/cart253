@@ -115,3 +115,26 @@ function draw() {
 
 }
 
+/**
+ * Grows the flower when clicking on the flowerpot
+*/
+function mousePressed() {
+    let centerX = width / 2;
+    let potTop = 490;    // potY (590) - 100
+    let potBottom = 590;
+
+    // Check if click occurs inside the flowerpot area
+    if (mouseX > centerX - 50 && mouseX < centerX + 50 &&
+        mouseY > potTop && mouseY < potBottom) {
+
+        // Grow stem upward
+        if (flowerY > maxFlowerY) {
+            flowerY -= 15;
+        }
+
+        // Bloom petals larger
+        if (petalSize < maxPetalSize) {
+            petalSize += 5;
+        }
+    }
+}

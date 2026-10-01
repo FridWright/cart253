@@ -8,7 +8,7 @@
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Set up the canvas
 */
 function setup() {
     createCanvas(400, 600)
@@ -17,7 +17,7 @@ function setup() {
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Draw a flower in a pot
 */
 function draw() {
     background("black")
@@ -27,12 +27,12 @@ function draw() {
     // Flower positioning
     let flowerY = 250;
     // Y position of the flowerpot base
-    let potY = 500;
+    let potY = 590;
 
     // 1. Draw the green stem in the center
     stroke("green");
     strokeWeight(8);
-    line(centerX, flowerY, centerX, potY);
+    line(centerX, flowerY, centerX, potY - 20);
 
     // Draw the flower 
 
@@ -65,6 +65,23 @@ function draw() {
     // LAYER 3: Center core of flower
     fill("#ffd966");
     ellipse(centerX, flowerY, 70, 70);
+
+
+
+    // LAYER 4: Flower Pot
+    fill("#B07130");
+    stroke("#8C5924");
+    strokeWeight(2);
+    quad(
+        // Top-left
+        centerX - 50, potY - 100,
+        // Top-right
+        centerX + 50, potY - 100,
+        // Bottom-right
+        centerX + 35, potY,
+        // Bottom-left
+        centerX - 35, potY
+    )
 
 }
 

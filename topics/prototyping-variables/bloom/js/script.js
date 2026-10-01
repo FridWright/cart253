@@ -107,8 +107,7 @@ function draw() {
 
     // CURSOR: Water drop cursor
     fill("#3498db");
-    stroke("#2980b9");
-    strokeWeight(2);
+    noStroke()
     // Teardrop shape (top triangle + bottom circle)
     triangle(mouseX - 12, mouseY, mouseX + 12, mouseY, mouseX, mouseY - 20);
     ellipse(mouseX, mouseY + 4, 24, 24);

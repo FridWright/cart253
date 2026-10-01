@@ -8,7 +8,8 @@
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Determine the position tracking, the base size variable of the follower circle,
+ * and the easing factor for inflation/deflation rate.
 */
 
 // 1. Position tracking
@@ -24,12 +25,13 @@ let followerSize = 40;
 
 
 function setup() {
-    createCanvas(800, 800);
+    createCanvas(1000, 700);
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Draw a anchor point, a tether line, and a connected white circle
+ * The circle follows the anchor and inflates when pulled across screen, then deflates.
 */
 function draw() {
 
@@ -52,8 +54,6 @@ function draw() {
 
 
 
-
-
     // Draw shapes (circle, tether line, anchor point)
 
     /// Connecting tether line
@@ -67,7 +67,7 @@ function draw() {
     ellipse(mouseX, mouseY, 8, 8);
 
     /// Single follower circle
-    fill(circleColor);
+    fill("white");
     noStroke();
     ellipse(followerX, followerY, followerSize, followerSize);
 

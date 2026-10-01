@@ -83,13 +83,13 @@ function draw() {
     stroke("#F79EBD");
     strokeWeight(5);
     // Left petal
-    ellipse(centerX - 55, flowerY, 90, 90);
+    ellipse(centerX - frontOffset, flowerY, petalSize, petalSize);
     // Right petal
-    ellipse(centerX + 55, flowerY, 90, 90);
+    ellipse(centerX + frontOffset, flowerY, petalSize, petalSize);
     // Top petal
-    ellipse(centerX, flowerY - 55, 90, 90);
+    ellipse(centerX, flowerY - frontOffset, petalSize, petalSize);
     // Bottom petal
-    ellipse(centerX, flowerY + 55, 90, 90);
+    ellipse(centerX, flowerY + frontOffset, petalSize, petalSize);
 
 
     // LAYER 3: Center core of flower

@@ -31,7 +31,7 @@ let maxPetalSize = 90;
 
 function setup() {
     // Create 400 x 600 canvas
-    createCanvas(400, 600)
+    createCanvas(400, 600);
     // Hide standard arrow cursor
     /// Reference for noCursor from https://p5js.org/reference/p5/noCursor/
     noCursor();
@@ -43,7 +43,7 @@ function setup() {
 */
 
 function draw() {
-    background("black")
+    background("#041026");
 
     // Center coordinates for positioning
     let centerX = width / 2;
@@ -59,8 +59,8 @@ function draw() {
     // Draw the flower, stem and pot
 
     // Draw the green stem in the center
-    stroke("green");
-    strokeWeight(8);
+    stroke("#0B4A1D");
+    strokeWeight(9);
     line(centerX, flowerY, centerX, potY - 20);
 
 
@@ -115,15 +115,15 @@ function draw() {
     )
 
     // Add text on flower pot
-    fill("white")
-    noStroke()
+    fill("white");
+    noStroke();
     textSize(15);
     text("water me!", 168, 530);
 
 
     // CURSOR: Water drop cursor
     fill("#3498db");
-    noStroke()
+    noStroke();
     // Teardrop shape (top triangle + bottom circle)
     /// Reference for triangle from https://p5js.org/reference/p5/triangle/
     triangle(mouseX - 12, mouseY, mouseX + 12, mouseY, mouseX, mouseY - 20);

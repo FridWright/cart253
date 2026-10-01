@@ -24,7 +24,7 @@
 
 ### 3. Prototype Three - Bloom [view here]((https://fridwright.github.io/cart253/topics/prototyping-variables/bloom/))
 
-<img src=".png">
+<img src="topics/prototyping-variables/tether/assets/images/bloom.png">
 
 
 

@@ -5,6 +5,7 @@
  * This is the third project for the Prototyping - Variables assignment. 
  */
 
+
 "use strict";
 
 /**

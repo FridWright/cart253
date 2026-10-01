@@ -8,6 +8,18 @@
 "use strict";
 
 /**
+ * Describe flower growth variables
+ */
+
+// 1. Flower Growth Variables
+// Starts lower down in the pot
+let flowerY = 400;
+// Starts as a small bud
+let petalSize = 40;
+
+
+
+/**
  * Set up the canvas
 */
 function setup() {
@@ -66,8 +78,9 @@ function draw() {
 
     // LAYER 3: Center core of flower
     fill("#ffd966");
+    stroke("#E8B825");
+    strokeWeight(5)
     ellipse(centerX, flowerY, 70, 70);
-
 
 
     // LAYER 4: Flower Pot

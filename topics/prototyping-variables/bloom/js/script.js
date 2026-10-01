@@ -26,4 +26,9 @@ function draw() {
     let centerX = width / 2;
     // Y position of the flowerpot base
     let potY = 500;
+
+    // 1. Draw the green stem in the center
+    stroke("green");
+    strokeWeight(8);
+    line(centerX, 200, centerX, potY);
 }

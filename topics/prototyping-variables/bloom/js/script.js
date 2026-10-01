@@ -114,6 +114,13 @@ function draw() {
         centerX - 35, potY
     )
 
+    // Add text on flower pot
+    fill("white")
+    noStroke()
+    text("water me!", 168, 530);
+    textSize(15);
+
+
     // CURSOR: Water drop cursor
     fill("#3498db");
     noStroke()

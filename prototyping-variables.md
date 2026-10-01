@@ -16,15 +16,15 @@
 
 
 
-### 2. Prototype Two - Quadrant [view here](https://fridwright.github.io/cart253/topics/prototyping-instructions/quadrant/)
+### 2. Prototype Two - ___ [view here](____)
 
-<img src="topics/prototyping-instructions/quadrant/assets/images/quadrant.png">
+<img src=".png">
 
 
 
-### 3. Prototype Three - Night Waves [view here](https://fridwright.github.io/cart253/topics/prototyping-instructions/night-waves/)
+### 3. Prototype Three - ______ [view here](____)
 
-<img src="topics/prototyping-instructions/night-waves/assets/images/night-waves.png">
+<img src=".png">
 
 
 

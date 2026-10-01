@@ -60,4 +60,11 @@ function draw() {
     ellipse(centerX, flowerY - 55, 90, 90);
     // Bottom petal
     ellipse(centerX, flowerY + 55, 90, 90);
+
+
+    // LAYER 3: Center core of flower
+    fill("#ffd966");
+    ellipse(centerX, flowerY, 70, 70);
+
 }
+

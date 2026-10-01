@@ -25,7 +25,7 @@ let followerSize = 40;
 
 
 function setup() {
-    createCanvas(1000, 700);
+    createCanvas(900, 700);
 }
 
 
@@ -37,6 +37,11 @@ function draw() {
 
     // Background colour
     background("black")
+
+    // Add text
+    fill("white");
+    textSize(15);
+    text("tether", 450, 100)
 
     // Easing formula movement in regards to mouse cursor
     followerX += (mouseX - followerX) * easing;

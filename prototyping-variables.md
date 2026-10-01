@@ -16,9 +16,9 @@
 
 
 
-### 2. Prototype Two - ___ [view here](____)
+### 2. Prototype Two - Tether [view here](https://fridwright.github.io/cart253/topics/prototyping-variables/tether/)
 
-<img src=".png">
+<img src="topics/prototyping-variables/tether/assets/images/tether.png">
 
 
 

@@ -30,5 +30,5 @@ function draw() {
     // 1. Draw the green stem in the center
     stroke("green");
     strokeWeight(8);
-    line(centerX, 200, centerX, potY);
+    line(centerX, 250, centerX, potY);
 }

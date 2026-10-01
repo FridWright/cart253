@@ -34,6 +34,7 @@ function draw() {
     /// Connecting tether line
     stroke("white");
     strokeWeight(2);
+    line(mouseX, mouseY, followerX, followerY);
 
     /// Mouse anchor point
     fill("white");

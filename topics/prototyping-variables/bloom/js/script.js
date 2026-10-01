@@ -11,20 +11,27 @@
  * Describe flower growth variables
  */
 
-// 1. Flower Growth Variables
+// 1. Flower Variables
 // Starts lower down in the pot
 let flowerY = 400;
 // Starts as a small bud
 let petalSize = 40;
 
+// 2. Growth Configuration
+// Highest point it can grow
+let maxFlowerY = 200;
+// Largest size petals can bloom
+let maxPetalSize = 90;
 
 
 /**
  * Set up the canvas
 */
 function setup() {
+    // Create 400 x 600 canvas
     createCanvas(400, 600)
-
+    // Hide standard arrow cursor
+    noCursor();
 }
 
 

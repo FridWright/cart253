@@ -1,5 +1,5 @@
 /**
- * Prototyping - Variables THREE (____)
+ * Prototyping - Variables (Bloom)
  * Fridrikka Wright
  * 
  * This is the third project for the Prototyping - VAriables assignment. 
@@ -11,22 +11,24 @@
  * Describe flower growth variables
  */
 
-// 1. Flower Variables
-// Starts lower down in the pot
+
+// 1. Dynamic Flower Variables
+// Current height of flower
 let flowerY = 400;
-// Starts as a small bud
+// Current size of petals
 let petalSize = 40;
 
-// 2. Growth Configuration
-// Highest point it can grow
+// 2. Growth Limits
+// Highest point it grows
 let maxFlowerY = 200;
-// Largest size petals can bloom
+// Max bloom size
 let maxPetalSize = 90;
 
 
 /**
  * Set up the canvas
 */
+
 function setup() {
     // Create 400 x 600 canvas
     createCanvas(400, 600)
@@ -38,22 +40,29 @@ function setup() {
 /**
  * Draw a flower in a pot
 */
+
 function draw() {
     background("black")
 
+
     // Center coordinates for positioning
     let centerX = width / 2;
-    // Flower positioning
-    let flowerY = 250;
     // Y position of the flowerpot base
     let potY = 590;
 
-    // 1. Draw the green stem in the center
+    // Calculate Dynamic offsets of petal sizes
+    let backOffset = petalSize * 0.45;
+    let frontOffset = petalSize * 0.6;
+    let coreSize = petalSize * 0.75;
+
+
+    // Draw the flower, stem and pot
+
+    // Draw the green stem in the center
     stroke("green");
     strokeWeight(8);
     line(centerX, flowerY, centerX, potY - 20);
 
-    // Draw the flower 
 
     // LAYER ONE: Back Petals (overlapping red circles around center)
     fill("#82164A");
@@ -90,7 +99,7 @@ function draw() {
     ellipse(centerX, flowerY, 70, 70);
 
 
-    // LAYER 4: Flower Pot
+    // Draw flower Pot
     fill("#B07130");
     stroke("#8C5924");
     strokeWeight(10);

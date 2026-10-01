@@ -68,17 +68,17 @@ function draw() {
     strokeWeight(4);
     ellipse(centerX, centerY, auraSize, auraSize);
 
-    // Main core inner circle
-    fill("#e69138");
+    // Main inner center circle 
+    fill("#ffd966");
     noStroke();
     ellipse(centerX, centerY, coreSize, coreSize);
 
     // #1 Coloured inner ring 3/4 of main core size
-    fill("#f6b26b");
+    fill("	#f1c232");
     ellipse(centerX, centerY, coreSize * 0.75, coreSize * 0.75);
 
     // #2 Coloured inner ring 1/2 of main core size
-    fill("#f1c232");
+    fill("#fdaa48");
     ellipse(centerX, centerY, coreSize * 0.5, coreSize * 0.5);
 
     // #3 Coloured inner ring 1/4 of main core size

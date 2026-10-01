@@ -16,10 +16,27 @@ function setup() {
 }
 
 
-
 /**
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
+
+    // Background
+    background("black")
+
+
+    // Draw shapes (circle, tether line, anchor point)
+
+    /// Connecting tether line
+    stroke("white");
+    strokeWeight(2);
+
+    /// Mouse anchor point
+    fill("white");
+    noStroke();
+
+    /// Single follower circle
+    fill(circleColor);
+    noStroke();
 
 }

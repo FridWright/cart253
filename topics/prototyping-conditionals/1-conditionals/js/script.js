@@ -15,6 +15,7 @@ let cardX = (25);
 let cardY = (50);
 let cardW = (60);
 let cardH = (100);
+let cardR = (8); // Card radius for rounded corners
 
 function setup() {
     createCanvas(800, 500)
@@ -33,25 +34,25 @@ function draw() {
     fill("white");
     stroke("black");
     strokeWeight(2);
-    rect(cardX, cardY, cardW, cardH); // CARD ONE
-    rect(cardX + 100, cardY, cardW, cardH); // CARD TWO
-    rect(cardX + 200, cardY, cardW, cardH); // CARD THREE
-    rect(cardX + 300, cardY, cardW, cardH); // CARD FOUR
-    rect(cardX + 400, cardY, cardW, cardH); // CARD FIVE
-    rect(cardX + 500, cardY, cardW, cardH); // CARD SIX
-    rect(cardX + 600, cardY, cardW, cardH); // CARD SEVEN
-    rect(cardX + 700, cardY, cardW, cardH); // CARD EIGHT
+    rect(cardX, cardY, cardW, cardH, cardR); // CARD ONE
+    rect(cardX + 100, cardY, cardW, cardH, cardR); // CARD TWO
+    rect(cardX + 200, cardY, cardW, cardH, cardR); // CARD THREE
+    rect(cardX + 300, cardY, cardW, cardH, cardR); // CARD FOUR
+    rect(cardX + 400, cardY, cardW, cardH, cardR); // CARD FIVE
+    rect(cardX + 500, cardY, cardW, cardH, cardR); // CARD SIX
+    rect(cardX + 600, cardY, cardW, cardH, cardR); // CARD SEVEN
+    rect(cardX + 700, cardY, cardW, cardH, cardR); // CARD EIGHT
 
     // Draw 8 cards HORIZONTAL BOTTOM LINE
 
-    rect(cardX, cardY + 200, cardW, cardH); // CARD NINE
-    rect(cardX + 100, cardY + 200, cardW, cardH); // CARD TEN
-    rect(cardX + 200, cardY + 200, cardW, cardH); // CARD ELEVEN
-    rect(cardX + 300, cardY + 200, cardW, cardH); // CARD TWELVE
-    rect(cardX + 400, cardY + 200, cardW, cardH); // CARD THIRTEEN
-    rect(cardX + 500, cardY + 200, cardW, cardH); // CARD FOURTEEN
-    rect(cardX + 600, cardY + 200, cardW, cardH); // CARD FIFTEEN
-    rect(cardX + 700, cardY + 200, cardW, cardH); // CARD SIXTEEN
+    rect(cardX, cardY + 200, cardW, cardH, cardR); // CARD NINE
+    rect(cardX + 100, cardY + 200, cardW, cardH, cardR); // CARD TEN
+    rect(cardX + 200, cardY + 200, cardW, cardH, cardR); // CARD ELEVEN
+    rect(cardX + 300, cardY + 200, cardW, cardH, cardR); // CARD TWELVE
+    rect(cardX + 400, cardY + 200, cardW, cardH, cardR); // CARD THIRTEEN
+    rect(cardX + 500, cardY + 200, cardW, cardH, cardR); // CARD FOURTEEN
+    rect(cardX + 600, cardY + 200, cardW, cardH, cardR); // CARD FIFTEEN
+    rect(cardX + 700, cardY + 200, cardW, cardH, cardR); // CARD SIXTEEN
 
 
     // Draw a rectangle bottom screen to be a match meter

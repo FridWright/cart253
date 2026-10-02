@@ -17,6 +17,19 @@ let cardW = (60);
 let cardH = (100);
 let cardR = (8); // Card radius for rounded corners
 
+// Palette for matching card pairs
+// 8 distinct color pairs (16 colors total)
+let palette = [
+    "#FF3366", "#FF3366", // Pink pair
+    "#33CCFF", "#33CCFF", // Blue pair
+    "#FF9933", "#FF9933", // Orange pair
+    "#33FF77", "#33FF77", // Green pair
+    "#CC33FF", "#CC33FF", // Purple pair
+    "#FFFF33", "#FFFF33", // Yellow pair
+    "#FF3333", "#FF3333", // Red pair
+    "#33FFFF", "#33FFFF"  // Cyan pair
+];
+
 function setup() {
     createCanvas(800, 500)
 

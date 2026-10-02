@@ -17,18 +17,16 @@ let cardW = (60);
 let cardH = (100);
 let cardR = (8); // Card radius for rounded corners
 
-// Palette for matching card pairs
-// 8 distinct color pairs (16 colors total)
-let palette = [
-    "#FF3366", "#FF3366", // Pink pair
-    "#33CCFF", "#33CCFF", // Blue pair
-    "#FF9933", "#FF9933", // Orange pair
-    "#33FF77", "#33FF77", // Green pair
-    "#CC33FF", "#CC33FF", // Purple pair
-    "#FFFF33", "#FFFF33", // Yellow pair
-    "#FF3333", "#FF3333", // Red pair
-    "#33FFFF", "#33FFFF"  // Cyan pair
+
+// Palette for matching card pairs game (16 cards total, 8 matching pairs)
+let cardColours = [
+    "#FF3366", "#33CCFF", "#FF9933", "#33FF77", "#CC33FF", "#FFFF33", "#FF3333", "#33FFFF", // TOP ROW (Cards 0 to 7)
+    "#FF3366", "#33CCFF", "#FF9933", "#33FF77", "#CC33FF", "#FFFF33", "#FF3333", "#33FFFF"  // BOTTOM ROW (Cards 8 to 15)
 ];
+
+// Tracks true/false for cards 0 to 15
+let cardFlipped = [];
+
 
 function setup() {
     createCanvas(800, 500)

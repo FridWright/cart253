@@ -55,8 +55,13 @@ function draw() {
 
 
     // Draw a rectangle bottom screen to be a match meter
+    fill("black")
+    rect(100, 400, 600, 30);
 
-    rect(100, 410, 600, 30);
+    // Add text describing the program
+    fill("white")
+    textSize(15)
+    text("find all matching pairs before the time runs out", 250, 460)
 
 
 }

@@ -34,14 +34,14 @@ function draw() {
     fill("white");
     stroke("#C92F0E");
     strokeWeight(4);
-    rect(cardX, cardY, cardW, cardH, cardR); // CARD ONE
-    rect(cardX + 100, cardY, cardW, cardH, cardR); // CARD TWO
-    rect(cardX + 200, cardY, cardW, cardH, cardR); // CARD THREE
-    rect(cardX + 300, cardY, cardW, cardH, cardR); // CARD FOUR
-    rect(cardX + 400, cardY, cardW, cardH, cardR); // CARD FIVE
-    rect(cardX + 500, cardY, cardW, cardH, cardR); // CARD SIX
-    rect(cardX + 600, cardY, cardW, cardH, cardR); // CARD SEVEN
-    rect(cardX + 700, cardY, cardW, cardH, cardR); // CARD EIGHT
+    drawCard(cardX, cardY); // CARD ONE
+    drawCard(cardX + 100, cardY); // CARD TWO
+    drawCard(cardX + 200, cardY); // CARD THREE
+    drawCard(cardX + 300, cardY); // CARD FOUR
+    drawCard(cardX + 400, cardY); // CARD FIVE
+    drawCard(cardX + 500, cardY); // CARD SIX
+    drawCard(cardX + 600, cardY); // CARD SEVEN
+    drawCard(cardX + 700, cardY); // CARD EIGHT
 
     // Draw 8 cards HORIZONTAL BOTTOM LINE
 
@@ -66,4 +66,14 @@ function draw() {
     text("find all matching pairs before the time runs out", 250, 460)
 
 
+}
+
+// Add a drawCard function for simplifying drawing a card
+
+function drawCard(x, y) {
+    // 1. Draw the card base
+    fill("white");
+    stroke("#C92F0E");
+    strokeWeight(4);
+    rect(x, y, cardW, cardH, cardR);
 }

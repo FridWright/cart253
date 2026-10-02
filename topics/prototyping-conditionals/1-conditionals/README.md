@@ -21,3 +21,41 @@ This bit should attribute any code, assets or other elements used taken from oth
 This bit could include the license you want to apply to your work. For example:
 
 > This project is licensed under a Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en)) license with the exception of libraries and other components with their own licenses.
+
+extra code not going to be used for this project:
+
+// Tracks true/false for cards 0 to 15
+let cardFlipped = [];
+
+
+// Time countdown for the match meter bar
+let startTime;
+let gameDuration = 60000; // 60,000 milliseconds = 1 minute
+
+ // Record the start time when sketch boots
+    startTime = millis();
+
+    // 1. Draw black container box
+    fill("black");
+    stroke("black");
+    strokeWeight(1);
+    rect(meterX, meterY, meterW, meterH);
+
+    // 2. Calculate time elapsed (capped at 60 seconds)
+    let elapsedTime = millis() - startTime;
+    let constrainedTime = constrain(elapsedTime, 0, gameDuration);
+
+    // 3. Map time to red fill width (0 to 600px)
+    let fillWidth = map(constrainedTime, 0, gameDuration, 0, meterW);
+
+    // 4. Fill container from left to right with red
+    fill("#C92F0E");
+    noStroke();
+    rect(meterX, meterY, fillWidth, meterH);
+    
+        // Draw a rectangle bottom screen to be a match meter timer and add constraints
+
+    let meterX = 100;
+    let meterY = 400;
+    let meterW = 600;
+    let meterH = 30;

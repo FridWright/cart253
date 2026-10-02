@@ -20,16 +20,24 @@ let cardR = (8); // Card radius for rounded corners
 let cardColours = [
     "#FF3366", "#33CCFF", "#FF9933", "#33FF77", "#CC33FF", "#FFFF33", "#FF3333", "#33FFFF", // TOP ROW (Cards 0 to 7)
     "#FF3366", "#33CCFF", "#FF9933", "#33FF77", "#CC33FF", "#FFFF33", "#FF3333", "#33FFFF"  // BOTTOM ROW (Cards 8 to 15)
+
 ];
 
-// Tracks true/false for cards 0 to 15
+// Tracks true/false state for cards 0 to 15
 let cardFlipped = [];
+
+// Match checking variables
+let firstCard = -1;  // Index of first card clicked (-1 means none)
+let secondCard = -1; // Index of second card clicked (-1 means none)
+let isChecking = false; // Prevents clicking new cards while waiting for mis-matched cards to flip back
+
 
 /**
  * Create canvas, 
 */
 function setup() {
     createCanvas(800, 500)
+
 
     // Set all 16 cards to be face-down (false) at start
     for (let i = 0; i < 16; i++) {
@@ -65,10 +73,6 @@ function draw() {
         drawCard(x, y, i + 8);
     }
 
-    // Draw a rectangle bottom screen to be a match meter
-    fill("black")
-    stroke("black")
-    rect(100, 400, 600, 30);
 
     // Add text describing the program
     fill("white")
@@ -113,27 +117,28 @@ function drawCard(x, y, index) {
             centerX - size, centerY  // LEFT POINT
         );
     }
+}
 
-    /**
-     * Mouse clicks to flip cards face-up
-     */
-    function mousePressed() {
-        // Check Top Row Cards (0 to 7)
-        for (let i = 0; i < 8; i++) {
-            let x = cardX + i * 100;
-            let y = cardY;
-            if (mouseX > x && mouseX < x + cardW && mouseY > y && mouseY < y + cardH) {
-                cardFlipped[i] = true; // Flip card face-up!
-            }
+/**
+ * Mouse clicks to flip cards face-up
+ */
+function mousePressed() {
+    // Check Top Row Cards (0 to 7)
+    for (let i = 0; i < 8; i++) {
+        let x = cardX + i * 100;
+        let y = cardY;
+        if (mouseX > x && mouseX < x + cardW && mouseY > y && mouseY < y + cardH) {
+            cardFlipped[i] = true; // Flip card face-up!
         }
+    }
 
-        // Check Bottom Row Cards (8 to 15)
-        for (let i = 0; i < 8; i++) {
-            let x = cardX + i * 100;
-            let y = cardY + 200;
-            if (mouseX > x && mouseX < x + cardW && mouseY > y && mouseY < y + cardH) {
-                cardFlipped[i + 8] = true; // Flip card face-up!
-            }
+    // Check Bottom Row Cards (8 to 15)
+    for (let i = 0; i < 8; i++) {
+        let x = cardX + i * 100;
+        let y = cardY + 200;
+        if (mouseX > x && mouseX < x + cardW && mouseY > y && mouseY < y + cardH) {
+            cardFlipped[i + 8] = true; // Flip card face-up!
         }
     }
 }
+

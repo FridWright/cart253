@@ -11,11 +11,10 @@
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
 // Define card size and placements
-let cardSize = (50, 50);
-let cardX = (25)
-let cardY = (50)
-let cardW = (50)
-let cardH = (100)
+let cardX = (25);
+let cardY = (50);
+let cardW = (60);
+let cardH = (100);
 
 function setup() {
     createCanvas(800, 500)
@@ -42,4 +41,19 @@ function draw() {
     rect(cardX + 500, cardY, cardW, cardH); // CARD SIX
     rect(cardX + 600, cardY, cardW, cardH); // CARD SEVEN
     rect(cardX + 700, cardY, cardW, cardH); // CARD EIGHT
+
+    // Draw 8 cards HORIZONTAL BOTTOM LINE
+
+    rect(cardX, cardY + 200, cardW, cardH); // CARD NINE
+    rect(cardX + 700, cardY, cardW, cardH); // CARD TEN
+    rect(cardX + 100, cardY, cardW, cardH); // CARD ELEVEN
+    rect(cardX + 200, cardY, cardW, cardH); // CARD TWELVE
+    rect(cardX + 300, cardY, cardW, cardH); // CARD THIRTEEN
+    rect(cardX + 400, cardY, cardW, cardH); // CARD FOURTEEN
+    rect(cardX + 500, cardY, cardW, cardH); // CARD FIFTEEN
+    rect(cardX + 600, cardY, cardW, cardH); // CARD SIXTEEN
+
+
+
+
 }

@@ -84,29 +84,35 @@ function draw() {
 // Add a diamond to the inside of the cards
 
 function drawCard(x, y, index) {
-    // Check if card is face-up or face-down
+    let centerX = x + cardW / 2;
+    let centerY = y + cardH / 2;
+    let size = 12;
+
     if (cardFlipped[index]) {
-        // FACE UP: Fill card body with its assigned color
+        // --- FACE UP ---
+        // Solid secret color fill with a crisp white border (no diamond)
         fill(cardColors[index]);
         stroke("white");
         strokeWeight(4);
         rect(x, y, cardW, cardH, cardR);
 
+    } else {
+        // --- FACE DOWN ---
+        // White card background with red border
+        fill("white");
+        stroke("#C92F0E");
+        strokeWeight(4);
+        rect(x, y, cardW, cardH, cardR);
+
+        // Red center diamond back pattern
+        fill("#C92F0E");
+        noStroke();
+        quad(
+            centerX, centerY - size, // TOP POINT
+            centerX + size, centerY, // RIGHT POINT
+            centerX, centerY + size, // BOTTOM POINT
+            centerX - size, centerY  // LEFT POINT
+        );
     }
-
-    // 2. Calculate center coordinates of the card
-    let centerX = x + cardW / 2;
-    let centerY = y + cardH / 2;
-    let size = 12; // Controls diamond radius (24px total width/height)
-
-    // 3. Draw the center diamond using quad(x1, y1, x2, y2, x3, y3, x4, y4)
-    fill("#C92F0E");
-    noStroke();
-    quad(
-        centerX, centerY - size, // TOP POINT
-        centerX + size, centerY, // RIGHT POINT
-        centerX, centerY + size, // BOTTOM POINT
-        centerX - size, centerY  // LEFT POINT
-    );
-
 }
+

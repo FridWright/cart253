@@ -38,7 +38,6 @@ function setup() {
 }
 
 
-
 /**
  * Draw background and cards and match meter bar
 */
@@ -66,7 +65,6 @@ function draw() {
         drawCard(x, y, i + 8);
     }
 
-
     // Draw a rectangle bottom screen to be a match meter
     fill("black")
     stroke("black")
@@ -82,6 +80,7 @@ function draw() {
 
 // Add a drawCard function for simplifying drawing a card
 // Add a diamond to the inside of the cards
+// Add conditionals to card parameters whether flipped face up or flipped face down
 
 function drawCard(x, y, index) {
     let centerX = x + cardW / 2;
@@ -89,22 +88,22 @@ function drawCard(x, y, index) {
     let size = 12;
 
     if (cardFlipped[index]) {
-        // --- FACE UP ---
-        // Solid secret color fill with a crisp white border (no diamond)
-        fill(cardColors[index]);
+        // FACE UP CARD
+        /// Solid colour from one of the 8 card colours white white border
+        fill(cardColours[index]);
         stroke("white");
         strokeWeight(4);
         rect(x, y, cardW, cardH, cardR);
 
     } else {
-        // --- FACE DOWN ---
-        // White card background with red border
+        // FACE DOWN CARD
+        /// White card background with red border
         fill("white");
         stroke("#C92F0E");
         strokeWeight(4);
         rect(x, y, cardW, cardH, cardR);
 
-        // Red center diamond back pattern
+        // Red center diamond back pattern on face down card back
         fill("#C92F0E");
         noStroke();
         quad(
@@ -114,5 +113,27 @@ function drawCard(x, y, index) {
             centerX - size, centerY  // LEFT POINT
         );
     }
-}
 
+    /**
+     * Mouse clicks to flip cards face-up
+     */
+    function mousePressed() {
+        // Check Top Row Cards (0 to 7)
+        for (let i = 0; i < 8; i++) {
+            let x = cardX + i * 100;
+            let y = cardY;
+            if (mouseX > x && mouseX < x + cardW && mouseY > y && mouseY < y + cardH) {
+                cardFlipped[i] = true; // Flip card face-up!
+            }
+        }
+
+        // Check Bottom Row Cards (8 to 15)
+        for (let i = 0; i < 8; i++) {
+            let x = cardX + i * 100;
+            let y = cardY + 200;
+            if (mouseX > x && mouseX < x + cardW && mouseY > y && mouseY < y + cardH) {
+                cardFlipped[i + 8] = true; // Flip card face-up!
+            }
+        }
+    }
+}

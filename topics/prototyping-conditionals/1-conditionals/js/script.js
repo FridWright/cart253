@@ -27,13 +27,13 @@ function setup() {
  * Draw background and cards and match meter bar
 */
 function draw() {
-    background("red");
+    background("#216334");
 
     // Draw 8 cards HORZONTAL TOP LINE
 
     fill("white");
-    stroke("black");
-    strokeWeight(2);
+    stroke("#C92F0E");
+    strokeWeight(4);
     rect(cardX, cardY, cardW, cardH, cardR); // CARD ONE
     rect(cardX + 100, cardY, cardW, cardH, cardR); // CARD TWO
     rect(cardX + 200, cardY, cardW, cardH, cardR); // CARD THREE
@@ -57,6 +57,7 @@ function draw() {
 
     // Draw a rectangle bottom screen to be a match meter
     fill("black")
+    stroke("black")
     rect(100, 400, 600, 30);
 
     // Add text describing the program

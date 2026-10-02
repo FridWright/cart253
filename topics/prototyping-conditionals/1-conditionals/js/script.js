@@ -23,7 +23,7 @@ function setup() {
 
 
 /**
- * Draw background and cards
+ * Draw background and cards and match meter bar
 */
 function draw() {
     background("red");
@@ -45,15 +45,18 @@ function draw() {
     // Draw 8 cards HORIZONTAL BOTTOM LINE
 
     rect(cardX, cardY + 200, cardW, cardH); // CARD NINE
-    rect(cardX + 700, cardY, cardW, cardH); // CARD TEN
-    rect(cardX + 100, cardY, cardW, cardH); // CARD ELEVEN
-    rect(cardX + 200, cardY, cardW, cardH); // CARD TWELVE
-    rect(cardX + 300, cardY, cardW, cardH); // CARD THIRTEEN
-    rect(cardX + 400, cardY, cardW, cardH); // CARD FOURTEEN
-    rect(cardX + 500, cardY, cardW, cardH); // CARD FIFTEEN
-    rect(cardX + 600, cardY, cardW, cardH); // CARD SIXTEEN
+    rect(cardX + 100, cardY + 200, cardW, cardH); // CARD TEN
+    rect(cardX + 200, cardY + 200, cardW, cardH); // CARD ELEVEN
+    rect(cardX + 300, cardY + 200, cardW, cardH); // CARD TWELVE
+    rect(cardX + 400, cardY + 200, cardW, cardH); // CARD THIRTEEN
+    rect(cardX + 500, cardY + 200, cardW, cardH); // CARD FOURTEEN
+    rect(cardX + 600, cardY + 200, cardW, cardH); // CARD FIFTEEN
+    rect(cardX + 700, cardY + 200, cardW, cardH); // CARD SIXTEEN
 
 
+    // Draw a rectangle bottom screen to be a match meter
+
+    rect(100, 410, 600, 30);
 
 
 }

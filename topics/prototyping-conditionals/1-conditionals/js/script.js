@@ -45,14 +45,14 @@ function draw() {
 
     // Draw 8 cards HORIZONTAL BOTTOM LINE
 
-    rect(cardX, cardY + 200, cardW, cardH, cardR); // CARD NINE
-    rect(cardX + 100, cardY + 200, cardW, cardH, cardR); // CARD TEN
-    rect(cardX + 200, cardY + 200, cardW, cardH, cardR); // CARD ELEVEN
-    rect(cardX + 300, cardY + 200, cardW, cardH, cardR); // CARD TWELVE
-    rect(cardX + 400, cardY + 200, cardW, cardH, cardR); // CARD THIRTEEN
-    rect(cardX + 500, cardY + 200, cardW, cardH, cardR); // CARD FOURTEEN
-    rect(cardX + 600, cardY + 200, cardW, cardH, cardR); // CARD FIFTEEN
-    rect(cardX + 700, cardY + 200, cardW, cardH, cardR); // CARD SIXTEEN
+    drawCard(cardX, cardY + 200); // CARD NINE
+    drawCard(cardX + 100, cardY + 200); // CARD TEN
+    drawCard(cardX + 200, cardY + 200); // CARD ELEVEN
+    drawCard(cardX + 300, cardY + 200); // CARD TWELVE
+    drawCard(cardX + 400, cardY + 200);// CARD THIRTEEN
+    drawCard(cardX + 500, cardY + 200); // CARD FOURTEEN
+    drawCard(cardX + 600, cardY + 200); // CARD FIFTEEN
+    drawCard(cardX + 700, cardY + 200); // CARD SIXTEEN
 
 
     // Draw a rectangle bottom screen to be a match meter

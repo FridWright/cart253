@@ -69,6 +69,7 @@ function draw() {
 }
 
 // Add a drawCard function for simplifying drawing a card
+// Add a diamond to the inside of the cards
 
 function drawCard(x, y) {
     // 1. Draw the card base
@@ -76,4 +77,12 @@ function drawCard(x, y) {
     stroke("#C92F0E");
     strokeWeight(4);
     rect(x, y, cardW, cardH, cardR);
+
+    // 2. Calculate center coordinates of the card
+    let centerX = x + cardW / 2;
+    let centerY = y + cardH / 2;
+    let size = 12; // Controls diamond radius (24px total width/height)
+
+
+
 }

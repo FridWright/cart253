@@ -50,30 +50,21 @@ function draw() {
     noStroke()
     quad(200, 250, 400, 0, 600, 250, 400, 500)
 
-    // Draw 8 cards HORZONTAL TOP LINE
+    // Draw 8 cards HORZONTAL TOP LINE (cards 0-7)
 
-    fill("white");
-    stroke("#C92F0E");
-    strokeWeight(4);
-    drawCard(cardX, cardY); // CARD ONE
-    drawCard(cardX + 100, cardY); // CARD TWO
-    drawCard(cardX + 200, cardY); // CARD THREE
-    drawCard(cardX + 300, cardY); // CARD FOUR
-    drawCard(cardX + 400, cardY); // CARD FIVE
-    drawCard(cardX + 500, cardY); // CARD SIX
-    drawCard(cardX + 600, cardY); // CARD SEVEN
-    drawCard(cardX + 700, cardY); // CARD EIGHT
+    for (let i = 0; i < 8; i++) {
+        let x = cardX + i * 100;
+        let y = cardY;
+        drawCard(x, y, i);
+    }
 
-    // Draw 8 cards HORIZONTAL BOTTOM LINE
+    // Draw 8 cards HORIZONTAL BOTTOM LINE (cards 8-15)
 
-    drawCard(cardX, cardY + 200); // CARD NINE
-    drawCard(cardX + 100, cardY + 200); // CARD TEN
-    drawCard(cardX + 200, cardY + 200); // CARD ELEVEN
-    drawCard(cardX + 300, cardY + 200); // CARD TWELVE
-    drawCard(cardX + 400, cardY + 200);// CARD THIRTEEN
-    drawCard(cardX + 500, cardY + 200); // CARD FOURTEEN
-    drawCard(cardX + 600, cardY + 200); // CARD FIFTEEN
-    drawCard(cardX + 700, cardY + 200); // CARD SIXTEEN
+    for (let i = 0; i < 8; i++) {
+        let x = cardX + i * 100;
+        let y = cardY + 200;
+        drawCard(x, y, i + 8);
+    }
 
 
     // Draw a rectangle bottom screen to be a match meter

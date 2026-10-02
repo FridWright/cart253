@@ -83,6 +83,14 @@ function drawCard(x, y) {
     let centerY = y + cardH / 2;
     let size = 12; // Controls diamond radius (24px total width/height)
 
-
+    // 3. Draw the center diamond using quad(x1, y1, x2, y2, x3, y3, x4, y4)
+    fill("#C92F0E");
+    noStroke();
+    quad(
+        centerX, centerY - size, // TOP POINT
+        centerX + size, centerY, // RIGHT POINT
+        centerX, centerY + size, // BOTTOM POINT
+        centerX - size, centerY  // LEFT POINT
+    );
 
 }

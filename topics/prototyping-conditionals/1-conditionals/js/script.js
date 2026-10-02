@@ -7,9 +7,7 @@
 
 "use strict";
 
-/**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
+
 // Define card size and placements
 let cardX = (25);
 let cardY = (50);
@@ -27,11 +25,18 @@ let cardColours = [
 // Tracks true/false for cards 0 to 15
 let cardFlipped = [];
 
-
+/**
+ * Create canvas, 
+*/
 function setup() {
     createCanvas(800, 500)
 
+    // Set all 16 cards to be face-down (false) at start
+    for (let i = 0; i < 16; i++) {
+        cardFlipped[i] = false;
+    }
 }
+
 
 
 /**

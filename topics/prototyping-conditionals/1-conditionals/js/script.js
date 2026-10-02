@@ -1,0 +1,45 @@
+/**
+ * Prototyping - Conditionals (ONE)
+ * Fridrikka Wright
+ * 
+ * This is the first projet for the Prototyping - Conditionals assignment.
+ */
+
+"use strict";
+
+/**
+ * OH LOOK I DIDN'T DESCRIBE SETUP!!
+*/
+// Define card size and placements
+let cardSize = (50, 50);
+let cardX = (100)
+let cardY = (50)
+let cardW = (50)
+let cardH = (100)
+
+function setup() {
+    createCanvas(800, 500)
+
+}
+
+
+/**
+ * Draw background and cards
+*/
+function draw() {
+    background("red");
+
+    // Draw 8 cards HORZONTAL TOP LINE
+
+    fill("white");
+    stroke("black");
+    strokeWeight(2);
+    rect(cardX, cardY, cardW, cardH); // CARD ONE
+    rect(cardX + 100, cardY, cardW, cardH); // CARD TWO
+    rect(cardX + 100, cardY, cardW, cardH); // CARD THREE
+    rect(cardX + 100, cardY, cardW, cardH); // CARD FOUR
+    rect(cardX + 100, cardY, cardW, cardH); // CARD FIVE
+    rect(cardX + 100, cardY, cardW, cardH); // CARD SIX
+    rect(cardX + 100, cardY, cardW, cardH); // CARD SEVEN
+    rect(cardX + 100, cardY, cardW, cardH); // CARD EIGHT
+}

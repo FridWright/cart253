@@ -12,7 +12,7 @@
 */
 // Define card size and placements
 let cardSize = (50, 50);
-let cardX = (100)
+let cardX = (25)
 let cardY = (50)
 let cardW = (50)
 let cardH = (100)
@@ -36,10 +36,10 @@ function draw() {
     strokeWeight(2);
     rect(cardX, cardY, cardW, cardH); // CARD ONE
     rect(cardX + 100, cardY, cardW, cardH); // CARD TWO
-    rect(cardX + 100, cardY, cardW, cardH); // CARD THREE
-    rect(cardX + 100, cardY, cardW, cardH); // CARD FOUR
-    rect(cardX + 100, cardY, cardW, cardH); // CARD FIVE
-    rect(cardX + 100, cardY, cardW, cardH); // CARD SIX
-    rect(cardX + 100, cardY, cardW, cardH); // CARD SEVEN
-    rect(cardX + 100, cardY, cardW, cardH); // CARD EIGHT
+    rect(cardX + 200, cardY, cardW, cardH); // CARD THREE
+    rect(cardX + 300, cardY, cardW, cardH); // CARD FOUR
+    rect(cardX + 400, cardY, cardW, cardH); // CARD FIVE
+    rect(cardX + 500, cardY, cardW, cardH); // CARD SIX
+    rect(cardX + 600, cardY, cardW, cardH); // CARD SEVEN
+    rect(cardX + 700, cardY, cardW, cardH); // CARD EIGHT
 }

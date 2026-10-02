@@ -77,7 +77,7 @@ function draw() {
     // Add text describing the program
     fill("white")
     textSize(15)
-    text("find all matching pairs before the time runs out", 250, 460)
+    text("click two cards to find matching pairs", 250, 460)
 
 
 }

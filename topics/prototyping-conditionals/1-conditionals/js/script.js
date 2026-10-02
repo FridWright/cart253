@@ -29,6 +29,11 @@ function setup() {
 function draw() {
     background("#216334");
 
+    // Draw a big green background triangle on the table
+    fill("#2F7D2D")
+    noStroke()
+    quad(200, 250, 400, 0, 600, 250, 400, 500)
+
     // Draw 8 cards HORZONTAL TOP LINE
 
     fill("white");

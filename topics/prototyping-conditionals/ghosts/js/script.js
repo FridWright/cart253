@@ -50,6 +50,15 @@ function draw() {
 }
 
 /**
+ * Function to draw light beam from lamp
+ */
+function drawLightBeam() {
+    fill(255, 255, 180, 70); // Translucent yellow 
+    noStroke();
+    triangle(lampX, lampY - 15, 600, 0, 600, 280);
+}
+
+/**
  * Function to draw the lamp
  */
 function drawLamp() {

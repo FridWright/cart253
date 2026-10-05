@@ -63,4 +63,12 @@ function drawLamp() {
         lampX + 25, lampY,      // Bottom-Right (Flared)
         lampX - 25, lampY       // Bottom-Left (Flared)
     );
+
+    // Bulb (changes color depending on lampOn variable)
+    if (lampOn) {
+        fill("#FFF099"); // Yellow bulb when light is ON
+    } else {
+        fill("#66665C"); // Grey bulb when light is OFF
+    }
+    ellipse(lampX, lampY - 5, 18, 18);
 }

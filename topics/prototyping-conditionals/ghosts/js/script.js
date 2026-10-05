@@ -8,8 +8,15 @@
 
 "use strict";
 
+// STATE & POSITION VARIABLES 
+let lampOn = false; // Tracks whether light is ON (true) or OFF (false)
+
+let lampX = 50;  // Lamp horizontal position (bottom-left)
+let lampY = 350; // Lamp vertical position
+
+
 /**
- * OCreate a 400 x 600 canvas
+ * Create a 400 x 600 canvas
 */
 function setup() {
     createCanvas(600, 400);
@@ -31,6 +38,5 @@ function draw() {
     fill("white");
     noStroke();
     textSize(14);
-    textAlign(RIGHT, BOTTOM);
-    text("Click the lamp to toggle light ON / OFF", 15, 15);
+    text("click the lamp to toggle light ON / OFF", 350, 385);
 }

@@ -22,10 +22,15 @@ function drawTrafficBox() {
     // Draw the light Circles inside the traffic box (Centered at X = 200)
     let centerX = trafficBoxX + (trafficBoxW / 2); // 200
 
-    fill("grey");
-    ellipse(centerX, trafficBoxY + 40, 50, 50); // Top (Red)
-    ellipse(centerX, trafficBoxY + 100, 50, 50); // Middle (Yellow)
-    ellipse(centerX, trafficBoxY + 160, 50, 50); // Bottom (Green)
+    // Top (Red)  
+    fill("red");
+    ellipse(centerX, trafficBoxY + 40, 50, 50);
+    // Middle (Yellow)
+    fill("yellow")
+    ellipse(centerX, trafficBoxY + 100, 50, 50);
+    // Bottom (Green)
+    fill("green")
+    ellipse(centerX, trafficBoxY + 160, 50, 50);
 }
 
 
@@ -62,6 +67,7 @@ function draw() {
     rect(210, 450, 10, 50);
     // crosswalk bar four
     rect(240, 450, 10, 50);
+
 
 
 }

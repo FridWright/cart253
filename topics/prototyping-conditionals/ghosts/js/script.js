@@ -43,3 +43,15 @@ function draw() {
     textSize(14);
     text("click the lamp to toggle light ON / OFF", 350, 385);
 }
+
+/**
+ * Function to draw the lamp
+ */
+function drawLamp() {
+
+    // Lamp Pole and Base
+    fill("#4A4E59");
+    noStroke();
+    rect(lampX - 6, lampY, 12, 50, 2);  // Pole
+    ellipse(lampX, lampY + 45, 30, 10);  // Base
+}

@@ -23,8 +23,20 @@ function setup() {
 function draw() {
     background("#5C172D");
 
+    // Draw Traffic light box
     fill("black");
     noStroke();
     rect(150, 100, 100, 200);
+
+    // Draw sidewalk
+    rect(0, 450, 400, 50);
+
+    // Draw crosswalk
+    fill("yellow")
+    noStroke()
+    // crosswalk bar one
+    rect(150, 450, 10, 50)
+    // crosswalk bar two
+    rect(180, 450, 10, 50)
 
 }

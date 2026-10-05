@@ -1,5 +1,5 @@
 # **Prototyping: Conditionals** 
-> ## by *Frid Wright* __/10/2026
+> ## by *Frid Wright* 05/10/2026
 
 ## Objectives
 1. Get comfortable with conditionals and the glory of choice
@@ -22,9 +22,9 @@
 
 
 
-### 3. Prototype Three - ___ [view here](https://fridwright.github.io/cart253/topics/prototyping-)
+### 3. Prototype Three - Ghosts [view here](https://fridwright.github.io/cart253/topics/prototyping-conditionals/ghosts/)
 
-<img src="topics/prototyping-conditionals//assets/images/.png">
+<img src="topics/prototyping-conditionals/ghosts/assets/images/ghosts1.png">
 
 
 

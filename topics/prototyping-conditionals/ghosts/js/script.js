@@ -50,8 +50,17 @@ function draw() {
 function drawLamp() {
 
     // Lamp Pole and Base
-    fill("#4A4E59");
+    fill("#523713");
     noStroke();
     rect(lampX - 6, lampY, 12, 50, 2);  // Pole
     ellipse(lampX, lampY + 45, 30, 10);  // Base
+
+    // Lamp Shade
+    fill("#532A7D");
+    quad(
+        lampX - 15, lampY - 25, // Top-Left (Narrower)
+        lampX + 15, lampY - 25, // Top-Right (Narrower)
+        lampX + 25, lampY,      // Bottom-Right (Flared)
+        lampX - 25, lampY       // Bottom-Left (Flared)
+    );
 }

@@ -18,7 +18,16 @@ function drawTrafficBox() {
     fill("black");
     noStroke();
     rect(trafficBoxX, trafficBoxY, trafficBoxW, trafficBoxH, 10);
+
+    // Draw the light Circles inside the traffic box (Centered at X = 200)
+    let centerX = trafficBoxX + (trafficBoxW / 2); // 200
+
+    fill("grey");
+    ellipse(centerX, trafficBoxY + 40, 50, 50); // Top (Red)
+    ellipse(centerX, trafficBoxY + 100, 50, 50); // Middle (Yellow)
+    ellipse(centerX, trafficBoxY + 160, 50, 50); // Bottom (Green)
 }
+
 
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
@@ -37,12 +46,6 @@ function draw() {
 
     // Draw Traffic light box
     drawTrafficBox();
-
-    // Draw three traffic light circles
-    fill("grey");
-    noStroke();
-    ///CIRCLE LIGHT ONE
-    ellipse(160, 130, 50, 50);
 
     // Draw sidewalk
     fill("black");

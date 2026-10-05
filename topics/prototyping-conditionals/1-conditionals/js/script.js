@@ -18,8 +18,8 @@ let cardR = (8); // Card radius for rounded corners
 
 // Palette for matching card pairs game (16 cards total, 8 matching pairs)
 let cardColours = [
-    "#FF3366", "#33CCFF", "#FF9933", "#33FF77", "#CC33FF", "#FFFF33", "#FF3333", "#33FFFF", // TOP ROW (Cards 0 to 7)
-    "#FF3366", "#33CCFF", "#FF9933", "#33FF77", "#CC33FF", "#FFFF33", "#FF3333", "#33FFFF"  // BOTTOM ROW (Cards 8 to 15)
+    "#F590B5", "#33CCFF", "#FF9933", "#FF3333", "#33FF77", "#FFFF33", "#FF3333", "#FF9933", // TOP ROW (Cards 0 to 7)
+    "#33CCFF", "#FFFF33", "#33FF77", "#F590B5", "#CC33FF", "#A6F5F5", "#A6F5F5", "#CC33FF"  // BOTTOM ROW (Cards 8 to 15)
 
 ];
 
@@ -123,22 +123,49 @@ function drawCard(x, y, index) {
  * Mouse clicks to flip cards face-up
  */
 function mousePressed() {
-    // Check Top Row Cards (0 to 7)
-    for (let i = 0; i < 8; i++) {
-        let x = cardX + i * 100;
-        let y = cardY;
-        if (mouseX > x && mouseX < x + cardW && mouseY > y && mouseY < y + cardH) {
-            cardFlipped[i] = true; // Flip card face-up!
-        }
-    }
+    // Ignore clicks if we are currently waiting for non-matching cards to flip back over
+    if (isChecking) return;
 
-    // Check Bottom Row Cards (8 to 15)
-    for (let i = 0; i < 8; i++) {
-        let x = cardX + i * 100;
-        let y = cardY + 200;
-        if (mouseX > x && mouseX < x + cardW && mouseY > y && mouseY < y + cardH) {
-            cardFlipped[i + 8] = true; // Flip card face-up!
+    // Loop through all 16 card positions
+    for (let i = 0; i < 16; i++) {
+        let row = floor(i / 8); // 0 for top row, 1 for bottom row
+        let col = i % 8;        // 0 to 7 column index
+
+        let x = cardX + col * 100;
+        let y = cardY + row * 200;
+
+        // Check if click occurred inside this specific card AND it isn't already face-up
+        if (mouseX > x && mouseX < x + cardW && mouseY > y && mouseY < y + cardH && !cardFlipped[i]) {
+
+            // Flip clicked card face-up
+            cardFlipped[i] = true;
+
+            if (firstCard === -1) {
+                // First card selected
+                firstCard = i;
+            } else if (secondCard === -1) {
+                // Second card selected
+                secondCard = i;
+                isChecking = true; // Lock further clicks during evaluation
+
+                // --- EVALUATE MATCH ---
+                if (cardColours[firstCard] === cardColours[secondCard]) {
+                    // MATCH FOUND! Keep both face-up and reset picks
+                    firstCard = -1;
+                    secondCard = -1;
+                    isChecking = false;
+                } else {
+                    // NO MATCH! Wait 1 second (1000ms), then flip both back face-down
+                    setTimeout(function () {
+                        cardFlipped[firstCard] = false;
+                        cardFlipped[secondCard] = false;
+                        firstCard = -1;
+                        secondCard = -1;
+                        isChecking = false;
+                    }, 1000);
+                }
+            }
+            break; // Stop loop once clicked card is handled
         }
     }
 }
-

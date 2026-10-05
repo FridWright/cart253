@@ -10,13 +10,13 @@
 
 ## Deliverables
 
-### 1. Prototype One - ______ [view here](https://fridwright.github.io/cart253/topics/prototyping-)
+### 1. Prototype One - Match Game [view here](https://fridwright.github.io/cart253/topics/prototyping-conditionals/match-game/)
 
-<img src="topics/prototyping-conditionals//assets/images/.png">
+<img src="topics/prototyping-conditionals/match-game/assets/images/match.png">
 
 
 
-### 2. Prototype Two - ______ [view here](https://fridwright.github.io/cart253/topics/prototyping-)
+### 2. Prototype Two - ______ [view here](https://fridwright.github.io/cart253/topics/prototyping-conditionals/)
 
 <img src="topics/prototyping-conditionals//assets/images/.png">
 

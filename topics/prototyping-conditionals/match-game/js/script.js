@@ -111,6 +111,7 @@ function drawCard(x, y, index) {
         // Red center diamond back pattern on face down card back
         fill("#C92F0E");
         noStroke();
+        // Reference for quad() from https://p5js.org/reference/p5/quad/
         quad(
             centerX, centerY - size, // TOP POINT
             centerX + size, centerY, // RIGHT POINT
@@ -125,9 +126,11 @@ function drawCard(x, y, index) {
  */
 function mousePressed() {
     // Ignore clicks if we are currently waiting for non-matching cards to flip back over
+    /// Reference for if/else from https://p5js.org/reference/p5/if/
     if (isChecking) return;
 
     // Loop through all 16 card positions
+    /// Reference for floor() from https://p5js.org/reference/p5/floor/
     for (let i = 0; i < 16; i++) {
         let row = floor(i / 8); // 0 for top row, 1 for bottom row
         let col = i % 8;        // 0 to 7 column index

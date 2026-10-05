@@ -66,6 +66,35 @@ function draw() {
 }
 
 /**
+ * Describe handGhosts: loops through ghosts array and draws each ghost
+ */
+function handleGhosts() {
+    for (let i = 0; i < ghosts.length; i++) {
+        let g = ghosts[i];
+        drawGhostShape(g.x, g.y, g.size);
+    }
+}
+
+/**
+ * Render a singular ghost (drawGhostShape)
+ */
+function drawGhostShape(x, y, size) {
+    noStroke();
+
+    // Ghost body opacity: semi-faded and red when light is on, white and bright when dark
+    if (lampOn) {
+        fill(161, 34, 34, 100);
+    } else {
+        fill(255, 255, 255, 220);
+    }
+
+    // Ghost head and lower skirt
+    ellipse(x, y, size, size * 1.2);
+    rect(x - size / 2, y, size, size * 0.6, 0, 0, 4, 4);
+}
+
+
+/**
  * Function to draw light beam from lamp
  */
 function drawLightBeam() {

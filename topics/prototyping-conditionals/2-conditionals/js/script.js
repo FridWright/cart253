@@ -14,10 +14,19 @@
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
+
+// Traffic Light State Variables:
+let lightState = "GREEN"; // Start at GREEN
+let lastStateChange = 0;   // Stores timestamp of last change (in ms)
+let stateDuration = 3000;  // Initial duration for GREEN state
+
 function setup() {
     createCanvas(400, 600);
-
+    lastStateChange = millis(); // Initialize start time
+    stateDuration = random(3000, 6000); // Random duration for first green
 }
+
+
 
 
 /**
@@ -26,7 +35,10 @@ function setup() {
 function draw() {
     background("#5C172D");
 
-    // Draw Traffic light box
+    // Update state timing logic
+    updateTrafficLightTimer();
+
+    // Draw Traffic light box with lights
     drawTrafficBox();
 
     // Draw sidewalk
@@ -44,11 +56,35 @@ function draw() {
     rect(210, 450, 10, 50);
     // crosswalk bar four
     rect(240, 450, 10, 50);
-
-
 }
 
-// Create function to draw the traffic box and lights
+/**
+ * Handles checking millis() and cycling: GREEN -> YELLOW -> RED -> GREEN
+ */
+function updateTrafficLightTimer() {
+    let currentTime = millis();
+
+    // Check if enough time has passed for current state
+    if (currentTime - lastStateChange >= stateDuration) {
+        lastStateChange = currentTime; // Reset change timer
+
+        // State Machine Transition Rules
+        if (lightState === "GREEN") {
+            lightState = "YELLOW";
+            stateDuration = 1500; // Quickly yellow (1.5 seconds)
+        } else if (lightState === "YELLOW") {
+            lightState = "RED";
+            stateDuration = random(3000, 6000); // Random red time (3-6 seconds)
+        } else if (lightState === "RED") {
+            lightState = "GREEN";
+            stateDuration = random(3000, 6000); // Random green time (3-6 seconds)
+        }
+    }
+}
+
+/**
+ * Create function to draw the traffic box and lights
+ */
 function drawTrafficBox() {
     let trafficBoxX = 150;
     let trafficBoxY = 100;
@@ -76,14 +112,13 @@ function drawTrafficBox() {
         greenColour = color(0, 255, 100); // Bright Green
     }
 
-
     // Top (Red)  
-    fill("redColour");
+    fill(redColour);
     ellipse(centerX, trafficBoxY + 40, 50, 50);
     // Middle (Yellow)
-    fill("yellowColour")
+    fill(yellowColour)
     ellipse(centerX, trafficBoxY + 100, 50, 50);
     // Bottom (Green)
-    fill("greenColour")
+    fill(greenColour)
     ellipse(centerX, trafficBoxY + 160, 50, 50);
 }

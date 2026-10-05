@@ -1,19 +1,16 @@
 /**
- * Prototyping - Conditionals (TWO)
+ * Prototyping - Conditionals (Crosswalk)
  * Fridrikka Wright
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * This prototype is a crosswalk simulation where the traffic lights change within
+ * random controlled intervals from green to yellow to red. Pedestrains walking 
+ * down the sidewalk must wait at the crosswalk until the light turns back to green.
  */
 
 "use strict";
 
 
 
-
-/**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
 
 // Traffic Light State Variables:
 let lightState = "GREEN"; // Start at GREEN
@@ -25,6 +22,10 @@ let pedestrians = [];
 let lastSpawnTime = 0;
 let spawnInterval = 1200; // New pedestrian every 1.2 seconds
 
+/**
+ * Setup canvas, state duration and last state change. 
+*/
+
 function setup() {
     createCanvas(400, 600);
     lastStateChange = millis(); // Initialize start time
@@ -35,7 +36,7 @@ function setup() {
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Draw a background, sidewalk, crosswalk, and calls to drawTrafficBox and handlePedestrians
 */
 function draw() {
     background("#5C172D");
@@ -61,6 +62,72 @@ function draw() {
     rect(210, 450, 10, 50);
     // crosswalk bar four
     rect(240, 450, 10, 50);
+
+    // Spawn and Update Pedestrians
+    handlePedestrians();
+
+}
+
+/**
+ * Pedestrians: Manages spawning, moving, stopping, and drawing.
+ */
+
+function handlePedestrians() {
+
+    // A. Spawn a new pedestrian periodically
+    if (millis() - lastSpawnTime > spawnInterval) {
+        pedestrians.push({
+            x: -20,
+            y: random(460, 485), // Random height on sidewalk
+            speed: random(1.2, 2.0),
+            size: 16,
+            shirtColor: color(random(100, 255), random(100, 255), random(100, 255))
+        });
+        lastSpawnTime = millis();
+        spawnInterval = random(1000, 2200); // Randomize spacing
+    }
+
+    let stopLineX = 130; // Stopping point right before crosswalk
+
+    // B. Loop through all active pedestrians
+    for (let i = 0; i < pedestrians.length; i++) {
+        let p = pedestrians[i];
+        let canMove = true;
+
+        // Check 1: Stop at red or yellow light
+        if (lightState === "RED" || lightState === "YELLOW") {
+            if (p.x >= stopLineX - 10 && p.x <= stopLineX + 10) {
+                canMove = false;
+            }
+        }
+
+        // Check 2: Don't walk into the person ahead of you
+        if (i > 0) {
+            let personAhead = pedestrians[i - 1];
+            let distance = personAhead.x - p.x;
+            if (distance > 0 && distance < 22) {
+                canMove = false;
+            }
+        }
+
+        // Move if allowed
+        if (canMove) {
+            p.x += p.speed;
+        }
+
+        // Draw Pedestrian (Head & Body)
+        fill(p.shirtColor);
+        rect(p.x - 6, p.y, 12, 14, 3); // Body
+        fill(p.shirtColor);
+        ellipse(p.x, p.y - 6, 12, 12);  // Head
+    }
+
+    // C. Clean up pedestrians that leave the right side of the screen
+    for (let i = pedestrians.length - 1; i >= 0; i--) {
+        if (pedestrians[i].x > width + 30) {
+            pedestrians.splice(i, 1);
+        }
+    }
 }
 
 /**

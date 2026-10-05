@@ -76,8 +76,8 @@ function draw() {
 
     // Add text describing the program
     fill("white")
-    textSize(15)
-    text("click two cards to find matching pairs", 250, 460)
+    textSize(20)
+    text("click two cards to find matching pairs", 240, 460)
 
 
 }
@@ -148,7 +148,7 @@ function mousePressed() {
                 secondCard = i;
                 isChecking = true; // Lock further clicks during evaluation
 
-                // --- EVALUATE MATCH ---
+                // EVALUATE THE MATCH
                 if (cardColours[firstCard] === cardColours[secondCard]) {
                     // MATCH FOUND! Keep both face-up and reset picks
                     firstCard = -1;

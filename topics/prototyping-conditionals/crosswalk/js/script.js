@@ -7,9 +7,8 @@
  * down the sidewalk must wait at the crosswalk until the light turns back to green.
  */
 
+
 "use strict";
-
-
 
 
 // Traffic Light State Variables:

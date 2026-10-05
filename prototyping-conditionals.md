@@ -16,9 +16,9 @@
 
 
 
-### 2. Prototype Two - ______ [view here](https://fridwright.github.io/cart253/topics/prototyping-conditionals/)
+### 2. Prototype Two - Crosswalk [view here](https://fridwright.github.io/cart253/topics/prototyping-conditionals/crosswalk/)
 
-<img src="topics/prototyping-conditionals//assets/images/.png">
+<img src="topics/prototyping-conditionals/crosswalk/assets/images/crosswalk.png">
 
 
 

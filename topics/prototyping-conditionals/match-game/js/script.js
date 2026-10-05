@@ -1,8 +1,9 @@
 /**
- * Prototyping - Conditionals (ONE)
+ * Prototyping - Conditionals (Match Game)
  * Fridrikka Wright
  * 
  * This is the first projet for the Prototyping - Conditionals assignment.
+ * It is a card matching game where the user must find all matching colours (8 total). 
  */
 
 "use strict";

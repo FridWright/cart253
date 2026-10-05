@@ -66,11 +66,32 @@ function draw() {
 }
 
 /**
- * Describe handGhosts: loops through ghosts array and draws each ghost
+ * handleGhosts: describe their array and movement in a diagonal fashion;
+ * Updates ghost positions diagonally based on lampOn state
  */
 function handleGhosts() {
     for (let i = 0; i < ghosts.length; i++) {
         let g = ghosts[i];
+
+        if (!lampOn) {
+            // LIGHT OFF: Move DOWN-LEFT toward lamp
+            g.x -= g.speed * 1.2;
+            g.y += g.speed * 0.7;
+
+            // Constrain room bounds near lamp
+            g.x = max(g.x, 80);
+            g.y = min(g.y, 320);
+
+        } else {
+            // LIGHT ON: Move UP-RIGHT away from lamp
+            g.x += g.speed * 1.5;
+            g.y -= g.speed * 0.9;
+
+            // Constrain room bounds near top-right corner
+            g.x = min(g.x, 570);
+            g.y = max(g.y, 30);
+        }
+
         drawGhostShape(g.x, g.y, g.size);
     }
 }

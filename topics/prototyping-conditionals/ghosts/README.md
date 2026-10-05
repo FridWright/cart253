@@ -1,6 +1,6 @@
-# TITLE OF PROJECT
+# Prototyping - Conditionals (Ghosts)
 
-AUTHOR NAME
+Fridrikka Wright
 
 [View this project online](URL_FOR_THE_RUNNING_PROJECT)
 

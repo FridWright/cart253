@@ -2,11 +2,13 @@
  * Prototyping - Conditionals (Ghosts)
  * Fridrikka Wright
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * 10 ghosts charge at lamp, to have them turn back, turn the lamp on and
+ * illuminate them in a light beam (they will also turn red and close their eyes). 
  */
 
+
 "use strict";
+
 
 // STATE & POSITION VARIABLES 
 let lampOn = false; // Tracks whether light is ON (true) or OFF (false)
@@ -35,16 +37,15 @@ function setup() {
     }
 }
 
-
 /**
  * Draw a dynamic background, on-sceen text, 
 */
 function draw() {
     // Create a dynamic background: lighter dark blue when light is on, pitch black when off
     if (lampOn) {
-        background("#111625");
+        background("#131440");
     } else {
-        background("#05070D");
+        background("#000000");
     }
 
     // Draw light beam, when lamp is clicked on
@@ -134,12 +135,11 @@ function drawGhostShape(x, y, size) {
     }
 }
 
-
 /**
  * Function to draw light beam from lamp
  */
 function drawLightBeam() {
-    fill(255, 255, 180, 70); // Translucent yellow 
+    fill(255, 255, 180, 245); // yellow beam
     noStroke();
     triangle(lampX, lampY - 15, 600, 0, 600, 280);
 }

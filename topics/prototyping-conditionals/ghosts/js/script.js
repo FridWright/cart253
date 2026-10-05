@@ -34,6 +34,9 @@ function draw() {
         background("#05070D");
     }
 
+    // Call drawLamp
+    drawLamp();
+
     // Add on-screen instructions
     fill("white");
     noStroke();

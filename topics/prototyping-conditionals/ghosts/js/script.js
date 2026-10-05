@@ -83,9 +83,9 @@ function drawGhostShape(x, y, size) {
 
     // Ghost body opacity: semi-faded and red when light is on, white and bright when dark
     if (lampOn) {
-        fill(161, 34, 34, 100);
+        fill(161, 34, 34, 120);
     } else {
-        fill(255, 255, 255, 220);
+        fill(255, 255, 255, 245);
     }
 
     // Ghost head and lower skirt

@@ -21,6 +21,10 @@ function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
-    background("#5C172D")
+    background("#5C172D");
+
+    fill("black");
+    noStroke();
+    rect(150, 100, 100, 200);
 
 }

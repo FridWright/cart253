@@ -25,7 +25,7 @@ function setup() {
     createCanvas(600, 400);
 
     // Create ghosts in the upper right corner of canvas
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 10; i++) {
         ghosts.push({
             x: random(450, 580),
             y: random(20, 150),

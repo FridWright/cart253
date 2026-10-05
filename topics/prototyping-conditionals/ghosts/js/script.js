@@ -72,3 +72,16 @@ function drawLamp() {
     }
     ellipse(lampX, lampY - 5, 18, 18);
 }
+
+/**
+ * Mouse pressed interaction to turn on lamp bulb when clicked
+ */
+function mousePressed() {
+    // Calculate distance between mouse click and lamp bulb position
+    let d = dist(mouseX, mouseY, lampX, lampY);
+
+    // If click occurs within 40px radius of the lamp bulb
+    if (d < 40) {
+        lampOn = !lampOn; // Toggle true -> false or false -> true
+    }
+}

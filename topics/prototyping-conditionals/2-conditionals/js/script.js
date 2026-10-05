@@ -8,6 +8,18 @@
 
 "use strict";
 
+// Create function to draw the traffic ight box
+function drawTrafficBox() {
+    let trafficBoxX = 150;
+    let trafficBoxY = 100;
+    let trafficBoxW = 100;
+    let trafficBoxH = 200;
+
+    fill("black");
+    noStroke();
+    rect(trafficBoxX, trafficBoxY, trafficBoxW, trafficBoxH, 10);
+}
+
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
@@ -24,19 +36,29 @@ function draw() {
     background("#5C172D");
 
     // Draw Traffic light box
-    fill("black");
+    drawTrafficBox();
+
+    // Draw three traffic light circles
+    fill("grey");
     noStroke();
-    rect(150, 100, 100, 200);
+    ///CIRCLE LIGHT ONE
+    ellipse(160, 130, 50, 50);
 
     // Draw sidewalk
+    fill("black");
     rect(0, 450, 400, 50);
 
     // Draw crosswalk
-    fill("yellow")
-    noStroke()
+    fill("yellow");
+    noStroke();
     // crosswalk bar one
-    rect(150, 450, 10, 50)
+    rect(150, 450, 10, 50);
     // crosswalk bar two
-    rect(180, 450, 10, 50)
+    rect(180, 450, 10, 50);
+    // crosswalk bar three
+    rect(210, 450, 10, 50);
+    // crosswalk bar four
+    rect(240, 450, 10, 50);
+
 
 }

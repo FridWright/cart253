@@ -14,6 +14,8 @@ let lampOn = false; // Tracks whether light is ON (true) or OFF (false)
 let lampX = 50;  // Lamp horizontal position (bottom-left)
 let lampY = 350; // Lamp vertical position
 
+// DECLARE GHOSTS ARRAY
+let ghosts = [];
 
 /**
  * Create a 400 x 600 canvas

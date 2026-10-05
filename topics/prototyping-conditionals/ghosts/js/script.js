@@ -83,14 +83,34 @@ function drawGhostShape(x, y, size) {
 
     // Ghost body opacity: semi-faded and red when light is on, white and bright when dark
     if (lampOn) {
-        fill(161, 34, 34, 120);
+        fill(161, 34, 34, 255);
     } else {
-        fill(255, 255, 255, 245);
+        fill(255, 255, 255, 255);
     }
 
     // Ghost head and lower skirt
     ellipse(x, y, size, size * 1.2);
     rect(x - size / 2, y, size, size * 0.6, 0, 0, 4, 4);
+
+
+    // Ghost eyes: Change shape from circle to line depending on whether lamp is ON or OFF
+    if (!lampOn) {
+        // Moving toward light: Standard black circle eyes
+        fill("black");
+        noStroke();
+        ellipse(x - size * 0.18, y - size * 0.1, size * 0.2, size * 0.2);
+        ellipse(x + size * 0.18, y - size * 0.1, size * 0.2, size * 0.2);
+
+    } else {
+        // Fleeing light: Straight horizontal black line eyes
+        stroke("black");
+        strokeWeight(2);
+
+        // LEFT EYE LINE:
+        line(x - size * 0.28, y - size * 0.1, x - size * 0.08, y - size * 0.1);
+        // RIGHT EYE LINE:
+        line(x + size * 0.08, y - size * 0.1, x + size * 0.28, y - size * 0.1);
+    }
 }
 
 

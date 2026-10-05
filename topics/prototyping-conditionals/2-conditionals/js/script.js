@@ -8,30 +8,7 @@
 
 "use strict";
 
-// Create function to draw the traffic ight box
-function drawTrafficBox() {
-    let trafficBoxX = 150;
-    let trafficBoxY = 100;
-    let trafficBoxW = 100;
-    let trafficBoxH = 200;
 
-    fill("black");
-    noStroke();
-    rect(trafficBoxX, trafficBoxY, trafficBoxW, trafficBoxH, 10);
-
-    // Draw the light Circles inside the traffic box (Centered at X = 200)
-    let centerX = trafficBoxX + (trafficBoxW / 2); // 200
-
-    // Top (Red)  
-    fill("red");
-    ellipse(centerX, trafficBoxY + 40, 50, 50);
-    // Middle (Yellow)
-    fill("yellow")
-    ellipse(centerX, trafficBoxY + 100, 50, 50);
-    // Bottom (Green)
-    fill("green")
-    ellipse(centerX, trafficBoxY + 160, 50, 50);
-}
 
 
 /**
@@ -69,5 +46,44 @@ function draw() {
     rect(240, 450, 10, 50);
 
 
+}
 
+// Create function to draw the traffic box and lights
+function drawTrafficBox() {
+    let trafficBoxX = 150;
+    let trafficBoxY = 100;
+    let trafficBoxW = 100;
+    let trafficBoxH = 200;
+    // Draw the light circles inside the traffic box (Centered at X = 200)
+    let centerX = trafficBoxX + (trafficBoxW / 2); // 200
+
+    // Draw Traffic box base 
+    fill("black");
+    noStroke();
+    rect(trafficBoxX, trafficBoxY, trafficBoxW, trafficBoxH, 10);
+
+    // Draw Default dim gray fills for inactive lights
+    let redColour = color(80, 0, 0);
+    let yellowColour = color(80, 80, 0);
+    let greenColour = color(0, 80, 0);
+
+    // Conditionals to illuminate the active light based on lightState
+    if (lightState === "RED") {
+        redColour = color(255, 0, 0); // Bright Red
+    } else if (lightState === "YELLOW") {
+        yellowColour = color(255, 220, 0); // Bright Yellow
+    } else if (lightState === "GREEN") {
+        greenColour = color(0, 255, 100); // Bright Green
+    }
+
+
+    // Top (Red)  
+    fill("redColour");
+    ellipse(centerX, trafficBoxY + 40, 50, 50);
+    // Middle (Yellow)
+    fill("yellowColour")
+    ellipse(centerX, trafficBoxY + 100, 50, 50);
+    // Bottom (Green)
+    fill("greenColour")
+    ellipse(centerX, trafficBoxY + 160, 50, 50);
 }

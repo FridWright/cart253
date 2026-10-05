@@ -22,6 +22,17 @@ let ghosts = [];
 */
 function setup() {
     createCanvas(600, 400);
+
+    // Create ghosts in the upper right corner of canvas
+    for (let i = 0; i < 4; i++) {
+        ghosts.push({
+            x: random(450, 580),
+            y: random(20, 150),
+            speed: random(1.0, 2.0),
+            size: random(24, 32)
+        });
+    }
+
 }
 
 

@@ -34,6 +34,11 @@ function draw() {
         background("#05070D");
     }
 
+    // Draw light beam, when lamp is clicked on
+    if (lampOn) {
+        drawLightBeam();
+    }
+
     // Call drawLamp
     drawLamp();
 

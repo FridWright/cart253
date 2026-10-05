@@ -20,6 +20,11 @@ let lightState = "GREEN"; // Start at GREEN
 let lastStateChange = 0;   // Stores timestamp of last change (in ms)
 let stateDuration = 3000;  // Initial duration for GREEN state
 
+// Pedestrains: Array and Spawning
+let pedestrians = [];
+let lastSpawnTime = 0;
+let spawnInterval = 1200; // New pedestrian every 1.2 seconds
+
 function setup() {
     createCanvas(400, 600);
     lastStateChange = millis(); // Initialize start time

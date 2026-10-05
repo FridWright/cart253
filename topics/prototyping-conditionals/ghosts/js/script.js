@@ -17,6 +17,7 @@ let lampY = 350; // Lamp vertical position
 // DECLARE GHOSTS ARRAY
 let ghosts = [];
 
+
 /**
  * Create a 400 x 600 canvas
 */
@@ -32,7 +33,6 @@ function setup() {
             size: random(24, 32)
         });
     }
-
 }
 
 
@@ -54,6 +54,9 @@ function draw() {
 
     // Call drawLamp
     drawLamp();
+
+    // Call draw all ghosts
+    handleGhosts();
 
     // Add on-screen instructions
     fill("white");

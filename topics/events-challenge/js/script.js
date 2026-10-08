@@ -61,3 +61,11 @@ function displayScore() {
     text(floor(score), width / 2, height / 2);
     pop();
 }
+
+/**
+ * STEP 2: Write a lose() function
+ * Sets the gameOver state to true when invoked.
+ */
+function lose() {
+    gameOver = true;
+}

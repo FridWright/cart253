@@ -27,7 +27,9 @@ let spawnInterval = 1200; // New pedestrian every 1.2 seconds
 
 function setup() {
     createCanvas(400, 600);
+    // Reference for millis() from https://p5js.org/reference/p5/millis/
     lastStateChange = millis(); // Initialize start time
+    // Reference for random() from https://p5js.org/reference/p5/random/
     stateDuration = random(3000, 6000); // Random duration for first green
 }
 
@@ -136,6 +138,7 @@ function updateTrafficLightTimer() {
     let currentTime = millis();
 
     // Check if enough time has passed for current state
+    /// Reference for if/else from https://p5js.org/reference/p5/if/
     if (currentTime - lastStateChange >= stateDuration) {
         lastStateChange = currentTime; // Reset change timer
 
@@ -193,3 +196,4 @@ function drawTrafficBox() {
     fill(greenColour)
     ellipse(centerX, trafficBoxY + 160, 50, 50);
 }
+

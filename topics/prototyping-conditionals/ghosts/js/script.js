@@ -11,6 +11,7 @@
 
 
 // STATE & POSITION VARIABLES 
+/// Reference for false from https://p5js.org/reference/p5/Boolean/ 
 let lampOn = false; // Tracks whether light is ON (true) or OFF (false)
 
 let lampX = 50;  // Lamp horizontal position (bottom-left)
@@ -42,6 +43,7 @@ function setup() {
 */
 function draw() {
     // Create a dynamic background: lighter dark blue when light is on, pitch black when off
+    /// Reference for if/else from https://p5js.org/reference/p5/if/
     if (lampOn) {
         background("#131440");
     } else {

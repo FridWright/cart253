@@ -69,3 +69,11 @@ function displayScore() {
 function lose() {
     gameOver = true;
 }
+
+/**
+ * STEP 3: Make the user lose if they use the keyboard
+ * Listens for key presses and key releases.
+ */
+function keyPressed() {
+    lose();
+}

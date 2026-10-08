@@ -77,3 +77,8 @@ function lose() {
 function keyPressed() {
     lose();
 }
+
+
+function keyReleased() {
+    lose();
+}

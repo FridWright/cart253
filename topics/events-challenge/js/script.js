@@ -5,7 +5,7 @@
  * Updated script of the "Only Move is Not To Play" game from:
  * https://pippinbarr.com/cart253/assignments/challenges/events/
  * Adds these parameters:
- * Write a lose() function, make the user lose if they use the keyboard, 
+ * Write a lose function, make the user lose if they use the keyboard, 
  * and make the user lose if the use the mouse.
  */
 
@@ -38,6 +38,7 @@ function draw() {
     displayUI();
 }
 
+
 /**
  * Show the game over message if needed, and the current score
  */
@@ -53,6 +54,7 @@ function displayUI() {
     displayScore();
 }
 
+
 /**
  * Display the score
  */
@@ -64,6 +66,7 @@ function displayScore() {
     text(floor(score), width / 2, height / 2);
     pop();
 }
+
 
 /**
  * STEP 2: Write a lose() function
@@ -85,6 +88,7 @@ function keyPressed() {
 function keyReleased() {
     lose();
 }
+
 
 /**
  * STEP 4: Make the user lose if they use the mouse

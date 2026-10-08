@@ -16,7 +16,7 @@ The purpose of this website is to collect my Prototyping work for this course & 
 
 2. **Prototyping: Variables**   [click here](prototyping-variables.md)
 
-3. *Coming Soon*- **Prototyping: Conditionals**[⏰](prototyping-conditionals.md)
+3. **Prototyping: Conditionals**  [click here](prototyping-conditionals.md)
 
 4. *Coming Soon*- **Prototyping: Events**[⏰](https://www.example.com)
 

@@ -33,6 +33,9 @@ The third prototype, *Bloom*, is an interactive growth sketch where a flower spr
 Throughout the *Prototyping: Variables* Assignment, I relied heavily on p5.js references and found it essential for implementing functions like dist(), lerpColor(), and mousePressed().
 
 4. ### <u>Third Journal Entry ⏰</u>
+This journal entry reflects on my process of the [Prototyping: Conditionals assignment.](https://github.com/FridWright/cart253/blob/main/prototyping-conditionals.md)
+
+My first prototype, *Match Game*, is a classic pair matching game where the user tries to flip cards to find colour matches. I used mousePressed() and dist() to detect player clicks on individual grid cards, triggering a flipped state for revealed colours. For the core memory logic, I utilized setTimeout() to pause face-up cards before flipping mismatched pairs back over.
 
 5. ### <u>Third Journal Entry ⏰</u>
 

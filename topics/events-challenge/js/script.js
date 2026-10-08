@@ -2,8 +2,11 @@
  * In-Class Challenge: Events
  * Fridrikka Wright
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Updated script of the "Only Move is Not To Play" game from:
+ * https://pippinbarr.com/cart253/assignments/challenges/events/
+ * Adds these parameters:
+ * Write a lose() function, make the user lose if they use the keyboard, 
+ * and make the user lose if the use the mouse.
  */
 
 "use strict";
@@ -25,7 +28,7 @@ function setup() {
  * Update the score and display the UI
  */
 function draw() {
-    background("#87ceeb");
+    background("#749E4C");
 
     // Only increase the score if the game is not over
     if (!gameOver) {
@@ -80,5 +83,29 @@ function keyPressed() {
 
 
 function keyReleased() {
+    lose();
+}
+
+/**
+ * STEP 4: Make the user lose if they use the mouse
+ * Listens for clicks/presses/releases/moves/drags/wheel scrolls.
+ */
+function mouseMoved() {
+    lose();
+}
+
+function mouseDragged() {
+    lose();
+}
+
+function mousePressed() {
+    lose();
+}
+
+function mouseReleased() {
+    lose();
+}
+
+function mouseWheel() {
     lose();
 }

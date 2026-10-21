@@ -12,8 +12,8 @@
 const ball = {
     x: 300,
     y: 20,
-    width: 10,
-    height: 10,
+    width: 20,
+    height: 20,
     velocity: {
         x: 3,
         y: 6
@@ -24,8 +24,8 @@ const ball = {
 const ball2 = {
     x: 150,
     y: 50,
-    width: 10,
-    height: 10,
+    width: 20,
+    height: 20,
     velocity: {
         x: -3,
         y: 7
@@ -36,8 +36,8 @@ const ball2 = {
 const ball3 = {
     x: 250,
     y: 30,
-    width: 10,
-    height: 10,
+    width: 20,
+    height: 20,
     velocity: {
         x: -2,
         y: 4
@@ -48,8 +48,8 @@ const ball3 = {
 const ball4 = {
     x: 120,
     y: 40,
-    width: 10,
-    height: 10,
+    width: 20,
+    height: 20,
     velocity: {
         x: -2,
         y: 2

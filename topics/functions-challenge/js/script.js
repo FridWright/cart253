@@ -76,7 +76,7 @@ function setup() {
  * Move and display the ball and paddle
 */
 function draw() {
-    background("#87ceeb");
+    background("black");
 
     movePaddle(paddle);
 
@@ -160,7 +160,7 @@ function drawPaddle(paddle) {
     push();
     rectMode(CENTER);
     noStroke();
-    fill("pink");
+    fill("white");
     rect(paddle.x, paddle.y, paddle.width, paddle.height);
     pop();
 }
@@ -172,7 +172,7 @@ function drawBall(ball) {
     push();
     rectMode(CENTER);
     noStroke();
-    fill("pink");
+    fill("red");
     rect(ball.x, ball.y, ball.width, ball.height);
     pop();
 }

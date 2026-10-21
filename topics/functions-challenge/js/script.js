@@ -55,7 +55,10 @@ function draw() {
     background("#87ceeb");
 
     movePaddle(paddle);
+
+    // Move the two balls
     moveBall(ball);
+    moveBall(ball2);
 
     handleBounce(ball, paddle);
 

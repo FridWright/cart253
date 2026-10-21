@@ -15,8 +15,8 @@ const ball = {
     width: 10,
     height: 10,
     velocity: {
-        x: 0,
-        y: 10
+        x: 3,
+        y: 6
     }
 };
 
@@ -27,7 +27,7 @@ const ball2 = {
     width: 10,
     height: 10,
     velocity: {
-        x: 3,
+        x: -3,
         y: 7
     }
 };

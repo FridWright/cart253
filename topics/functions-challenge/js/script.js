@@ -32,6 +32,30 @@ const ball2 = {
     }
 };
 
+// Our third ball (different position and velocity)
+const ball3 = {
+    x: 250,
+    y: 30,
+    width: 10,
+    height: 10,
+    velocity: {
+        x: -2,
+        y: 4
+    }
+};
+
+// Our fourth ball (different position and velocity)
+const ball4 = {
+    x: 120,
+    y: 40,
+    width: 10,
+    height: 10,
+    velocity: {
+        x: -2,
+        y: 2
+    }
+};
+
 // Our paddle
 const paddle = {
     x: 300,
@@ -56,16 +80,23 @@ function draw() {
 
     movePaddle(paddle);
 
-    // Move the two balls
+    // Move the balls
     moveBall(ball);
     moveBall(ball2);
+    moveBall(ball3);
+    moveBall(ball4);
 
     // Handle bounces for both balls against paddle
     handleBounce(ball, paddle);
     handleBounce(ball2, paddle);
+    handleBounce(ball3, paddle);
+    handleBounce(ball4, paddle);
+
     // Handle bounces to be contained within canvas borders
     handleCanvasBounds(ball);
     handleCanvasBounds(ball2);
+    handleCanvasBounds(ball3);
+    handleCanvasBounds(ball4);
 
     // Draw the paddle
     drawPaddle(paddle);
@@ -73,6 +104,8 @@ function draw() {
     // Draw both balls
     drawBall(ball);
     drawBall(ball2);
+    drawBall(ball3);
+    drawBall(ball4);
 }
 
 /**

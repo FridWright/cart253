@@ -70,7 +70,9 @@ function moveBall(ball) {
  * Bounces the provided ball off the provided paddle
  */
 function handleBounce(ball, paddle) {
-
+    if (checkOverlap(ball, paddle)) {
+        ball.velocity.y *= -1;
+    }
 }
 
 /**

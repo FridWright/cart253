@@ -64,7 +64,11 @@ function draw() {
     handleBounce(ball, paddle);
     handleBounce(ball2, paddle);
 
+    // Draw the paddle
     drawPaddle(paddle);
+
+    // Draw both balls
+    drawBall(ball2);
     drawBall(ball);
 }
 

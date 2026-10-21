@@ -10,7 +10,7 @@
 
 // Our ball
 const ball = {
-    x: 300,
+    x: 200,
     y: 20,
     width: 20,
     height: 20,

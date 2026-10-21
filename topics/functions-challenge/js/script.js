@@ -55,7 +55,7 @@ function draw() {
  * Moves the paddle
  */
 function movePaddle(paddle) {
-
+    paddle.x = mouseX;
 }
 
 /**

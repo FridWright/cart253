@@ -2,3 +2,4 @@
 >2. **"Variables"** In-Class Challenge: https://fridwright.github.io/cart253/topics/variables-challenge/
 >3. **"Conditionals"** In-Class Challenge: https://fridwright.github.io/cart253/topics/conditionals-challenge/
 >4. **"Events"** In-Class Challenge: https://fridwright.github.io/cart253/topics/events-challenge/
+>5. **"Functions"** In-Class Challenge: https://fridwright.github.io/cart253/topics/functions-challenge/

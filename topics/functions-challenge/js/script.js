@@ -1,9 +1,9 @@
 /**
- * Bouncy Ball Ball Bonanza
- * Pippin Barr
+ * In-Class Challenge: Bouncy Balls VS Paddle
+ * Fridrikka Wright
  * 
- * The starting point for a ball-bouncing experience of
- * epic proportions!
+ * Starter example code from:
+ * https://pippinbarr.com/cart253/assignments/challenges/functions/
  */
 
 "use strict";

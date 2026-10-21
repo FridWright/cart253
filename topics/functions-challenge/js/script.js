@@ -68,8 +68,8 @@ function draw() {
     drawPaddle(paddle);
 
     // Draw both balls
-    drawBall(ball2);
     drawBall(ball);
+    drawBall(ball2);
 }
 
 /**
@@ -85,6 +85,27 @@ function movePaddle(paddle) {
 function moveBall(ball) {
     ball.x += ball.velocity.x;
     ball.y += ball.velocity.y;
+}
+
+/**
+ * Bounces the ball off the canvas walls (left, right, top)
+ */
+function handleCanvasBounds(ball) {
+    // Left wall
+    if (ball.x - ball.width / 2 < 0) {
+        ball.velocity.x *= -1;
+        ball.x = ball.width / 2;
+    }
+    // Right wall
+    if (ball.x + ball.width / 2 > width) {
+        ball.velocity.x *= -1;
+        ball.x = width - ball.width / 2;
+    }
+    // Top wall
+    if (ball.y - ball.height / 2 < 0) {
+        ball.velocity.y *= -1;
+        ball.y = ball.height / 2;
+    }
 }
 
 /**

@@ -36,7 +36,7 @@ const ball2 = {
 const paddle = {
     x: 300,
     y: 280,
-    width: 80,
+    width: 180,
     height: 10
 };
 
@@ -63,6 +63,9 @@ function draw() {
     // Handle bounces for both balls against paddle
     handleBounce(ball, paddle);
     handleBounce(ball2, paddle);
+    // Handle bounces to be contained within canvas borders
+    handleCanvasBounds(ball);
+    handleCanvasBounds(ball2);
 
     // Draw the paddle
     drawPaddle(paddle);

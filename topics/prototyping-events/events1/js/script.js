@@ -28,9 +28,19 @@ let cardR = (8); // Card radius for rounded corners
 
 
 // Palette for matching card pairs game (16 cards total, 8 matching pairs)
-let cardColours = [
-    "#F590B5", "#33CCFF", "#FF9933", "#FF3333", "#33FF77", "#FFFF33", "#FF3333", "#FF9933", // TOP ROW (Cards 0 to 7)
-    "#33CCFF", "#FFFF33", "#33FF77", "#F590B5", "#CC33FF", "#A6F5F5", "#A6F5F5", "#CC33FF"  // BOTTOM ROW (Cards 8 to 15)
+let baseColours = [
+    "#F590B5", "#F590B5",
+    "#33CCFF", "#33CCFF",
+    "#FF9933", "#FF9933",
+    "#FF3333", "#FF3333",
+    "#33FF77", "#33FF77",
+    "#FFFF33", "#FFFF33",
+    "#CC33FF", "#CC33FF",
+    "#A6F5F5", "#A6F5F5"
+];
+
+// This will hold the shuffled colors for the current game
+let cardColours = [];
 
 ];
 
@@ -76,7 +86,7 @@ function setup() {
 
 
 /**
- * Draw background and cards and match meter bar
+ * Draw background and cards and countdown timer
 */
 function draw() {
     background("#216334");

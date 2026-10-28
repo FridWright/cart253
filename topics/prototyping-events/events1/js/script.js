@@ -134,6 +134,7 @@ function draw() {
         rect(0, 0, 800, 500);
 
         fill("white");
+        noStroke();
         textSize(40);
         text("YOU WIN!", 330, 220);
         textSize(24);

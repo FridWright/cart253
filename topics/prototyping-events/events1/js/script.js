@@ -43,6 +43,24 @@ let secondCard = -1; // Index of second card clicked (-1 means none)
 let isChecking = false; // Prevents clicking new cards while waiting for mis-matched cards to flip back
 
 
+// Create the reset game function
+function resetGame() {
+    // Reset all cards to face down
+    for (let i = 0; i < 16; i++) {
+        cardFlipped[i] = false;
+    }
+    // Reset matching variables
+    firstCard = -1;
+    secondCard = -1;
+    isChecking = false;
+
+    // Reset timer variables
+    timeLeft = 60;
+    gameStarted = false;
+    clearInterval(timerInterval);
+}
+
+
 /**
  * Create canvas, 
 */

@@ -42,8 +42,6 @@ let baseColours = [
 // This will hold the shuffled colors for the current game
 let cardColours = [];
 
-];
-
 // Tracks true/false state for cards 0 to 15
 let cardFlipped = [];
 
@@ -79,12 +77,7 @@ function resetGame() {
 */
 function setup() {
     createCanvas(800, 500)
-
-
-    // Set all 16 cards to be face-down (false) at start
-    for (let i = 0; i < 16; i++) {
-        cardFlipped[i] = false;
-    }
+    resetGame(); // Shuffles colors and sets up the initial game state
 }
 
 

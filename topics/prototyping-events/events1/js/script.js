@@ -169,6 +169,22 @@ function mousePressed() {
         // Check if click occurred inside this specific card AND it isn't already face-up
         if (mouseX > x && mouseX < x + cardW && mouseY > y && mouseY < y + cardH && !cardFlipped[i]) {
 
+
+            // Start the time countdown after user makes first click
+            if (!gameStarted) {
+                gameStarted = true;
+                timerInterval = setInterval(function () {
+                    if (timeLeft > 0) {
+                        timeLeft--;
+                    } else {
+                        // Time ran out!
+                        alert("Time's up! Game restarting.");
+                        resetGame();
+                    }
+                }, 1000); // Decrement every 1000ms (1 second)
+            }
+
+
             // Flip clicked card face-up
             cardFlipped[i] = true;
 

@@ -127,6 +127,18 @@ function draw() {
     // Format timer to always show two digits (e.g., 0:59)
     let secondsDisplay = timeLeft < 10 ? "0" + timeLeft : timeLeft;
     text("Time: 0:" + secondsDisplay, 650, 460);
+
+    // If the game is won, show the win screen overlay
+    if (gameWon) {
+        fill(0, 0, 0, 180); // Semi-transparent dark background
+        rect(0, 0, 800, 500);
+
+        fill("white");
+        textSize(40);
+        text("YOU WIN!", 330, 220);
+        textSize(24);
+        text("Click anywhere to play again", 270, 280);
+    }
 }
 
 

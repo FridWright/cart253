@@ -55,6 +55,9 @@ let isChecking = false; // Prevents clicking new cards while waiting for mis-mat
 
 // Create the reset game function
 function resetGame() {
+    // Randomize the card colors on every reset/load
+    cardColours = shuffle(baseColours);
+
     // Reset all cards to face down
     for (let i = 0; i < 16; i++) {
         cardFlipped[i] = false;

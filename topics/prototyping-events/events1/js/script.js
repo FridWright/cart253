@@ -39,7 +39,7 @@ let baseColours = [
     "#A6F5F5", "#A6F5F5"
 ];
 
-// This will hold the shuffled colors for the current game
+// This will hold the shuffled colours for the current game
 let cardColours = [];
 
 // Tracks true/false state for cards 0 to 15
@@ -53,8 +53,9 @@ let isChecking = false; // Prevents clicking new cards while waiting for mis-mat
 
 // Create the reset game function
 function resetGame() {
-    // Randomize the card colors on every reset/load
+    // Randomize the card colours on every reset/load
     cardColours = shuffle(baseColours);
+    /// Reference for shuffle from https://p5js.org/reference/p5/shuffle/
 
     // Reset all cards to face down
     for (let i = 0; i < 16; i++) {
@@ -77,7 +78,7 @@ function resetGame() {
 */
 function setup() {
     createCanvas(800, 500)
-    resetGame(); // Shuffles colors and sets up the initial game state
+    resetGame(); // Shuffles colours and sets up the initial game state
 }
 
 

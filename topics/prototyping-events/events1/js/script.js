@@ -102,22 +102,15 @@ function draw() {
         drawCard(x, y, i + 8);
     }
 
-
     // Add text describing the program
-    fill("white")
-    textSize(20)
-    text("click two cards to find matching pairs", 240, 460)
+    fill("white");
+    textSize(20);
+    text("click two cards to find matching pairs", 240, 460);
+
+    // Format timer to always show two digits (e.g., 0:59)
+    let secondsDisplay = timeLeft < 10 ? "0" + timeLeft : timeLeft;
+    text("Time: 0:" + secondsDisplay, 650, 460);
 }
-
-// Add text describing the program and showing the timer
-fill("white");
-textSize(18);
-text("click two cards to find matching pairs", 50, 460);
-
-// Format timer to always show two digits (e.g., 0:59)
-let secondsDisplay = timeLeft < 10 ? "0" + timeLeft : timeLeft;
-text("Time: 0:" + secondsDisplay, 650, 460);
-
 
 
 // Add a drawCard function for simplifying drawing a card

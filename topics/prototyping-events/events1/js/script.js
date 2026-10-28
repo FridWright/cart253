@@ -172,8 +172,15 @@ function drawCard(x, y, index) {
  * Mouse clicks to flip cards face-up
  */
 function mousePressed() {
-    // Ignore clicks if we are currently waiting for non-matching cards to flip back over
     /// Reference for if/else from https://p5js.org/reference/p5/if/
+
+    // If the game is won, clicking anywhere resets and restarts
+    if (gameWon) {
+        resetGame();
+        return;
+    }
+
+    // Ignore clicks if we are currently waiting for non-matching cards to flip back over
     if (isChecking) return;
 
     // Loop through all 16 card positions
@@ -221,6 +228,14 @@ function mousePressed() {
                     firstCard = -1;
                     secondCard = -1;
                     isChecking = false;
+
+                    // Track successful matches and check win condition
+                    matchedPairs++;
+                    if (matchedPairs === 8) {
+                        gameWon = true;
+                        clearInterval(timerInterval);
+                    }
+
                 } else {
                     // NO MATCH! Wait 1 second (1000ms), then flip both back face-down
                     setTimeout(function () {

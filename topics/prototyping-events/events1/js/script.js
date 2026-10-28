@@ -4,10 +4,11 @@
  * 
 
  * This is a re-vamp of the Match Game created for the Prototyping- Conditionals assignment.
-* /// It is a card matching game where the user must find all matching colours (8 total).///
+* /// It is a card matching game where the user must find all matching colours (8 total)///
 * This rework introduces a timer wherein all matches must be found before time runs out.
 * It also includes randomization of the card colours each reload, so the cards change
-* their position for each new game. 
+* their position for each new game. and now, if the user finds all matches before the timer runs 
+* out, they are congratulated and asked if they want to play again.
 
  */
 
@@ -50,6 +51,9 @@ let firstCard = -1;  // Index of first card clicked (-1 means none)
 let secondCard = -1; // Index of second card clicked (-1 means none)
 let isChecking = false; // Prevents clicking new cards while waiting for mis-matched cards to flip back
 
+let matchedPairs = 0; // Counts how many pairs have been matched (0 to 8)
+let gameWon = false;  // Tracks if the player has won
+
 
 // Create the reset game function
 function resetGame() {
@@ -65,6 +69,12 @@ function resetGame() {
     firstCard = -1;
     secondCard = -1;
     isChecking = false;
+    timeLeft = 60;
+    gameStarted = false;
+
+    // Reset win tracking
+    matchedPairs = 0;
+    gameWon = false;
 
     // Reset timer variables
     timeLeft = 60;

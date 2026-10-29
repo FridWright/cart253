@@ -11,6 +11,12 @@
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
+
+// Game State & Key Tracking
+let requiredKeys = [];          // Keys the player MUST keep holding down
+let pendingKey = null;          // The current key commanded by the wheel
+let activeKeysHeld = new Set(); // Raw set tracking every key physically pressed down right now
+
 function setup() {
     createCanvas(600, 600);
     textAlign(CENTER, CENTER);

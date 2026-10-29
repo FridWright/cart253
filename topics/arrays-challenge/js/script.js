@@ -30,7 +30,7 @@ function createBall(x, y) {
         y: y,
         size: 20,
         // Colour
-        fill: "#000000",
+        fill: color(random(255), random(255), random(255)),
         // Movement
         velocity: {
             x: random(-5, 5),
@@ -52,7 +52,7 @@ function mousePressed() {
  * Moves and draws all balls in the array
  */
 function draw() {
-    background("#87ceeb");
+    background("#D6386A");
 
     // Loop through every ball in the array
     for (let ball of balls) {

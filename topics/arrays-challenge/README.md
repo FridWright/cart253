@@ -1,20 +1,17 @@
-# TITLE OF PROJECT
+# In-Class Challenge: Arrays
 
-AUTHOR NAME
+Fridrikka Wright
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://fridwright.github.io/cart253/topics/arrays-challenge/)
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+This is the in-class challenge to explore arrays. The array used is for balls, which appear on screen whenever the mouse is clicked. Every ball in the array contains its own unique set of properties.
 
 ## Attribution
 
-This bit should attribute any code, assets or other elements used taken from other sources. For example:
-
 > - This project uses [p5.js](https://p5js.org).
-> - The clown image is a capture of the clown from the Apple emoji character set.
-> - The barking sound effect is "single dog bark 1" by crazymonke9 from freesound.org: https://freesound.org/people/crazymonke9/sounds/418107/
+> - Sample code "Boingo" from Pippin Barr at https://pippinbarr.com/cart253/assignments/challenges/arrays/
 
 ## License
 

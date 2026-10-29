@@ -80,3 +80,13 @@ function startNewGame() {
     pendingKey = null;
     triggerSpin();
 }
+
+function triggerSpin() {
+    // Find keys that aren't already required
+    let unused = availableKeys.filter(k => !requiredKeys.some(rk => rk.char === k.char));
+    if (unused.length === 0) return; // Player beat the game!
+
+    pendingKey = random(unused);
+    spinSpeed = random(25, 35);
+    gameState = 'SPINNING';
+}

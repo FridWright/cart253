@@ -94,3 +94,13 @@ function triggerSpin() {
 function updateSpinning() {
     verifyKeysHeld(); // Make sure player didn't let go while wheel spins
     if (gameState === 'GAMEOVER') return;
+
+    wheelAngle += spinSpeed;
+    spinSpeed *= 0.94; // Deceleration friction
+
+    // When wheel stops, transition to waiting for user input
+    if (spinSpeed < 0.2) {
+        spinSpeed = 0;
+        gameState = 'AWAITING_INPUT';
+    }
+}

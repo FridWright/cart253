@@ -90,3 +90,7 @@ function triggerSpin() {
     spinSpeed = random(25, 35);
     gameState = 'SPINNING';
 }
+
+function updateSpinning() {
+    verifyKeysHeld(); // Make sure player didn't let go while wheel spins
+    if (gameState === 'GAMEOVER') return;

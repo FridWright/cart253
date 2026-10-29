@@ -7,16 +7,16 @@
  * A ball that bounces around on the canvas
  */
 
-let ball1 = undefined; // Will create it with createBall()
+let balls = []; // Create an empty array for our balls
 
 /**
- * Create the canvas and the ball
+ * Create the canvas and the first ball
  */
 function setup() {
     // Create the canvas
     createCanvas(400, 400);
-    // Create the ball
-    ball1 = createBall();
+    // Create and add the first ball to the array
+    balls.push(createBall());
 }
 
 /**
@@ -41,15 +41,12 @@ function createBall() {
 }
 
 /**
- * Moves and draws the ball
+ * Moves and draws all balls in the array
  */
 function draw() {
     background("#87ceeb");
 
-    // Pass ball1 into each function
-    moveBall(ball1);
-    bounceBall(ball1);
-    drawBall(ball1);
+
 }
 
 /**

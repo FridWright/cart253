@@ -32,13 +32,25 @@ let availableKeys = [
     { char: '7', code: 55 }, { char: '8', code: 56 }, { char: '9', code: 57 }
 ];
 
+let wheelAngle = 0;
+let spinSpeed = 0;
+let gameState = 'START'; // Can be: 'START', 'SPINNING', 'AWAITING_INPUT', 'GAMEOVER'
 
 function setup() {
     createCanvas(600, 600);
     textAlign(CENTER, CENTER);
     angleMode(DEGREES);
 
+    // Browser event listeners to track multi-key holds accurately
+    window.addEventListener('keydown', (e) => {
+        let k = e.key.toUpperCase();
+        activeKeysHeld.add(k);
+    });
 
+    window.addEventListener('keyup', (e) => {
+        let k = e.key.toUpperCase();
+        activeKeysHeld.delete(k);
+    });
 }
 
 

@@ -1,8 +1,8 @@
-# TITLE OF PROJECT
+# Prototyping - Events: Twister
 
-AUTHOR NAME
+Fridrikka Wright
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://fridwright.github.io/cart253/topics/prototyping-events/twister/)
 
 ## Description
 

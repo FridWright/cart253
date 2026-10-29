@@ -1,6 +1,6 @@
 /**
- * Title of Project
- * Author Name
+ * Prototyping - Events: Twister
+ * Fridrikka Wright
  * 
  * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
  * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
@@ -12,6 +12,10 @@
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
 function setup() {
+    createCanvas(600, 600);
+    textAlign(CENTER, CENTER);
+    angleMode(DEGREES);
+
 
 }
 

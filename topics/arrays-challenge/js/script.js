@@ -41,10 +41,10 @@ function createBall() {
 }
 
 /**
- * Adds a new ball to the array whenever the mouse is pressed
+ * Adds a new ball to the array whenever the mouse is pressed, from where the mouse is pressed
  */
 function mousePressed() {
-    const newBall = createBall();
+    const newBall = createBall(mouseX, mouseY);
     balls.push(newBall);
 }
 

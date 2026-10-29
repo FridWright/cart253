@@ -118,3 +118,13 @@ function updateAwaitingInput() {
         triggerSpin();
     }
 }
+
+function verifyKeysHeld() {
+    // If any required key is not in active hold, game over
+    for (let rk of requiredKeys) {
+        if (!activeKeysHeld.has(rk.char)) {
+            gameState = 'GAMEOVER';
+            break;
+        }
+    }
+}

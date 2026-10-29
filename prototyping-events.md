@@ -9,13 +9,13 @@
 
 ## Deliverables
 
-### 1. Prototype One - **Timed** Match Game (*rework of previous project*) [view here](https://fridwright.github.io/cart253/topics/prototyping-events/timed-match-game/)
+### 1. Prototype One - **Timed** Match Game (*rework of previous project!*) [view here](https://fridwright.github.io/cart253/topics/prototyping-events/timed-match-game/)
 
 <img src="topics/prototyping-events/timed-match-game/assets/images/timedmatch.png">
 
 
 
-### 2. Prototype Two - Crosswalk [view here](https://fridwright.github.io/cart253/topics/prototyping-conditionals/crosswalk/)
+### 2. Prototype Two - Twister [view here](https://fridwright.github.io/cart253/topics/prototyping-events/twister/)
 
 <img src="topics/prototyping-conditionals/crosswalk/assets/images/crosswalk.png">
 

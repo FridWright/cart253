@@ -6,7 +6,7 @@ Fridrikka Wright
 
 ## Description
 
-This is a re-vamp of the "Match Game" created for the prior Prototyping- Conditionals assignment.
+This is a re-vamp of the "Match Game" created for the prior Prototyping- Conditionals assignment (https://fridwright.github.io/cart253/topics/prototyping-conditionals/match-game/)
 Introducing "Timed Match Game"... now with music!!
 It is a card matching game where the user must find all matching colours (8 total).
 This rework introduces a timer wherein all matches must be found before time runs out.

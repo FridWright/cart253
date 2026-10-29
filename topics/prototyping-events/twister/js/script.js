@@ -41,6 +41,7 @@ function setup() {
     textAlign(CENTER, CENTER);
     angleMode(DEGREES);
 
+
     // Browser event listeners to track multi-key holds accurately
     window.addEventListener('keydown', (e) => {
         let k = e.key.toUpperCase();
@@ -59,6 +60,12 @@ function setup() {
 */
 function draw() {
     background(18, 18, 24);
+
+    push();
+    textSize(14);
+    fill(180);
+    noStroke();
+    text(`KEYBOARD TWISTER`, width / 2, height - 550);
 
     // Conditionals for game setup
     if (gameState === 'START') {
@@ -114,7 +121,7 @@ function updateAwaitingInput() {
         requiredKeys.push(pendingKey); // Lock it in
         pendingKey = null;
 
-        // Automatically trigger the next spin!
+        // Automatically trigger the next spin
         triggerSpin();
     }
 }
@@ -127,4 +134,34 @@ function verifyKeysHeld() {
             break;
         }
     }
+}
+
+function drawGameUI() {
+    // Draw Wheel
+    push();
+    translate(width / 2, height / 2 - 40);
+    let sliceAngle = 360 / 6;
+    let colors = [color(239, 68, 68), color(59, 130, 246), color(34, 197, 94), color(234, 179, 8), color(168, 85, 247), color(236, 72, 153)];
+
+    stroke(255);
+    strokeWeight(2);
+    for (let i = 0; i < 6; i++) {
+        fill(colors[i]);
+        arc(0, 0, 220, 220, i * sliceAngle + wheelAngle, (i + 1) * sliceAngle + wheelAngle, PIE);
+    }
+
+    fill(30);
+    noStroke();
+    ellipse(0, 0, 90, 90);
+
+    fill(255);
+    textSize(24);
+    textStyle(BOLD);
+    if (gameState === 'SPINNING') {
+        text("SPIN!", 0, 0);
+    } else if (gameState === 'AWAITING_INPUT' && pendingKey) {
+        text(pendingKey.char, 0, 0);
+    }
+    pop();
+
 }

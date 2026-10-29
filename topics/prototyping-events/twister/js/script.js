@@ -24,5 +24,7 @@ function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
+    background(18, 18, 24);
+
 
 }

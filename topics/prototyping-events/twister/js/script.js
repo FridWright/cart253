@@ -26,5 +26,17 @@ function setup() {
 function draw() {
     background(18, 18, 24);
 
+    // Conditionals for game setup
+    if (gameState === 'START') {
+        drawStartScreen();
+    } else if (gameState === 'SPINNING') {
+        updateSpinning();
+        drawGameUI();
+    } else if (gameState === 'AWAITING_INPUT') {
+        updateAwaitingInput();
+        drawGameUI();
+    } else if (gameState === 'GAMEOVER') {
+        drawGameOverScreen();
+    }
 
 }

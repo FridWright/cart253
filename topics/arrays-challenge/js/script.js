@@ -46,7 +46,12 @@ function createBall() {
 function draw() {
     background("#87ceeb");
 
-
+    // Loop through every ball in the array
+    for (let ball of balls) {
+        moveBall(ball);
+        bounceBall(ball);
+        drawBall(ball);
+    }
 }
 
 /**

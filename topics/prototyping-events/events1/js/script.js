@@ -15,7 +15,7 @@
 "use strict";
 
 // Background music variable (casino sounds)
-let bgMusic = new Audio("js/casino.mp3");
+let bgMusic = new Audio("assets/sounds/casino.mp3");
 bgMusic.loop = true; // Make it loop continuously
 bgMusic.volume = 0.1; // Set volume (0.0 to 1.0)
 

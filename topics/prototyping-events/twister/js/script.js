@@ -74,3 +74,9 @@ function draw() {
     }
 
 }
+
+function startNewGame() {
+    requiredKeys = [];
+    pendingKey = null;
+    triggerSpin();
+}

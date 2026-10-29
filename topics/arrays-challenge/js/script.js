@@ -41,6 +41,14 @@ function createBall() {
 }
 
 /**
+ * Adds a new ball to the array whenever the mouse is pressed
+ */
+function mousePressed() {
+    const newBall = createBall();
+    balls.push(newBall);
+}
+
+/**
  * Moves and draws all balls in the array
  */
 function draw() {

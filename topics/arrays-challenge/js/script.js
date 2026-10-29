@@ -1,5 +1,5 @@
 /**
- * In-Class Challenge: Arrays
+ * In-Class Challenge: Arrays (Confetti Balls)
  * Fridrikka Wright
  * 
  * Sample code "Boingo" from Pippin Barr at https://pippinbarr.com/cart253/assignments/challenges/arrays/

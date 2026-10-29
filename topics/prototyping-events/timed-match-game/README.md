@@ -2,7 +2,7 @@
 
 Fridrikka Wright
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://fridwright.github.io/cart253/topics/prototyping-events/timed-match-game/)
 
 ## Description
 
@@ -19,7 +19,5 @@ And now, if the user finds all matches before the timer runs out, they are congr
 > - Sound from this project is "Gambling Casino Ambience Sound Effect" provided by https://www.youtube.com/watch?v=faIzwyaU6kA
 
 ## License
-
-This bit could include the license you want to apply to your work. For example:
 
 > This project is licensed under a Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en)) license with the exception of libraries and other components with their own licenses.

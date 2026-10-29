@@ -9,9 +9,9 @@
 
 ## Deliverables
 
-### 1. Prototype One - Match Game [view here](https://fridwright.github.io/cart253/topics/prototyping-conditionals/match-game/)
+### 1. Prototype One - Timed Match Game (rework of previous project) [view here](https://fridwright.github.io/cart253/topics/prototyping-events/timed-match-game/)
 
-<img src="topics/prototyping-conditionals/match-game/assets/images/match.png">
+<img src="topics/prototyping-events/timed-match-game/assets/images/timedmatch.png">
 
 
 

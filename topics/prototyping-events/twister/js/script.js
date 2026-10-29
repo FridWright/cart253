@@ -104,3 +104,17 @@ function updateSpinning() {
         gameState = 'AWAITING_INPUT';
     }
 }
+
+function updateAwaitingInput() {
+    verifyKeysHeld();
+    if (gameState === 'GAMEOVER') return;
+
+    // Check if the user pressed the pending key
+    if (pendingKey && activeKeysHeld.has(pendingKey.char)) {
+        requiredKeys.push(pendingKey); // Lock it in
+        pendingKey = null;
+
+        // Automatically trigger the next spin!
+        triggerSpin();
+    }
+}

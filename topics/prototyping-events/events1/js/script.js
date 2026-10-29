@@ -3,17 +3,21 @@
  * Fridrikka Wright
  * 
 
- * This is a re-vamp of the Match Game created for the Prototyping- Conditionals assignment.
+ * This is a re-vamp of the Match Game created for the prior Prototyping- Conditionals assignment.
 * /// It is a card matching game where the user must find all matching colours (8 total)///
 * This rework introduces a timer wherein all matches must be found before time runs out.
 * It also includes randomization of the card colours each reload, so the cards change
-* their position for each new game. and now, if the user finds all matches before the timer runs 
+* their position for each new game. And now, if the user finds all matches before the timer runs 
 * out, they are congratulated and asked if they want to play again.
 
  */
 
 "use strict";
 
+// Background music variable (casino sounds)
+let bgMusic = new Audio("js/casino.mp3");
+bgMusic.loop = true; // Make it loop continuously
+bgMusic.volume = 0.1; // Set volume (0.0 to 1.0)
 
 // Timer variables
 let timeLeft = 60; // 60 seconds
@@ -212,6 +216,11 @@ function mousePressed() {
             // Start the time countdown after user makes first click
             if (!gameStarted) {
                 gameStarted = true;
+
+                // Play and loop background music (if it isn't already playing)
+                // Play background music safely
+                bgMusic.play().catch(error => console.log("Audio play blocked:", error));
+
                 timerInterval = setInterval(function () {
                     if (timeLeft > 0) {
                         timeLeft--;

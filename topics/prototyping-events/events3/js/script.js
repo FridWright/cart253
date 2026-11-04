@@ -124,6 +124,10 @@ function updateGame() {
             b.vx *= -1.05; // Slightly speed up on hit
             b.x = rightPaddleX - paddleWidth / 2 - b.radius;
         }
+        // Failure/Out of Bounds Check (Game Over if any ball escapes)
+        if (b.x < 0 || b.x > width) {
+            gameState = 'GAMEOVER';
+        }
     }
 
 

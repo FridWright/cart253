@@ -20,9 +20,11 @@ let paddleSpeed = 7;
 // Balls Array & Time Event variables
 let balls = [];
 let lastSpawnTime = 0;
-let spawnInterval = 30000; // 30,000 milliseconds = 30 seconds
+let spawnInterval = 15000; // 15,000 milliseconds = 15 seconds
 let survivalTime = 0;
 
+// Stop timer after final ball is lost and game is over
+let finalTimeSecs = 0;
 
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
@@ -70,7 +72,7 @@ function spawnNewBall() {
         vx: random([4, -4]), // Initial horizontal speed/direction
         vy: random(-3, 3),   // Initial vertical speed/direction
         radius: 12,
-        color: color(random(100, 255), random(100, 255), 255)
+        color: color(random(40, 120), random(40, 120), random(40, 120))
     });
 }
 
@@ -89,7 +91,7 @@ function updateGame() {
     // 2. Time-Based Event: Spawn a new ball every 30 seconds 
     if (millis() - lastSpawnTime > spawnInterval) {
         spawnNewBall();
-        lastSpawnTime = millis(); // Reset timer for next 30s interval
+        lastSpawnTime = millis(); // Reset timer for next 15s interval
     }
     // 3. Update all active balls in the array
     for (let i = balls.length - 1; i >= 0; i--) {
@@ -124,8 +126,9 @@ function updateGame() {
             b.vx *= -1.05; // Slightly speed up on hit
             b.x = rightPaddleX - paddleWidth / 2 - b.radius;
         }
-        // Failure/Out of Bounds Check (Game Over if any ball escapes)
+        // Failure / Out of Bounds Check (Game Over if any ball escapes)
         if (b.x < 0 || b.x > width) {
+            finalTimeSecs = floor((millis() - survivalTime) / 1000); // Freeze final time here!
             gameState = 'GAMEOVER';
         }
     }
@@ -140,13 +143,13 @@ function drawGameUI() {
     // Reference for drawingContext.setLineDash from https://editor.p5js.org/ogt/sketches/mv1TYg9TJ
     drawingContext.setLineDash([]); // Reset line dash
 
-    // Draw Left Paddle (Blue)
+    // Draw Left Paddle (brown)
     noStroke();
-    fill(59, 130, 246);
+    fill('#452F12');
     rect(50, leftY, paddleWidth, paddleHeight, 6);
 
-    // Draw Right Paddle (Pink)
-    fill(236, 72, 153);
+    // Draw Right Paddle (blue)
+    fill('#355B94');
     rect(width - 50, rightY, paddleWidth, paddleHeight, 6);
 
     // Draw all Active Balls
@@ -156,7 +159,7 @@ function drawGameUI() {
     }
 
     // Heads-up-display: Total Balls & Time Survived
-    fill(255);
+    fill('#993123');
     textSize(18);
     text(`Active Balls: ${balls.length}`, width / 2, 30);
 
@@ -181,4 +184,27 @@ function drawStartScreen() {
     textSize(20);
     textStyle(BOLD);
     text("Press SPACE to Start", width / 2, height / 2 + 100);
+}
+
+// Draw Game Over screen
+function drawGameOverScreen() {
+    fill('#993123');
+    textSize(50);
+    textStyle(BOLD);
+    text("BALL LOST - GAME OVER", width / 2, height / 2 - 50);
+
+    fill('#452F12');
+    textSize(20);
+    text(`You survived with ${balls.length} balls active for ${finalTimeSecs} seconds!`, width / 2, height / 2 + 10);
+
+    fill('#355B94');
+    textSize(16);
+    text("Press SPACE to play again", width / 2, height / 2 + 70);
+}
+
+// Key Event Listener (restart game when space key is pressed)
+function keyPressed() {
+    if (key === ' ' && (gameState === 'START' || gameState === 'GAMEOVER')) {
+        startNewGame();
+    }
 }

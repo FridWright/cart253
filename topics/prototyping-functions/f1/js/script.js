@@ -13,9 +13,10 @@ let cols = 4;
 let rows = 4;
 let buttonWidth = 100;
 let buttonHeight = 80;
-let startX = 120;
-let startY = 80;
 let spacing = 20;
+
+let startX;
+let startY;
 
 let gridData = [];
 
@@ -26,6 +27,14 @@ function setup() {
     createCanvas(800, 600);
     textAlign(CENTER, CENTER);
     rectMode(CORNER);
+
+    // Calculate total dimensions of the 4x4 grid
+    let totalGridWidth = (cols * buttonWidth) + ((cols - 1) * spacing);
+    let totalGridHeight = (rows * buttonHeight) + ((rows - 1) * spacing);
+
+    // Center the grid on the canvas
+    startX = (width - totalGridWidth) / 2;
+    startY = (height - totalGridHeight) / 2;
 
     let categories = ["Percussion", "Melody", "Vocals", "SFX"];
     let rowColors = ["#0D0C0C", "#424040", "#8C8888", "#F7F2F2"];

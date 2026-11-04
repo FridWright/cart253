@@ -32,15 +32,28 @@ The third prototype, *Bloom*, is an interactive growth sketch where a flower spr
 
 Throughout the *Prototyping: Variables* Assignment, I relied heavily on p5.js references and found it essential for implementing functions like dist(), lerpColor(), and mousePressed().
 
-4. ### <u>Third Journal Entry ⏰</u>
+4. ### <u>Fourth Journal Entry </u>
 This journal entry reflects on my process of the [Prototyping: Conditionals assignment.](https://github.com/FridWright/cart253/blob/main/prototyping-conditionals.md)
 
-My first prototype, *Match Game*, is a classic pair matching game where the user tries to flip cards to find colour matches. I used mousePressed() and dist() to detect player clicks on individual grid cards, triggering a flipped state for revealed colours. For the core memory logic, I utilized setTimeout() to pause face-up cards before flipping mismatched pairs back over.
+My first prototype, *Match Game*, is a classic pair matching game where the user tries to flip cards to find colour matches. I used mousePressed() and dist() to detect player clicks on individual grid cards, triggering a flipped state for revealed colours. For the core memory logic, I utilized setTimeout() to pause face-up cards before flipping mismatched pairs back over. Conditionals were very essential evluating matchs, keeping cards flipped up if so or fipping them back facedown if not. 
 
-5. ### <u>Third Journal Entry ⏰</u>
+My second prototype, *Crosswalk*, is a simulation that relies on conditional logic to govern state transitions, visual rendering, and pedestrian movement. If/else drives the traffic light state machine through red/green/yellow/grey in accordance to timing rules designated. Conditional checks also govern pedestrian behavior by evaluating whether a red or yellow light requires stopping at the crosswalk line, preventing bunching by checking distances against walkers ahead, and cleaning up characters once they move off-screen.
 
-6. ### <u>Third Journal Entry ⏰</u>
+The third prototype is *Ghosts*, uses conditionals to tell a group of curious ghosts whether its safe to approach a lamp they are interested in haunting, based on whether or not its illuminated by the user (..they are scared of the light). If the lamp is switched on, the ghosts hang back in the corner of the screen and are red and angry. Elsewise, when the lamp is off, the ghosts travel down to check out the lamp and are white and at ease. The lamp being on or off also triggers other rules regarding the state of the surrounding environment. 
 
-7. ### <u>Third Journal Entry ⏰</u>
+5. ### <u>Fifth Journal Entry </u>
+This journal entry reflects on my process for the [Prototyping: Events assignment.](https://github.com/FridWright/cart253/blob/main/prototyping-events.md)
 
-8. ### <u>Third Journal Entry ⏰</u>
+The theme for these prototypes took on an arcade theme as they progressed, and I realized I was doing my renditions of classic games. I suppose that these classic are a good vessel in which to explore Events.
+
+My first prototype *Timed Match Game* is actually a reworking of the week prior's prototype *Match Game*. The changes to this reworked edition include the randomization of the cards with each new reloaded game, so that the matches are not in the same place each time. This was done by putting all the colours in an array to be randomized. A timer was also introduced, adding an element of challenge that prompts the user to find all matches before timer is out. A game over screen has also been added, to ask the user if they want to play again, after they either win or lose. I also added audio to this prototype, which gave me trouble at first and was gratifying to resolve. 
+
+The second prototype, *Twister*, is a reimagiing of the classic board/body game Twister, except it asks the user to keep their fingers on certain keys as opposed to hands/feet on coloured circles on a mat. Event listeners were added to track multi-key holds, so when the keys were held, the game could keep the wheel spinning automatically and not trigger timeout, as well as be aware of what keys are already pressed so as to not call them again. An array of a database of keyboard letters A-Z and numbers 1-9 was created to track keys pressed by assigned a numerical code to each key. 
+
+The third prototype, *Paddleball*, was inspired by the similar in-class assignment. This is a simple paddleball game that utilizes user input events, temporal triggers, and collision physics. Continuous key polling is used for dual-paddle movement, while discrete listeners (keyPressed) handle game-state transitions via the spacebar. Time-based events tracked through millis() automatically introduce new balls at regular intervals, and physics-based collision and out-of-bounds triggers manage ball trajectories and game-over states.
+
+6. ### <u>Sixth Journal Entry ⏰</u>
+
+7. ### <u>Seventh Journal Entry ⏰</u>
+
+8. ### <u>Eigth Journal Entry ⏰</u>

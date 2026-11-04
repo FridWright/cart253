@@ -23,7 +23,7 @@
 
 ### 3. Prototype Three - Paddleball [view here](https://fridwright.github.io/cart253/topics/prototyping-events/paddleball/)
 
-<img src="topics/prototyping-events/paddleboard/assets/images/paddleball.png">
+<img src="topics/prototyping-events/paddleball/assets/images/paddleball.png">
 
 
 

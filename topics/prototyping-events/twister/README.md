@@ -6,7 +6,7 @@ Fridrikka Wright
 
 ## Description
 
-This is a game of Keyboard Twister. It functions siilarily to the real life version, where the player spins the wheel and has to keep whatever body part in contact with the corresponding colour of spin instruction. In this game, the wheel will instruct you to hold down a key (a letter or a number) - you cannot lift your finger off the key without triggering Game Over. 
+This is a game of Keyboard Twister. It functions siilarily to the real life version, where the player spins the wheel and has to keep whatever body part in contact with the corresponding colour of spin instruction. In this game, the wheel will instruct you to hold down a key (a letter or a number) - you cannot lift your finger off the key without triggering Game Over. See how many keys you can hold at once!
 
 ## Attribution
 

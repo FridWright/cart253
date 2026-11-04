@@ -15,7 +15,7 @@ let gameState = 'START'; // Can be: 'START', 'PLAYING', 'GAMEOVER'
 let leftY, rightY;
 let paddleWidth = 20;
 let paddleHeight = 100;
-let paddleSpeed = 7;
+let paddleSpeed = 10;
 
 // Balls Array & Time Event variables
 let balls = [];
@@ -40,7 +40,8 @@ function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
-    background('#F8FCE6');
+    background('#FFEBA6');
+    drawBorder();
 
     if (gameState === 'START') {
         drawStartScreen();
@@ -51,6 +52,37 @@ function draw() {
         drawGameOverScreen();
     }
 }
+// Draw the dashed border
+function drawBorder() {
+    stroke('white');
+    strokeWeight(5);
+    noFill();
+
+    let margin = 10; // distance from the canvas border
+    let dash = 15;
+    let gap = 15;
+
+    // 1. Top Border
+    for (let x = margin; x <= width - margin; x += dash + gap) {
+        line(x, margin, min(x + dash, width - margin), margin);
+    }
+
+    // 2. Bottom Border
+    for (let x = margin; x <= width - margin; x += dash + gap) {
+        line(x, height - margin, min(x + dash, width - margin), height - margin);
+    }
+
+    // 3. Left Border
+    for (let y = margin; y <= height - margin; y += dash + gap) {
+        line(margin, y, margin, min(y + dash, height - margin));
+    }
+
+    // 4. Right Border
+    for (let y = margin; y <= height - margin; y += dash + gap) {
+        line(width - margin, y, width - margin, min(y + dash, height - margin));
+    }
+}
+
 
 // Start game and create new ball 
 function startNewGame() {
@@ -69,8 +101,8 @@ function spawnNewBall() {
     balls.push({
         x: width / 2,
         y: height / 2,
-        vx: random([4, -4]), // Initial horizontal speed/direction
-        vy: random(-3, 3),   // Initial vertical speed/direction
+        vx: random([6, -6]), // Initial horizontal speed/direction
+        vy: random(-5, 5),   // Initial vertical speed/direction
         radius: 12,
         color: color(random(40, 120), random(40, 120), random(40, 120))
     });
@@ -135,13 +167,16 @@ function updateGame() {
 }
 
 function drawGameUI() {
-    // Center Net Line
-    stroke(255, 255, 255, 40);
+    // Center Net Line 
+    stroke("white");
     strokeWeight(4);
-    drawingContext.setLineDash([10, 10]);
-    line(width / 2, 0, width / 2, height);
-    // Reference for drawingContext.setLineDash from https://editor.p5js.org/ogt/sketches/mv1TYg9TJ
-    drawingContext.setLineDash([]); // Reset line dash
+    noFill();
+
+    let dashHeight = 15;
+    let gapHeight = 15;
+    for (let y = 0; y < height; y += dashHeight + gapHeight) {
+        line(width / 2, y, width / 2, y + dashHeight);
+    }
 
     // Draw Left Paddle (brown)
     noStroke();
@@ -170,6 +205,7 @@ function drawGameUI() {
 // Draw Start screen
 function drawStartScreen() {
     fill('#993123');
+    noStroke();
     textFont('monospace');
     textSize(50);
     textStyle(BOLD);

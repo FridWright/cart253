@@ -82,4 +82,7 @@ function updateGame() {
     if (keyIsDown(79)) rightY -= paddleSpeed; // 'O'
     if (keyIsDown(77)) rightY += paddleSpeed; // 'M'
 
+    // Keep paddles inside canvas bounds
+    leftY = constrain(leftY, paddleHeight / 2, height - paddleHeight / 2);
+    rightY = constrain(rightY, paddleHeight / 2, height - paddleHeight / 2);
 }

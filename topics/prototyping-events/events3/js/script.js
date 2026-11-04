@@ -102,5 +102,15 @@ function updateGame() {
         if (b.y - b.radius <= 0 || b.y + b.radius >= height) {
             b.vy *= -1;
         }
-
+        // Left Paddle Collision
+        let leftPaddleX = 50;
+        if (
+            b.x - b.radius <= leftPaddleX + paddleWidth / 2 &&
+            b.x + b.radius >= leftPaddleX - paddleWidth / 2 &&
+            b.y >= leftY - paddleHeight / 2 &&
+            b.y <= leftY + paddleHeight / 2
+        ) {
+            b.vx *= -1.05; // Slightly speed up on hit
+            b.x = leftPaddleX + paddleWidth / 2 + b.radius;
+        }
     }

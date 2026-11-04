@@ -236,7 +236,7 @@ function drawGameOverScreen() {
 
     fill('#452F12');
     textSize(20);
-    text(`You survived with ${balls.length} balls active for ${finalTimeSecs} seconds!`, width / 2, height / 2 + 10);
+    text(`You survived for ${finalTimeSecs} seconds!`, width / 2, height / 2 + 10);
 
     fill('#355B94');
     textSize(16);

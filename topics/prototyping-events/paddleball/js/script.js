@@ -2,7 +2,10 @@
  * Prototyping - Paddleball
  * Fridrikka Wright
  * 
- * Paddleboard
+ * A classic paddleball game where the user can play themselves, or another,
+ * by moving the paddles on the sides of the screen (with keys) to bounce a ball back
+ * and forth. A new ball is automatically added to the play every 10 seconds,
+ * and the game is over when there is no balls left in play. 
  */
 
 "use strict";

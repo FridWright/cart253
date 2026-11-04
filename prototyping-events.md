@@ -21,9 +21,9 @@
 
 
 
-### 3. Prototype Three - Ghosts [view here](https://fridwright.github.io/cart253/topics/prototyping-conditionals/ghosts/)
+### 3. Prototype Three - Paddleball [view here](https://fridwright.github.io/cart253/topics/prototyping-events/paddleball/)
 
-<img src="topics/prototyping-conditionals/ghosts/assets/images/ghosts1.png">
+<img src="topics/prototyping-events/paddleboard/assets/images/paddleball.png">
 
 
 

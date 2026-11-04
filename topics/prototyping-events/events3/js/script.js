@@ -63,3 +63,13 @@ function startNewGame() {
     survivalTime = millis();
     gameState = 'PLAYING';
 }
+function spawnNewBall() {
+    balls.push({
+        x: width / 2,
+        y: height / 2,
+        vx: random([4, -4]), // Initial horizontal speed/direction
+        vy: random(-3, 3),   // Initial vertical speed/direction
+        radius: 12,
+        color: color(random(100, 255), random(100, 255), 255)
+    });
+}

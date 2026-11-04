@@ -101,7 +101,7 @@ function spawnNewBall() {
         x: width / 2,
         y: height / 2,
         vx: random([7, -7]), // Initial horizontal speed/direction
-        vy: random(-6, 6),   // Initial vertical speed/direction
+        vy: random([-6, -5, -4, 4, 5, 6]),   // Initial vertical speed/direction
         radius: 12,
         color: color(random(40, 120), random(40, 120), random(40, 120))
     });

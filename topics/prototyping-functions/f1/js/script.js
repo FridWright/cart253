@@ -25,5 +25,14 @@ function setup() {
 function draw() {
     background("#752515");
 
+    // Title and Instructions
+    fill(255);
+    textSize(24);
+    textStyle(BOLD);
+    text("NOISE MACHINE", width / 2, 35);
 
+    textSize(14);
+    textStyle(NORMAL);
+    fill(180);
+    text("Click a button to toggle sound ON / OFF", width / 2, 530);
 }

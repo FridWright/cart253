@@ -16,7 +16,7 @@
 */
 
 // Game State & Key Tracking
-let requiredKeys = [];          // Keys the player MUST keep holding down
+let requiredKeys = [];          // Keys the player must keep holding down
 let pendingKey = null;          // The current key commanded by the wheel
 let activeKeysHeld = new Set(); // Raw set tracking every key physically pressed down right now
 
@@ -140,6 +140,8 @@ function verifyKeysHeld() {
         }
     }
 }
+
+// Draw the Game UI
 
 function drawGameUI() {
     // Draw Wheel

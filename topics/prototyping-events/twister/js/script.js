@@ -64,13 +64,14 @@ function setup() {
  * Draw the background and the conditionals for game setup
 */
 function draw() {
-    background(18, 18, 24);
+    background('black');
 
     push();
+    textFont('Trebuchet MS');
     textSize(14);
     fill(234, 179, 8);
     noStroke();
-    text(`KEYBOARD TWISTER: DON'T GET TANGLED`, width / 2, height - 550);
+    text(`☞ KEYBOARD TWISTER: DON'T GET TANGLED ☜`, width / 2, height - 550);
 
     // Conditionals for game setup
     if (gameState === 'START') {
@@ -96,7 +97,7 @@ function startNewGame() {
 function triggerSpin() {
     // Find keys that aren't already required
     let unused = availableKeys.filter(k => !requiredKeys.some(rk => rk.char === k.char));
-    if (unused.length === 0) return; // Player beat the game!
+    if (unused.length === 0) return; // Player beat the game
 
     pendingKey = random(unused);
     spinSpeed = random(25, 35);
@@ -107,6 +108,7 @@ function updateSpinning() {
     verifyKeysHeld(); // Make sure player didn't let go while wheel spins
     if (gameState === 'GAMEOVER') return;
 
+    // Reference for spinning wheel from https://editor.p5js.org/willgeary/sketches/B15uLDjhm
     wheelAngle += spinSpeed;
     spinSpeed *= 0.94; // Deceleration friction
 
@@ -148,7 +150,7 @@ function drawGameUI() {
     push();
     translate(width / 2, height / 2 - 40);
     let sliceAngle = 360 / 6;
-    let colors = [color(239, 68, 68), color(59, 130, 246), color(34, 197, 94), color(234, 179, 8), color(168, 85, 247), color(236, 72, 153)];
+    let colors = [color('red'), color('yellow'), color('orange'), color('green'), color('blue'), color('purple')];
 
     stroke(255);
     strokeWeight(2);
@@ -162,7 +164,7 @@ function drawGameUI() {
     noStroke();
     ellipse(0, 0, 90, 90);
 
-    fill(255);
+    fill('white');
     textSize(24);
     textStyle(BOLD);
     if (gameState === 'SPINNING') {
@@ -175,12 +177,12 @@ function drawGameUI() {
     // Draw Directive Banner
     push();
     if (gameState === 'AWAITING_INPUT' && pendingKey) {
-        fill(234, 179, 8);
+        fill('white');
         textSize(20);
         textStyle(BOLD);
         text(`HOLD DOWN '${pendingKey.char}' TO SPIN AGAIN!`, width / 2, height / 2 + 100);
     } else if (gameState === 'SPINNING') {
-        fill(150);
+        fill('white');
         textSize(18);
         text("SPINNING...", width / 2, height / 2 + 100);
     }
@@ -189,7 +191,7 @@ function drawGameUI() {
     // Draw Locked Keys (keys player must keep holding)
     push();
     textSize(14);
-    fill(180);
+    fill('white');
     noStroke();
     text(`KEYS YOU MUST KEEP HOLDING (${requiredKeys.length}):`, width / 2, height - 100);
 
@@ -198,13 +200,19 @@ function drawGameUI() {
         let rk = requiredKeys[i];
         let isHeld = activeKeysHeld.has(rk.char);
 
-        stroke(isHeld ? color(34, 197, 94) : color(239, 68, 68));
-        strokeWeight(2);
-        fill(isHeld ? color(34, 197, 94, 60) : color(239, 68, 68, 60));
+        // 1. Set color based on whether it is held
+        noStroke();
+        if (isHeld) {
+            fill('green');   // Solid green when held
+        } else {
+            fill('red');   // Solid red when NOT held
+        }
+
+        // 2. Draw the solid circle
         ellipse(startX + (i * 60), height - 50, 45, 45);
 
-        noStroke();
-        fill(255);
+        // 3. Draw the key letter on top
+        fill(255); // White text
         textSize(18);
         textStyle(BOLD);
         text(rk.char, startX + (i * 60), height - 49);
@@ -221,22 +229,22 @@ function drawStartScreen() {
     textStyle(BOLD);
     text("KEYBOARD TWISTER", width / 2, height / 2 - 50);
     textSize(16);
-    fill(180);
+    fill('white');
     text("1. Wheel spins and picks a key.\n2. Press and hold that key to spin again.\n3. Never let go of ANY required key!", width / 2, height / 2 + 10);
-    fill(34, 197, 94);
+    fill('red');
     textSize(18);
     text("Press SPACE to Start", width / 2, height / 2 + 100);
 }
 
 function drawGameOverScreen() {
-    fill(239, 68, 68);
+    fill('red');
     textSize(34);
     textStyle(BOLD);
     text("TANGLED! KEY RELEASED", width / 2, height / 2 - 40);
-    fill(255);
+    fill('white');
     textSize(18);
-    text(`You successfully held ${requiredKeys.length} keys!`, width / 2, height / 2 + 10);
-    fill(180);
+    text(`You successfully held ${requiredKeys.length} keys`, width / 2, height / 2 + 10);
+    fill('white');
     textSize(16);
     text("Press SPACE to try again", width / 2, height / 2 + 60);
 }

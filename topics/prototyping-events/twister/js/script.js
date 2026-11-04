@@ -164,4 +164,19 @@ function drawGameUI() {
     }
     pop();
 
+    // Draw Directive Banner
+    push();
+    if (gameState === 'AWAITING_INPUT' && pendingKey) {
+        fill(234, 179, 8);
+        textSize(20);
+        textStyle(BOLD);
+        text(`HOLD DOWN '${pendingKey.char}' TO SPIN AGAIN!`, width / 2, height / 2 + 100);
+    } else if (gameState === 'SPINNING') {
+        fill(150);
+        textSize(18);
+        text("SPINNING...", width / 2, height / 2 + 100);
+    }
+    pop();
+
+
 }

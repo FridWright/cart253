@@ -38,7 +38,7 @@ function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
-    background(18, 18, 24);
+    background('#F8FCE6');
 
     if (gameState === 'START') {
         drawStartScreen();
@@ -162,4 +162,23 @@ function drawGameUI() {
 
     let currentSurvivalSecs = floor((millis() - survivalTime) / 1000);
     text(`Time: ${currentSurvivalSecs}s`, width / 2, 60);
+}
+
+// Draw Start screen
+function drawStartScreen() {
+    fill('#993123');
+    textFont('monospace');
+    textSize(50);
+    textStyle(BOLD);
+    text("PADDLEBALL", width / 2, height / 2 - 80);
+
+    textSize(16);
+    textStyle(NORMAL);
+    fill('#452F12');
+    text("left paddle: W (⬆) / X (⬇)\nright paddle: O (⬆) / M (⬇)\n\nan extra ball is added every 30 seconds until failure!", width / 2, height / 2);
+
+    fill('#355B94');
+    textSize(20);
+    textStyle(BOLD);
+    text("Press SPACE to Start", width / 2, height / 2 + 100);
 }

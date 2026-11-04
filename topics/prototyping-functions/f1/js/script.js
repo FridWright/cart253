@@ -21,7 +21,8 @@ let startY;
 let gridData = [];
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Setup canvas, grid dimensions and centering, row colours and 
+ * categories, and the loop to replicate all 16 buttons
 */
 function setup() {
     createCanvas(800, 600);
@@ -36,26 +37,49 @@ function setup() {
     startX = (width - totalGridWidth) / 2;
     startY = (height - totalGridHeight) / 2;
 
-    let categories = ["Percussion", "Melody", "Vocals", "SFX"];
+
+    // Describe row colours and categories
+    let categories = ["Percussion", "Melody", "Synth", "SFX"];
     let rowColors = ["#0D0C0C", "#424040", "#8C8888", "#F7F2F2"];
 
-    // Loop through rows and columns to generate 16 buttons
+    // File path prefixes/names matching folder structure
+    let rowPrefixes = ["perc", "melody", "synth", "sfx"];
+
+    // Loop through rows and columns to generate 16 buttons with audio
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < cols; c++) {
             let x = startX + c * (buttonWidth + spacing);
             let y = startY + r * (buttonHeight + spacing);
 
-            gridData.push({
-                x: x,
-                y: y,
-                w: buttonWidth,
-                h: buttonHeight,
-                row: r,
-                col: c,
-                label: `${categories[r]} ${c + 1}`,
-                baseColor: rowColors[r],
-                isPlaying: false
-            });
+            // Create a unique file path for each sound (e.g., "assets/sounds/perc_1.mp3")
+            let soundPath = `assets/sounds/${rowPrefixes[r]}_${c + 1}.mp3`;
+
+            // Initialize the HTML5 Audio object
+            let soundObj = new Audio(soundPath);
+            soundObj.loop = true; // Set to true if you want sounds to loop when toggled on!
+            soundObj.volume = 0.3; // Adjust volume (0.0 to 1.0)
+
+
+
+            // Loop through rows and columns to generate 16 buttons
+            for (let r = 0; r < rows; r++) {
+                for (let c = 0; c < cols; c++) {
+                    let x = startX + c * (buttonWidth + spacing);
+                    let y = startY + r * (buttonHeight + spacing);
+
+                    gridData.push({
+                        x: x,
+                        y: y,
+                        w: buttonWidth,
+                        h: buttonHeight,
+                        row: r,
+                        col: c,
+                        label: `${categories[r]} ${c + 1}`,
+                        baseColor: rowColors[r],
+                        isPlaying: false
+                    });
+                }
+            }
         }
     }
 }

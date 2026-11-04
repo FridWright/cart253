@@ -73,3 +73,13 @@ function spawnNewBall() {
         color: color(random(100, 255), random(100, 255), 255)
     });
 }
+
+// Core Game Logic
+function updateGame() {
+    // 1. Paddle Controls (W/X for Left, O/M for Right)
+    if (keyIsDown(87)) leftY -= paddleSpeed; // 'W'
+    if (keyIsDown(88)) leftY += paddleSpeed; // 'X'
+    if (keyIsDown(79)) rightY -= paddleSpeed; // 'O'
+    if (keyIsDown(77)) rightY += paddleSpeed; // 'M'
+
+}

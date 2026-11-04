@@ -2,8 +2,7 @@
  * Prototyping - Paddleball
  * Fridrikka Wright
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Paddleboard
  */
 
 "use strict";
@@ -27,7 +26,7 @@ let survivalTime = 0;
 let finalTimeSecs = 0;
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Set up canvas
 */
 function setup() {
     createCanvas(1000, 600);
@@ -37,7 +36,7 @@ function setup() {
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Draw background, border, conditionals to show game start/end sreens
 */
 function draw() {
     background('#F7E097');
@@ -158,11 +157,16 @@ function updateGame() {
             b.vx *= -1.05; // Slightly speed up on hit
             b.x = rightPaddleX - paddleWidth / 2 - b.radius;
         }
-        // Failure / Out of Bounds Check (Game Over if any ball escapes)
+        // Failure / Out of Bounds Check (Remove only the escaped ball)
         if (b.x < 0 || b.x > width) {
-            finalTimeSecs = floor((millis() - survivalTime) / 1000); // Freeze final time here!
-            gameState = 'GAMEOVER';
+            balls.splice(i, 1); // Removes this specific ball from the array
         }
+    } // (closes the loop)
+
+    // Check for Game Over only if ALL balls are gone
+    if (balls.length === 0) {
+        finalTimeSecs = floor((millis() - survivalTime) / 1000);
+        gameState = 'GAMEOVER';
     }
 }
 

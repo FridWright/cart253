@@ -129,6 +129,37 @@ function updateGame() {
             gameState = 'GAMEOVER';
         }
     }
+}
 
+function drawGameUI() {
+    // Center Net Line
+    stroke(255, 255, 255, 40);
+    strokeWeight(4);
+    drawingContext.setLineDash([10, 10]);
+    line(width / 2, 0, width / 2, height);
+    // Reference for drawingContext.setLineDash from https://editor.p5js.org/ogt/sketches/mv1TYg9TJ
+    drawingContext.setLineDash([]); // Reset line dash
 
+    // Draw Left Paddle (Blue)
+    noStroke();
+    fill(59, 130, 246);
+    rect(50, leftY, paddleWidth, paddleHeight, 6);
+
+    // Draw Right Paddle (Pink)
+    fill(236, 72, 153);
+    rect(width - 50, rightY, paddleWidth, paddleHeight, 6);
+
+    // Draw all Active Balls
+    for (let b of balls) {
+        fill(b.color);
+        ellipse(b.x, b.y, b.radius * 2);
+    }
+
+    // Heads-up-display: Total Balls & Time Survived
+    fill(255);
+    textSize(18);
+    text(`Active Balls: ${balls.length}`, width / 2, 30);
+
+    let currentSurvivalSecs = floor((millis() - survivalTime) / 1000);
+    text(`Time: ${currentSurvivalSecs}s`, width / 2, 60);
 }

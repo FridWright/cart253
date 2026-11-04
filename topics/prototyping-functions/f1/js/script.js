@@ -76,3 +76,23 @@ function draw() {
         drawButton(btn.x, btn.y, btn.w, btn.h, btn.baseColor, btn.label, btn.isPlaying);
     }
 }
+
+function drawButton(x, y, w, h, col, label, active) {
+    if (active) {
+        fill(col);
+        stroke(255);
+        strokeWeight(4); // Glowing border when active
+    } else {
+        fill(50, 50, 60);
+        noStroke();      // Dark muted look when inactive
+    }
+
+    rect(x, y, w, h, 10);
+
+    // Button Text Label
+    fill(active ? 0 : 255);
+    noStroke();
+    textSize(14);
+    textStyle(BOLD);
+    text(label, x + w / 2, y + h / 2);
+}

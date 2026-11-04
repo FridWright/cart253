@@ -2,14 +2,17 @@
  * Prototyping - Events: Twister
  * Fridrikka Wright
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * This is a game of Keyboard Twister. It functions siilarily to the
+ * real version, where the player spins the wheel and has to keep in contact
+ * with the corresponding spin instruction. In this game, the wheel
+ * will instruct you to hold down a key - you cannot lift your finger
+ * off the key without game over. 
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Set up Game State, Key Tracking, and Database of allowed number/letter keycodes
 */
 
 // Game State & Key Tracking
@@ -18,6 +21,7 @@ let pendingKey = null;          // The current key commanded by the wheel
 let activeKeysHeld = new Set(); // Raw set tracking every key physically pressed down right now
 
 // Database of allowed letters and numbers with their standard keycodes
+/// Reference for random array from https://p5js.org/reference/p5/random/
 let availableKeys = [
     { char: 'A', code: 65 }, { char: 'B', code: 66 }, { char: 'C', code: 67 },
     { char: 'D', code: 68 }, { char: 'E', code: 69 }, { char: 'F', code: 70 },
@@ -39,6 +43,7 @@ let gameState = 'START'; // Can be: 'START', 'SPINNING', 'AWAITING_INPUT', 'GAME
 function setup() {
     createCanvas(600, 600);
     textAlign(CENTER, CENTER);
+    // Reference for angleMode from https://p5js.org/reference/p5/angleMode/
     angleMode(DEGREES);
 
 
@@ -56,16 +61,16 @@ function setup() {
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Draw the background and the conditionals for game setup
 */
 function draw() {
     background(18, 18, 24);
 
     push();
     textSize(14);
-    fill(180);
+    fill(234, 179, 8);
     noStroke();
-    text(`KEYBOARD TWISTER`, width / 2, height - 550);
+    text(`KEYBOARD TWISTER: DON'T GET TANGLED`, width / 2, height - 550);
 
     // Conditionals for game setup
     if (gameState === 'START') {
@@ -145,6 +150,7 @@ function drawGameUI() {
 
     stroke(255);
     strokeWeight(2);
+    // Reference for arc from https://p5js.org/reference/p5/arc/
     for (let i = 0; i < 6; i++) {
         fill(colors[i]);
         arc(0, 0, 220, 220, i * sliceAngle + wheelAngle, (i + 1) * sliceAngle + wheelAngle, PIE);
@@ -202,17 +208,40 @@ function drawGameUI() {
         text(rk.char, startX + (i * 60), height - 49);
     }
     pop();
+}
 
-    function drawStartScreen() {
-        fill(255);
-        textSize(32);
-        textStyle(BOLD);
-        text("KEYBOARD TWISTER", width / 2, height / 2 - 50);
-        textSize(16);
-        fill(180);
-        text("1. Wheel spins and picks a key.\n2. Press and hold that key to spin again.\n3. Never let go of ANY required key!", width / 2, height / 2 + 10);
-        fill(34, 197, 94);
-        textSize(18);
-        text("Press SPACE to Start", width / 2, height / 2 + 100);
+
+// Start screen and Game Over screen
+
+function drawStartScreen() {
+    fill(255);
+    textSize(32);
+    textStyle(BOLD);
+    text("KEYBOARD TWISTER", width / 2, height / 2 - 50);
+    textSize(16);
+    fill(180);
+    text("1. Wheel spins and picks a key.\n2. Press and hold that key to spin again.\n3. Never let go of ANY required key!", width / 2, height / 2 + 10);
+    fill(34, 197, 94);
+    textSize(18);
+    text("Press SPACE to Start", width / 2, height / 2 + 100);
+}
+
+function drawGameOverScreen() {
+    fill(239, 68, 68);
+    textSize(34);
+    textStyle(BOLD);
+    text("TANGLED! KEY RELEASED", width / 2, height / 2 - 40);
+    fill(255);
+    textSize(18);
+    text(`You successfully held ${requiredKeys.length} keys!`, width / 2, height / 2 + 10);
+    fill(180);
+    textSize(16);
+    text("Press SPACE to try again", width / 2, height / 2 + 60);
+}
+
+function keyPressed() {
+    // Reference for keyPressed from https://p5js.org/reference/p5/keyPressed/
+    if (key === ' ' && (gameState === 'START' || gameState === 'GAMEOVER')) {
+        startNewGame();
     }
 }

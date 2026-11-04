@@ -24,4 +24,12 @@ function setup() {
 function draw() {
     background(18, 18, 24);
 
+    if (gameState === 'START') {
+        drawStartScreen();
+    } else if (gameState === 'PLAYING') {
+        updateGame();
+        drawGameUI();
+    } else if (gameState === 'GAMEOVER') {
+        drawGameOverScreen();
+    }
 }

@@ -98,5 +98,9 @@ function updateGame() {
         b.x += b.vx;
         b.y += b.vy;
 
+        // Wall Bounce (Top & Bottom)
+        if (b.y - b.radius <= 0 || b.y + b.radius >= height) {
+            b.vy *= -1;
+        }
 
     }

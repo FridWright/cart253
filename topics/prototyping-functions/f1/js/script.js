@@ -17,6 +17,8 @@ let startX = 120;
 let startY = 80;
 let spacing = 20;
 
+let gridData = [];
+
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */

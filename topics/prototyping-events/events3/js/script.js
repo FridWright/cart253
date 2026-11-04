@@ -213,12 +213,12 @@ function drawStartScreen() {
     textFont('monospace');
     textSize(50);
     textStyle(BOLD);
-    text("PADDLEBALL", width / 2, height / 2 - 80);
+    text("⚾︎ PADDLEBALL ⚾︎", width / 2, height / 2 - 80);
 
     textSize(16);
-    textStyle(NORMAL);
+    textStyle(ITALIC);
     fill('#452F12');
-    text("left paddle: W (⬆) / X (⬇)\nright paddle: O (⬆) / M (⬇)\n\nan extra ball is added every 30 seconds until failure!", width / 2, height / 2);
+    text("left paddle: W (⬆) / X (⬇)\nright paddle: O (⬆) / M (⬇)\n\nan extra ball is added every 30 seconds until failure", width / 2, height / 2);
 
     fill('#355B94');
     textSize(20);

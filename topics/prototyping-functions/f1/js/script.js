@@ -8,6 +8,15 @@
 
 "use strict";
 
+
+let cols = 4;
+let rows = 4;
+let buttonWidth = 100;
+let buttonHeight = 80;
+let startX = 120;
+let startY = 80;
+let spacing = 20;
+
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */

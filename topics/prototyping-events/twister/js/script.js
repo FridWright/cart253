@@ -178,5 +178,30 @@ function drawGameUI() {
     }
     pop();
 
+    // Draw Locked Keys (keys player must keep holding)
+    push();
+    textSize(14);
+    fill(180);
+    noStroke();
+    text(`KEYS YOU MUST KEEP HOLDING (${requiredKeys.length}):`, width / 2, height - 100);
+
+    let startX = width / 2 - ((requiredKeys.length - 1) * 30);
+    for (let i = 0; i < requiredKeys.length; i++) {
+        let rk = requiredKeys[i];
+        let isHeld = activeKeysHeld.has(rk.char);
+
+        stroke(isHeld ? color(34, 197, 94) : color(239, 68, 68));
+        strokeWeight(2);
+        fill(isHeld ? color(34, 197, 94, 60) : color(239, 68, 68, 60));
+        ellipse(startX + (i * 60), height - 50, 45, 45);
+
+        noStroke();
+        fill(255);
+        textSize(18);
+        textStyle(BOLD);
+        text(rk.char, startX + (i * 60), height - 49);
+    }
+    pop();
+
 
 }

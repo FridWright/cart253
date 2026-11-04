@@ -96,3 +96,15 @@ function drawButton(x, y, w, h, col, label, active) {
     textStyle(BOLD);
     text(label, x + w / 2, y + h / 2);
 }
+
+function mousePressed() {
+    for (let i = 0; i < gridData.length; i++) {
+        let btn = gridData[i];
+
+        // Check if mouse is inside this button's bounding box
+        if (mouseX > btn.x && mouseX < btn.x + btn.w && mouseY > btn.y && mouseY < btn.y + btn.h) {
+            btn.isPlaying = !btn.isPlaying; // Toggle ON/OFF state
+            console.log(`${btn.label} is now: ${btn.isPlaying ? "PLAYING" : "STOPPED"}`);
+        }
+    }
+}

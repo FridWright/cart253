@@ -49,3 +49,17 @@ function draw() {
         drawGameOverScreen();
     }
 }
+
+// Start game and create new ball 
+function startNewGame() {
+    leftY = height / 2;
+    rightY = height / 2;
+
+    // Reset balls array with 1 initial ball
+    balls = [];
+    spawnNewBall();
+
+    lastSpawnTime = millis();
+    survivalTime = millis();
+    gameState = 'PLAYING';
+}

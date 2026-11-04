@@ -203,5 +203,16 @@ function drawGameUI() {
     }
     pop();
 
-
+    function drawStartScreen() {
+        fill(255);
+        textSize(32);
+        textStyle(BOLD);
+        text("KEYBOARD TWISTER", width / 2, height / 2 - 50);
+        textSize(16);
+        fill(180);
+        text("1. Wheel spins and picks a key.\n2. Press and hold that key to spin again.\n3. Never let go of ANY required key!", width / 2, height / 2 + 10);
+        fill(34, 197, 94);
+        textSize(18);
+        text("Press SPACE to Start", width / 2, height / 2 + 100);
+    }
 }

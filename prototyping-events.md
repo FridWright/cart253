@@ -17,7 +17,7 @@
 
 ### 2. Prototype Two - Twister [view here](https://fridwright.github.io/cart253/topics/prototyping-events/twister/)
 
-<img src="topics/prototyping-conditionals/crosswalk/assets/images/crosswalk.png">
+<img src="topics/prototyping-events/twister/assets/images/twister.png">
 
 
 

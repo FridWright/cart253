@@ -100,8 +100,8 @@ function spawnNewBall() {
     balls.push({
         x: width / 2,
         y: height / 2,
-        vx: random([7, -7]), // Initial horizontal speed/direction
-        vy: random([-6, -5, -4, 4, 5, 6]),   // Initial vertical speed/direction
+        vx: random([10, -10]), // Initial horizontal speed/direction
+        vy: random([-8, -7, -6, 6, 7, 8]),   // Initial vertical speed/direction
         radius: 12,
         color: color(random(40, 120), random(40, 120), random(40, 120))
     });
@@ -143,7 +143,7 @@ function updateGame() {
             b.y >= leftY - paddleHeight / 2 &&
             b.y <= leftY + paddleHeight / 2
         ) {
-            b.vx *= -1.05; // Slightly speed up on hit
+            b.vx *= -1.08; // Slightly speed up on hit
             b.x = leftPaddleX + paddleWidth / 2 + b.radius;
         }
         // Right Paddle Collision
@@ -154,7 +154,7 @@ function updateGame() {
             b.y >= rightY - paddleHeight / 2 &&
             b.y <= rightY + paddleHeight / 2
         ) {
-            b.vx *= -1.05; // Slightly speed up on hit
+            b.vx *= -1.08; // Slightly speed up on hit
             b.x = rightPaddleX - paddleWidth / 2 - b.radius;
         }
         // Failure / Out of Bounds Check (Remove only the escaped ball)
@@ -218,7 +218,7 @@ function drawStartScreen() {
     textSize(16);
     textStyle(ITALIC);
     fill('#452F12');
-    text("left paddle: W (⬆) / X (⬇)\nright paddle: O (⬆) / M (⬇)\n\nan extra ball is added every 30 seconds until failure", width / 2, height / 2);
+    text("left paddle: W (⬆) / X (⬇)\nright paddle: O (⬆) / M (⬇)\n\nan extra ball is added every 10 seconds until failure", width / 2, height / 2);
 
     fill('#355B94');
     textSize(20);

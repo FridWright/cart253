@@ -69,4 +69,10 @@ function draw() {
     textStyle(NORMAL);
     fill(180);
     text("Click a button to toggle sound ON / OFF", width / 2, 530);
+
+    // Draw all buttons from the array
+    for (let i = 0; i < gridData.length; i++) {
+        let btn = gridData[i];
+        drawButton(btn.x, btn.y, btn.w, btn.h, btn.baseColor, btn.label, btn.isPlaying);
+    }
 }

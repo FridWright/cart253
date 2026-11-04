@@ -85,4 +85,10 @@ function updateGame() {
     // Keep paddles inside canvas bounds
     leftY = constrain(leftY, paddleHeight / 2, height - paddleHeight / 2);
     rightY = constrain(rightY, paddleHeight / 2, height - paddleHeight / 2);
+
+    // 2. Time-Based Event: Spawn a new ball every 30 seconds 
+    if (millis() - lastSpawnTime > spawnInterval) {
+        spawnNewBall();
+        lastSpawnTime = millis(); // Reset timer for next 30s interval
+    }
 }

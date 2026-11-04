@@ -113,4 +113,18 @@ function updateGame() {
             b.vx *= -1.05; // Slightly speed up on hit
             b.x = leftPaddleX + paddleWidth / 2 + b.radius;
         }
+        // Right Paddle Collision
+        let rightPaddleX = width - 50;
+        if (
+            b.x + b.radius >= rightPaddleX - paddleWidth / 2 &&
+            b.x - b.radius <= rightPaddleX + paddleWidth / 2 &&
+            b.y >= rightY - paddleHeight / 2 &&
+            b.y <= rightY + paddleHeight / 2
+        ) {
+            b.vx *= -1.05; // Slightly speed up on hit
+            b.x = rightPaddleX - paddleWidth / 2 - b.radius;
+        }
     }
+
+
+}

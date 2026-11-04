@@ -19,7 +19,7 @@ let paddleSpeed = 12;
 // Balls Array & Time Event variables
 let balls = [];
 let lastSpawnTime = 0;
-let spawnInterval = 15000; // 15,000 milliseconds = 15 seconds
+let spawnInterval = 10000; // 10,000 milliseconds = 10 seconds
 let survivalTime = 0;
 
 // Stop timer after final ball is lost and game is over
@@ -119,10 +119,10 @@ function updateGame() {
     leftY = constrain(leftY, paddleHeight / 2, height - paddleHeight / 2);
     rightY = constrain(rightY, paddleHeight / 2, height - paddleHeight / 2);
 
-    // 2. Time-Based Event: Spawn a new ball every 30 seconds 
+    // 2. Time-Based Event: Spawn a new ball every 10 seconds 
     if (millis() - lastSpawnTime > spawnInterval) {
         spawnNewBall();
-        lastSpawnTime = millis(); // Reset timer for next 15s interval
+        lastSpawnTime = millis(); // Reset timer for next 10s interval
     }
     // 3. Update all active balls in the array
     for (let i = balls.length - 1; i >= 0; i--) {

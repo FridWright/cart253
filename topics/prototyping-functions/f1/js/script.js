@@ -134,10 +134,20 @@ function mousePressed() {
     for (let i = 0; i < gridData.length; i++) {
         let btn = gridData[i];
 
-        // Check if mouse is inside this button's bounding box
+        // Check if mouse click is inside this button
         if (mouseX > btn.x && mouseX < btn.x + btn.w && mouseY > btn.y && mouseY < btn.y + btn.h) {
-            btn.isPlaying = !btn.isPlaying; // Toggle ON/OFF state
-            console.log(`${btn.label} is now: ${btn.isPlaying ? "PLAYING" : "STOPPED"}`);
+            btn.isPlaying = !btn.isPlaying; // Toggle state
+
+            if (btn.isPlaying) {
+                // Play sound safely and catch any browser autoplay blocks
+                btn.audio.play().catch(error => {
+                    console.log("Audio play blocked:", error);
+                });
+            } else {
+                // Stop sound and reset audio track back to the start
+                btn.audio.pause();
+                btn.audio.currentTime = 0;
+            }
         }
     }
 }

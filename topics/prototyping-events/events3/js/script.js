@@ -91,4 +91,12 @@ function updateGame() {
         spawnNewBall();
         lastSpawnTime = millis(); // Reset timer for next 30s interval
     }
-}
+    // 3. Update all active balls in the array
+    for (let i = balls.length - 1; i >= 0; i--) {
+        let b = balls[i];
+
+        b.x += b.vx;
+        b.y += b.vy;
+
+
+    }

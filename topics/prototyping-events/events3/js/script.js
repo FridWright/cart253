@@ -15,7 +15,7 @@ let gameState = 'START'; // Can be: 'START', 'PLAYING', 'GAMEOVER'
 let leftY, rightY;
 let paddleWidth = 20;
 let paddleHeight = 100;
-let paddleSpeed = 10;
+let paddleSpeed = 12;
 
 // Balls Array & Time Event variables
 let balls = [];
@@ -40,7 +40,7 @@ function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
-    background('#FFEBA6');
+    background('#F7E097');
     drawBorder();
 
     if (gameState === 'START') {
@@ -101,8 +101,8 @@ function spawnNewBall() {
     balls.push({
         x: width / 2,
         y: height / 2,
-        vx: random([6, -6]), // Initial horizontal speed/direction
-        vy: random(-5, 5),   // Initial vertical speed/direction
+        vx: random([7, -7]), // Initial horizontal speed/direction
+        vy: random(-6, 6),   // Initial vertical speed/direction
         radius: 12,
         color: color(random(40, 120), random(40, 120), random(40, 120))
     });
@@ -178,9 +178,9 @@ function drawGameUI() {
         line(width / 2, y, width / 2, y + dashHeight);
     }
 
-    // Draw Left Paddle (brown)
+    // Draw Left Paddle (red)
     noStroke();
-    fill('#452F12');
+    fill('#993123');
     rect(50, leftY, paddleWidth, paddleHeight, 6);
 
     // Draw Right Paddle (blue)
@@ -225,6 +225,7 @@ function drawStartScreen() {
 // Draw Game Over screen
 function drawGameOverScreen() {
     fill('#993123');
+    noStroke();
     textSize(50);
     textStyle(BOLD);
     text("BALL LOST - GAME OVER", width / 2, height / 2 - 50);

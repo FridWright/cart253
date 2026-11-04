@@ -27,7 +27,30 @@ function setup() {
     textAlign(CENTER, CENTER);
     rectMode(CORNER);
 
+    let categories = ["Percussion", "Melody", "Vocals", "SFX"];
+    let rowColors = ["#0D0C0C", "#424040", "#8C8888", "#F7F2F2"];
+
+    // Loop through rows and columns to generate 16 buttons
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+            let x = startX + c * (buttonWidth + spacing);
+            let y = startY + r * (buttonHeight + spacing);
+
+            gridData.push({
+                x: x,
+                y: y,
+                w: buttonWidth,
+                h: buttonHeight,
+                row: r,
+                col: c,
+                label: `${categories[r]} ${c + 1}`,
+                baseColor: rowColors[r],
+                isPlaying: false
+            });
+        }
+    }
 }
+
 
 
 /**

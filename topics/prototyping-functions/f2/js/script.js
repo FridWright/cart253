@@ -23,7 +23,7 @@ function setup() {
     createCanvas(800, 600);
     textAlign(CENTER, CENTER);
     rectMode(CENTER);
-
+    textFont('Courier New');
 
     // Generate initial future
     currentFuture = generateMashPrediction();
@@ -45,12 +45,10 @@ function draw() {
 
     // Title and Instructions
     fill(255);
-    textFont('Courier New');
     textSize(36);
     textStyle(BOLD);
     text("M . A . S . H .", width / 2, 60);
 
-    textFont('script');
     textSize(13);
     fill(200);
     text("♡ predict your future ♡", width / 2, 95);
@@ -67,4 +65,25 @@ function draw() {
         fill(180);
         text("Press [SPACEBAR] to spin the wheel again", width / 2, 545);
     }
+}
+
+// SPINNING WHEEL LOGIC
+function updateAndDrawWheel() {
+    let cx = width / 2;
+    let cy = height / 2;
+    let wheelRadius = 160;
+
+    // Apply friction to slow down the wheel gradually
+    wheelAngle += spinSpeed;
+    spinSpeed *= 0.96; // Friction factor
+
+    // Once the wheel slows down almost to a stop, finalize prediction
+    if (spinSpeed < 0.2 && spinSpeed > 0) {
+        spinSpeed = 0;
+        currentFuture = generateMashPrediction();
+        gameState = "RESULT";
+    }
+    push();
+    translate(cx, cy);
+    rotate(wheelAngle);
 }

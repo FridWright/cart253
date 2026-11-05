@@ -86,6 +86,10 @@ if (isBlinking) {
     drawEyelids(rightX, eyeY, eyeW, eyeH, blinkProgress);
     pop();
 
+    // Reset array when shut
+    if (blinkProgress >= 1.0 && blinkProgress < 1.08) {
+        stars = [];
+    }
 
 
 }

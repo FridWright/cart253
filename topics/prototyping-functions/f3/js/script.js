@@ -123,3 +123,20 @@ function drawAbstractFish(x, y, sz, bodyCol, accentCol, facingLeft) {
 
     pop();
 }
+
+/**
+ * SHARK!
+ */
+function updateAndDrawShark() {
+    if (activeShark.facingLeft) {
+        activeShark.x -= activeShark.speed;
+        if (activeShark.x < -300) activeShark = null; // Resets when off-screen
+    } else {
+        activeShark.x += activeShark.speed;
+        if (activeShark.x > width + 300) activeShark = null;
+    }
+
+    if (activeShark) {
+        drawShark(activeShark.x, activeShark.y, activeShark.size, activeShark.facingLeft);
+    }
+}

@@ -68,10 +68,16 @@ drawStars();
 pop();
 
 // 6. Blinking (clipped inside eye portals)
+/// Reference for clip() from https://beta.p5js.org/reference/p5/clip/
 if (isBlinking) {
     blinkProgress += 0.08;
 
-
+    // Left eyelid
+    push();
+    drawAlmondPath(leftX, eyeY, eyeW, eyeH);
+    drawingContext.clip();
+    drawEyelids(leftX, eyeY, eyeW, eyeH, blinkProgress);
+    pop();
 
 
 

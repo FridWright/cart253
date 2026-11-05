@@ -140,3 +140,44 @@ function updateAndDrawShark() {
         drawShark(activeShark.x, activeShark.y, activeShark.size, activeShark.facingLeft);
     }
 }
+
+// Draw shark
+function drawShark(x, y, sz, facingLeft) {
+    push();
+    translate(x, y);
+
+    if (facingLeft) {
+        scale(-1, 1);
+    }
+
+    noStroke();
+
+    let sharkBody = color("#B0B0B0");
+    let sharkAccent = color("#1C1C1C");
+    let eyeCol = color("#781D1D");
+
+    // 1. Tail Fin
+    fill(sharkAccent);
+    triangle(-sz * 0.35, 0, -sz * 0.8, -sz * 0.4, -sz * 0.65, 0);
+    triangle(-sz * 0.35, 0, -sz * 0.65, 0, -sz * 0.8, sz * 0.4);
+
+    // 2. Dorsal Fin
+    fill(sharkAccent);
+    triangle(-sz * 0.1, -sz * 0.42, -sz * 0.25, -sz * 0.85, sz * 0.15, -sz * 0.42);
+
+    // 3. Main Body
+    fill(sharkBody);
+    ellipse(0, 0, sz, sz * 0.85);
+
+    // 4. Face Accent
+    fill(sharkAccent);
+    arc(sz * 0.18, 0, sz * 0.48, sz * 0.65, -HALF_PI, HALF_PI);
+
+    // 5. Eye (red)
+    fill(255);
+    ellipse(sz * 0.24, -sz * 0.08, sz * 0.16, sz * 0.16);
+    fill(eyeCol);
+    ellipse(sz * 0.26, -sz * 0.08, sz * 0.08, sz * 0.08);
+
+    pop();
+}

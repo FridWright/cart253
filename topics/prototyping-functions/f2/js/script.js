@@ -87,3 +87,11 @@ function updateAndDrawWheel() {
     translate(cx, cy);
     rotate(wheelAngle);
 }
+// Draw wheel segments (MASH categories)
+let categories = ["HOME", "SPOUSE", "JOB", "VEHICLE", "FORTUNE", "LUCK"];
+let sliceAngle = TWO_PI / categories.length;
+let sliceColors = [
+    color(255, 100, 100), color(100, 200, 255),
+    color(255, 200, 100), color(150, 255, 150),
+    color(220, 100, 255), color(255, 150, 200)
+];

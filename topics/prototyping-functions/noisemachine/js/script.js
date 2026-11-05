@@ -1,9 +1,10 @@
 /**
- * Title of Project
- * Author Name
+ * Prototyping - Functions: Noise Machine
+ * Fridrikka Wright
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * This is the Noise Machine, an old-school-ish synth pad that will play audio when the user 
+ * clicks the corresponding buttons. They have a choice of percussion, guitar, other instruments 
+ * and random sounds. 
  */
 
 "use strict";

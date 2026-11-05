@@ -53,6 +53,9 @@ The second prototype, *Twister*, is a reimagiing of the classic board/body game 
 The third prototype, *Paddleball*, was inspired by the similar in-class assignment. This is a simple paddleball game that utilizes user input events, temporal triggers, and collision physics. Continuous key polling is used for dual-paddle movement, while discrete listeners (keyPressed) handle game-state transitions via the spacebar. Time-based events tracked through millis() automatically introduce new balls at regular intervals, and physics-based collision and out-of-bounds triggers manage ball trajectories and game-over states.
 
 6. ### <u>Sixth Journal Entry ⏰</u>
+This journal entry reflects on my process for the [Prototyping: Functions assignment.](https://github.com/FridWright/cart253/blob/main/prototyping-functions.md)
+
+The first prototype created for this assignment is the *Noise Machine*. Noise machine is designed to look like an old-school synth pad, and works by having the user click buttons on the 4x4 grid pad to play corresponding audio. The prototype uses p5.js lifecycle functions (setup, draw, mousePressed) alongside custom parameterized functions like drawButton() and drawSimpleKnob() which was used to try and keep the code organized. I started by calculating layout coordinates and assigning audio files to each button in a grid. During execution, the program continuously renders the visual interface, which features hardware-esque border, typography, amp knobs, and the interactive buttons themselves.
 
 7. ### <u>Seventh Journal Entry ⏰</u>
 

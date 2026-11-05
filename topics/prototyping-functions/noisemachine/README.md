@@ -1,16 +1,14 @@
-# TITLE OF PROJECT
+# Prototyping - Functions: Noise Machine
 
-AUTHOR NAME
+Fridrikka Wright
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://fridwright.github.io/cart253/topics/prototyping-functions/noisemachine/)
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+This is the Noise Machine, an old-school-ish synth pad that will play audio when the user clicks the corresponding buttons. They have a choice of percussion, guitar, variety instruments and random sounds. You can maybe make something harmonious, but its much more likely it'll just be noise. 
 
 ## Attribution
-
-This bit should attribute any code, assets or other elements used taken from other sources. For example:
 
 > - This project uses [p5.js](https://p5js.org).
 Audio Citations:
@@ -29,7 +27,5 @@ Audio Citations:
 > - Bongos https://www.youtube.com/watch?v=l4k59KmInxM&list=RDl4k59KmInxM&start_radio=1 
 
 ## License
-
-This bit could include the license you want to apply to your work. For example:
 
 > This project is licensed under a Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en)) license with the exception of libraries and other components with their own licenses.

@@ -86,48 +86,49 @@ function updateAndDrawWheel() {
     push();
     translate(cx, cy);
     rotate(wheelAngle);
-}
 
-// Draw wheel segments (MASH categories)
-let categories = ["HOME", "SPOUSE", "JOB", "VEHICLE", "FORTUNE", "LUCK"];
-let sliceAngle = TWO_PI / categories.length;
-let sliceColors = [
-    color(255, 100, 100), color(100, 200, 255),
-    color(255, 200, 100), color(150, 255, 150),
-    color(220, 100, 255), color(255, 150, 200)
-];
 
-// Re-worked wheel code from my Twister prototype
-for (let i = 0; i < categories.length; i++) {
-    push();
-    rotate(i * sliceAngle);
-    fill(sliceColors[i]);
-    stroke(45, 15, 30);
-    strokeWeight(3);
-    arc(0, 0, wheelRadius * 2, wheelRadius * 2, 0, sliceAngle, PIE);
+    // Draw wheel segments (MASH categories)
+    let categories = ["HOME", "SPOUSE", "JOB", "VEHICLE", "FORTUNE", "LUCK"];
+    let sliceAngle = TWO_PI / categories.length;
+    let sliceColors = [
+        color(255, 100, 100), color(100, 200, 255),
+        color(255, 200, 100), color(150, 255, 150),
+        color(220, 100, 255), color(255, 150, 200)
+    ];
 
-    // Segment text label
-    rotate(sliceAngle / 2);
-    fill(255);
-    noStroke();
-    textSize(12);
-    textStyle(BOLD);
-    text(categories[i], wheelRadius * 0.65, 0);
+    // Re-worked wheel code from my Twister prototype
+    for (let i = 0; i < categories.length; i++) {
+        push();
+        rotate(i * sliceAngle);
+        fill(sliceColors[i]);
+        stroke(45, 15, 30);
+        strokeWeight(3);
+        arc(0, 0, wheelRadius * 2, wheelRadius * 2, 0, sliceAngle, PIE);
+
+        // Segment text label
+        rotate(sliceAngle / 2);
+        fill(255);
+        noStroke();
+        textSize(12);
+        textStyle(BOLD);
+        text(categories[i], wheelRadius * 0.65, 0);
+        pop();
+    }
     pop();
-}
-pop();
 
-// Center cap of the wheel
-fill(30, 10, 20);
-stroke(255);
-strokeWeight(3);
-ellipse(cx, cy, 50, 50);
+    // Center cap of the wheel
+    fill(30, 10, 20);
+    stroke(255);
+    strokeWeight(3);
+    ellipse(cx, cy, 50, 50);
 
-// Pointer marker at the top
-fill(255, 230, 50);
-noStroke();
-triangle(cx, cy - wheelRadius - 15, cx - 10, cy - wheelRadius - 35, cx + 10, cy - wheelRadius - 35);
+    // Pointer marker at the top
+    fill(255, 230, 50);
+    noStroke();
+    triangle(cx, cy - wheelRadius - 15, cx - 10, cy - wheelRadius - 35, cx + 10, cy - wheelRadius - 35);
 }
+
 
 // CORE FUNCTION WITH RETURN VALUES 
 function generateMashPrediction() {
@@ -136,7 +137,8 @@ function generateMashPrediction() {
         spouse: getRandomSpouse(),
         job: getRandomJob(),
         vehicle: getRandomVehicle(),
-        magicNumber: getMagicNumber()
+        fortune: getRandomFortune(),
+        luck: getRandomLuck()
     };
 }
 
@@ -162,17 +164,48 @@ function getRandomVehicle() {
 }
 
 function getRandomLuck() {
-    let luck = ["the #8", "a rainbow", "an accidental jinx", "stubbing your toe", "a snail", "getting hissed at by a goose", "yellow flowers", "the colour indigo", "the #33"]
-    return luck;
+    let luck = ["the #8", "a rainbow", "an accidental jinx", "stubbing your toe", "a snail", "getting hissed at by a goose", "yellow flowers", "the colour indigo", "the #33"];
+    return random(luck);
 }
 
 function getRandomFortune() {
-    let fortune = floor(random(3, 10));
-    return fortune;
+    let fortune = ["$500K", "$25K", "$3M", "$50K", "$150K", "Much debt", "$80K", "$1M", "$40K"];
+    return random(fortune);
 }
 
 // RENDERING FUNCTION 
 function drawMashCard(future) {
     let cx = width / 2;
     let cy = height / 2 - 10;
+
+    // Card background box
+    fill(30, 10, 20);
+    stroke(255, 150, 50);
+    strokeWeight(3);
+    rect(cx, cy, 540, 360, 10);
+
+
+    // Outcomes List
+    noStroke();
+    textSize(16);
+    textStyle(NORMAL);
+    fill(255);
+
+    let startY = cy - 80;
+    let spacingY = 55;
+
+    text(`𖠿 LIVING IN A: ${future.home.toUpperCase()}`, cx, startY);
+    text(`♡ MARRIED TO: ${future.spouse.toUpperCase()}`, cx, startY + spacingY);
+    text(`☕︎ WORKING AS: ${future.job.toUpperCase()}`, cx, startY + (spacingY * 2));
+    text(`☁︎ DRIVING A: ${future.vehicle.toUpperCase()}`, cx, startY + (spacingY * 3));
+    text(`$ RAKING IN: ${future.fortune.toUpperCase()}`, cx, startY + (spacingY * 4));
+    text(`☘︎ FINDING LUCK IN: ${future.luck.toUpperCase()}`, cx, startY + (spacingY * 5));
+}
+
+// Keypress listener to trigger the wheel spin
+function keyPressed() {
+    if (key === ' ' && gameState !== "SPINNING") {
+        spinSpeed = random(18, 28); // Give it a random high initial speed
+        gameState = "SPINNING";
+    }
 }

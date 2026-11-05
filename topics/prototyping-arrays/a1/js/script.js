@@ -29,7 +29,7 @@ function draw() {
 
     // 2. Dark Adaptation: Add new star objects to the array over time
     if (!isBlinking) {
-        if (frameCount % 5 === 0 && stars.length < 350) {
+        if (frameCount % 3 === 0 && stars.length < 500) {
             stars.push({
                 x: random(width),
                 y: random(height),
@@ -38,70 +38,69 @@ function draw() {
             });
         }
     }
-}
 
-// Eye coordinates on the 1000x500 canvas
-let leftX = 260;
-let rightX = 740;
-let eyeY = 250;
-let eyeW = 400;
-let eyeH = 300;
+    // Eye coordinates on the 1000x500 canvas
+    let leftX = 260;
+    let rightX = 740;
+    let eyeY = 250;
+    let eyeW = 400;
+    let eyeH = 300;
 
-// 3. Fill interior of eye sockets with pitch black (night sky)
-fill(10, 12, 18);
-noStroke();
-drawAlmondPath(leftX, eyeY, eyeW, eyeH);
-drawAlmondPath(rightX, eyeY, eyeW, eyeH);
+    // 3. Fill interior of eye sockets with pitch black (night sky)
+    fill(10, 12, 18);
+    noStroke();
+    drawAlmondPath(leftX, eyeY, eyeW, eyeH);
+    drawAlmondPath(rightX, eyeY, eyeW, eyeH);
 
-// 4. Render stars inside LEFT eye
-push();
-drawAlmondPath(leftX, eyeY, eyeW, eyeH);
-drawingContext.clip();
-drawStars();
-pop();
-
-// 5. Render stars inside RIGHT eye
-push();
-drawAlmondPath(rightX, eyeY, eyeW, eyeH);
-drawingContext.clip();
-drawStars();
-pop();
-
-// 6. Blinking (clipped inside eye portals)
-/// Reference for clip() from https://beta.p5js.org/reference/p5/clip/
-if (isBlinking) {
-    blinkProgress += 0.08;
-
-    // Left eyelid
+    // 4. Render stars inside LEFT eye
     push();
     drawAlmondPath(leftX, eyeY, eyeW, eyeH);
     drawingContext.clip();
-    drawEyelids(leftX, eyeY, eyeW, eyeH, blinkProgress);
+    drawStars();
     pop();
 
-    // Right eyelid
+    // 5. Render stars inside RIGHT eye
     push();
     drawAlmondPath(rightX, eyeY, eyeW, eyeH);
     drawingContext.clip();
-    drawEyelids(rightX, eyeY, eyeW, eyeH, blinkProgress);
+    drawStars();
     pop();
 
-    // Reset array when shut
-    if (blinkProgress >= 1.0 && blinkProgress < 1.08) {
-        stars = [];
+    // 6. Blinking (clipped inside eye portals)
+    /// Reference for clip() from https://beta.p5js.org/reference/p5/clip/
+    if (isBlinking) {
+        blinkProgress += 0.08;
+
+        // Left eyelid
+        push();
+        drawAlmondPath(leftX, eyeY, eyeW, eyeH);
+        drawingContext.clip();
+        drawEyelids(leftX, eyeY, eyeW, eyeH, blinkProgress);
+        pop();
+
+        // Right eyelid
+        push();
+        drawAlmondPath(rightX, eyeY, eyeW, eyeH);
+        drawingContext.clip();
+        drawEyelids(rightX, eyeY, eyeW, eyeH, blinkProgress);
+        pop();
+
+        // Reset array when shut
+        if (blinkProgress >= 1.0 && blinkProgress < 1.08) {
+            stars = [];
+        }
+        // End blink sequence when fully open
+        if (blinkProgress >= 2.0) {
+            isBlinking = false;
+            blinkProgress = 0.0;
+        }
     }
-    // End blink sequence when fully open
-    if (blinkProgress >= 2.0) {
-        isBlinking = false;
-        blinkProgress = 0.0;
-    }
+
+    // 7. Eye outlines & UI prompt
+    drawEyeRim(leftX, eyeY, eyeW, eyeH);
+    drawEyeRim(rightX, eyeY, eyeW, eyeH);
+    drawInstructions();
 }
-
-// 7. Eye outlines & UI prompt
-drawEyeRim(leftX, eyeY, eyeW, eyeH);
-drawEyeRim(rightX, eyeY, eyeW, eyeH);
-drawInstructions();
-
 
 function resetVision() {
     stars = [];

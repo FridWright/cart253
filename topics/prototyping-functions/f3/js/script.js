@@ -21,7 +21,7 @@ let colorPairs = [
 ];
 
 /**
- * DESCRIBE SETUP
+ * Setup canvas and initialize scene
  */
 function setup() {
     createCanvas(800, 600);
@@ -35,30 +35,56 @@ function setup() {
 function draw() {
     background(248, 247, 244); // off-white
 
+    // Default speed multiplier (pre-shark)
+    let speedMultiplier = 1.0;
+
     // Update and draw school of fish
     updateAndDrawFish(speedMultiplier);
 
-    function resetScene() {
-        fishList = [];
+}
+/**
+ * Reset and poplate the fish list
+ */
+function resetScene() {
+    fishList = [];
 
-        let totalFish = 18; // 18 fish total (3 of each color set)
-        for (let i = 0; i < totalFish; i++) {
-            let pair = colorPairs[i % colorPairs.length]; // Cycles through all 6 pairs
-            fishList.push({
-                x: random(-50, width + 50),
-                y: random(60, height - 60),
-                baseSpeed: random(1.0, 2.4),
-                size: random(40, 70),
-                bodyCol: color(pair.primary),
-                accentCol: color(pair.accent),
-                facingLeft: random() > 0.5
-            });
-        }
+    let totalFish = 18; // 18 fish total (3 of each color set)
+    for (let i = 0; i < totalFish; i++) {
+        let pair = colorPairs[i % colorPairs.length]; // Cycles through all 6 pairs
+        fishList.push({
+            x: random(-50, width + 50),
+            y: random(60, height - 60),
+            baseSpeed: random(1.0, 2.4),
+            size: random(40, 70),
+            bodyCol: color(pair.primary),
+            accentCol: color(pair.accent),
+            facingLeft: random() > 0.5
+        });
     }
-
 }
 
-// Draw fish bodies
+function updateAndDrawFish(multiplier) {
+    for (let i = 0; i < fishList.length; i++) {
+        let f = fishList[i];
+        let currentSpeed = f.baseSpeed * multiplier;
+
+        // Move fish and handle screen wrap-around
+        if (f.facingLeft) {
+            f.x -= currentSpeed;
+            if (f.x < -80) f.x = width + 80;
+        } else {
+            f.x += currentSpeed;
+            if (f.x > width + 80) f.x = -80;
+        }
+
+        // Modular drawing call
+        drawAbstractFish(f.x, f.y, f.size, f.bodyCol, f.accentCol, f.facingLeft);
+    }
+}
+
+/** 
+ * Draw fish (body/eye/tail/accent)
+*/
 function drawAbstractFish(x, y, sz, bodyCol, accentCol, facingLeft) {
     push();
     translate(x, y);

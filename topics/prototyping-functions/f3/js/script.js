@@ -13,3 +13,8 @@ function setup() {
     rectMode(CENTER);
     resetScene();
 }
+
+function draw() {
+    background(248, 247, 244); // off-white
+
+}

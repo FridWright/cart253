@@ -212,7 +212,7 @@ function drawMashCard(future) {
 // Keypress listener event to trigger the wheel spin
 
 function keyPressed() {
-    if (key === ' ' && gameState !== "SPINNING" && spinSpeed === 0) {
+    if (key === ' ' && spinSpeed === 0) {
         spinSpeed = random(18, 28); // Give it a random high initial speed
         gameState = "SPINNING";
     }

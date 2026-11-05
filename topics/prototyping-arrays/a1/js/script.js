@@ -107,3 +107,12 @@ function resetVision() {
     stars = [];
 }
 
+// (Modular Helper Function) ALMOND SHAPE 
+/// Reference for bezierVertex() from https://p5js.org/reference/p5/bezierVertex/
+function drawAlmondPath(x, y, w, h) {
+    beginShape();
+    vertex(x - w / 2, y);
+    bezierVertex(x - w / 4, y - h / 2, x + w / 4, y - h / 2, x + w / 2, y);
+    bezierVertex(x + w / 4, y + h / 2, x - w / 4, y + h / 2, x - w / 2, y);
+    endShape(CLOSE);
+}

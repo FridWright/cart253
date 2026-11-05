@@ -90,7 +90,11 @@ if (isBlinking) {
     if (blinkProgress >= 1.0 && blinkProgress < 1.08) {
         stars = [];
     }
-
+    // End blink sequence when fully open
+    if (blinkProgress >= 2.0) {
+        isBlinking = false;
+        blinkProgress = 0.0;
+    }
 
 }
 

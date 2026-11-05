@@ -26,8 +26,20 @@ function setup() {
 function draw() {
     background(248, 247, 244); // off-white
 
+    // Dark Adaptation: Add new star objects to the array over time
+    if (!isBlinking) {
+        if (frameCount % 5 === 0 && stars.length < 350) {
+            stars.push({
+                x: random(width),
+                y: random(height),
+                size: random(2.0, 5.5),
+                twinkleSpeed: random(0.04, 0.12)
+            });
+        }
+    }
 }
 
 function resetVision() {
     stars = [];
 }
+

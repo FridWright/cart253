@@ -35,6 +35,9 @@ function setup() {
 function draw() {
     background(248, 247, 244); // off-white
 
+    // Update and draw school of fish
+    updateAndDrawFish(speedMultiplier);
+
     function resetScene() {
         fishList = [];
 
@@ -59,6 +62,7 @@ function draw() {
 function drawAbstractFish(x, y, sz, bodyCol, accentCol, facingLeft) {
     push();
     translate(x, y);
+
 
     if (facingLeft) {
         scale(-1, 1);

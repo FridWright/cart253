@@ -170,3 +170,9 @@ function getRandomFortune() {
     let fortune = floor(random(3, 10));
     return fortune;
 }
+
+// RENDERING FUNCTION 
+function drawMashCard(future) {
+    let cx = width / 2;
+    let cy = height / 2 - 10;
+}

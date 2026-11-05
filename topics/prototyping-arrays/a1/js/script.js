@@ -67,9 +67,17 @@ drawingContext.clip();
 drawStars();
 pop();
 
+// 6. Blinking (clipped inside eye portals)
+if (isBlinking) {
+    blinkProgress += 0.08;
 
 
-function resetVision() {
-    stars = [];
-}
+
+
+
+
+
+    function resetVision() {
+        stars = [];
+    }
 

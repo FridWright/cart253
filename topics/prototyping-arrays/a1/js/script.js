@@ -53,13 +53,19 @@ noStroke();
 drawAlmondPath(leftX, eyeY, eyeW, eyeH);
 drawAlmondPath(rightX, eyeY, eyeW, eyeH);
 
-// 4. Render stars inside left eye
+// 4. Render stars inside LEFT eye
 push();
 drawAlmondPath(leftX, eyeY, eyeW, eyeH);
 drawingContext.clip();
 drawStars();
 pop();
 
+// 5. Render stars inside RIGHT eye
+push();
+drawAlmondPath(rightX, eyeY, eyeW, eyeH);
+drawingContext.clip();
+drawStars();
+pop();
 
 
 

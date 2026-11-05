@@ -25,6 +25,8 @@ function setup() {
     rectMode(CENTER);
     textFont('Courier New');
 
+    // Generate initial future
+    currentFuture = generateMashPrediction();
 }
 
 /**

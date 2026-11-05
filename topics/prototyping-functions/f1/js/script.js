@@ -39,7 +39,7 @@ function setup() {
 
 
     // Describe row colours and categories
-    let categories = ["Percussion", "Melody", "Synth", "SFX"];
+    let categories = ["Percussion", "Guitar", "Instrument", "Random"];
     let rowColors = ["#0D0C0C", "#424040", "#8C8888", "#F7F2F2"];
 
     // 1. Master list of 16 sound files in order
@@ -56,8 +56,6 @@ function setup() {
 
     let soundIndex = 0; // Tracks which file belongs to the current button
 
-    // File path prefixes/names matching folder structure
-    let rowPrefixes = ["perc", "melody", "synth", "sfx"];
 
     // Loop through rows and columns to generate 16 buttons with audio
     for (let r = 0; r < rows; r++) {
@@ -65,49 +63,33 @@ function setup() {
             let x = startX + c * (buttonWidth + spacing);
             let y = startY + r * (buttonHeight + spacing);
 
-            // Create a unique file path for each sound 
-            let soundPath = `assets/sounds/${rowPrefixes[r]}_${c + 1}.mp3`;
 
-            // Initialize the HTML5 Audio object
-            let soundObj = new Audio(soundPath);
-            soundObj.loop = true; // Set to true if you want sounds to loop when toggled on!
-            soundObj.volume = 0.3; // Adjust volume (0.0 to 1.0)
+            // Grab the corresponding sound path using soundIndex
+            let currentSoundPath = soundFiles[soundIndex];
+            let assignedAudio = new Audio(currentSoundPath);
+            assignedAudio.loop = true;
+            assignedAudio.volume = 0.3;
 
-            // 2. Loop through rows and columns to generate buttons
-            for (let r = 0; r < rows; r++) {
-                for (let c = 0; c < cols; c++) {
-                    let x = startX + c * (buttonWidth + spacing);
-                    let y = startY + r * (buttonHeight + spacing);
+            // Push the button object containing its unique audio file
+            gridData.push({
+                x: x,
+                y: y,
+                w: buttonWidth,
+                h: buttonHeight,
+                label: `${categories[r]} ${c + 1}`,
+                baseColor: rowColors[r],
+                isPlaying: false,
+                sound: assignedAudio
+            });
 
-                    // Grab the corresponding sound path using soundIndex
-                    let currentSoundPath = soundFiles[soundIndex];
-                    let assignedAudio = new Audio(currentSoundPath);
-                    assignedAudio.loop = true;
-                    assignedAudio.volume = 0.3;
-
-                    // Push the button object containing its unique audio file
-                    gridData.push({
-                        x: x,
-                        y: y,
-                        w: buttonWidth,
-                        h: buttonHeight,
-                        label: `${categories[r]} ${c + 1}`,
-                        baseColor: rowColors[r],
-                        isPlaying: false,
-                        sound: assignedAudio
-                    });
-
-                    soundIndex++; // Move to the next sound file for the next button
-                }
-            }
+            soundIndex++; // Move to the next sound file for the next button
         }
     }
 }
 
 
-
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Draw background, title, instructions and buttons
 */
 function draw() {
     background("#752515");
@@ -160,13 +142,13 @@ function mousePressed() {
 
             if (btn.isPlaying) {
                 // Play sound safely and catch any browser autoplay blocks
-                btn.audio.play().catch(error => {
+                btn.sound.play().catch(error => {
                     console.log("Audio play blocked:", error);
                 });
             } else {
                 // Stop sound and reset audio track back to the start
-                btn.audio.pause();
-                btn.audio.currentTime = 0;
+                btn.sound.pause();
+                btn.sound.currentTime = 0;
             }
         }
     }

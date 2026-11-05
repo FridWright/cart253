@@ -140,3 +140,33 @@ function generateMashPrediction() {
     };
 }
 
+// HELPER FUNCTIONS USING "RETURN" 
+function getRandomHome() {
+    let homes = ["Mansion", "Apartment", "Shack", "House", "Treehouse", "Castle", "Hotel", "Motel"];
+    return random(homes);
+}
+
+function getRandomSpouse() {
+    let spouses = ["A Hollywood star", "Your absolute dream", "Someone living a double life", "Your propriétaire", "A foreign oligarch", "Someone you'll meet next Wednesday @ 10 ", "Someone obsessed with free-soloing", "A wholesome farmer type"];
+    return random(spouses);
+}
+
+function getRandomJob() {
+    let jobs = ["ENT Doctor", "Sky Marshall", "Sky Dive Instructor", "Gardener", "Interior Designer", "Food Critic", "Life-long Student", "Touring Back-up Dancer"];
+    return random(jobs);
+}
+
+function getRandomVehicle() {
+    let vehicles = ["A sensible sedan", "A private helicopter", "A unicycle", "A cybertruck", "a Porsche 911", "BIXI forever", "an off-road Jeep", "a pink convertible"];
+    return random(vehicles);
+}
+
+function getRandomLuck() {
+    let luck = ["the #8", "a rainbow", "an accidental jinx", "stubbing your toe", "a snail", "getting hissed at by a goose", "yellow flowers", "the colour indigo", "the #33"]
+    return luck;
+}
+
+function getRandomFortune() {
+    let fortune = floor(random(3, 10));
+    return fortune;
+}

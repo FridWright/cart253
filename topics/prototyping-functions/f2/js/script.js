@@ -41,4 +41,14 @@ function draw() {
     rect(width / 2, height / 2, width - 40, height - 40, 12);
     pop();
 
+    // Title and Instructions
+    fill(255);
+    textSize(36);
+    textStyle(BOLD);
+    text("M . A . S . H .", width / 2, 60);
+
+    textSize(13);
+    fill(200);
+    text("♡ predict your future ♡", width / 2, 95);
+
 }

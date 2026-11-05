@@ -145,3 +145,15 @@ function drawEyelids(x, y, w, h, progress) {
     rectMode(CORNERS);
     rect(x - w / 2 - 20, y - h / 2 - 20, x + w / 2 + 20, lidY);
 }
+
+// Instructions Text
+function drawInstructions() {
+    push();
+    textAlign(CENTER, TOP);
+    textFont('sans-serif');
+    textSize(13);
+    fill(120, 115, 125, 200);
+    noStroke();
+    text("press spacebar to blink", width / 2, 20);
+    pop();
+}

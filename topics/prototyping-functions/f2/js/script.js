@@ -17,7 +17,7 @@ let wheelAngle = 0;
 let spinSpeed = 0;
 
 /**
- * DESCRIBE SETUP
+ * Create canvas, choose text font, generate inital future command
  */
 function setup() {
     createCanvas(800, 600);
@@ -30,7 +30,7 @@ function setup() {
 }
 
 /**
- * DESCRIBE DRAW
+ * Draw background, border, title and instructions, and render based on current game ststae
  */
 function draw() {
     background(45, 15, 30);
@@ -58,7 +58,13 @@ function draw() {
         updateAndDrawWheel();
         textSize(16);
         fill(255, 200, 100);
-        text("spinning destiny...", width / 2, 530);
+
+        if (spinSpeed > 0) {
+            text("spinning destiny...", width / 2, 530);
+        } else {
+            text("Press [SPACEBAR] to spin the wheel!", width / 2, 530);
+        }
+
     } else {
         drawMashCard(currentFuture);
         textSize(14);
@@ -83,6 +89,7 @@ function updateAndDrawWheel() {
         currentFuture = generateMashPrediction();
         gameState = "RESULT";
     }
+
     push();
     translate(cx, cy);
     rotate(wheelAngle);
@@ -187,12 +194,12 @@ function drawMashCard(future) {
 
     // Outcomes List
     noStroke();
-    textSize(16);
+    textSize(15);
     textStyle(NORMAL);
     fill(255);
 
-    let startY = cy - 80;
-    let spacingY = 55;
+    let startY = cy - 110;
+    let spacingY = 44;
 
     text(`𖠿 LIVING IN A: ${future.home.toUpperCase()}`, cx, startY);
     text(`♡ MARRIED TO: ${future.spouse.toUpperCase()}`, cx, startY + spacingY);
@@ -202,9 +209,10 @@ function drawMashCard(future) {
     text(`☘︎ FINDING LUCK IN: ${future.luck.toUpperCase()}`, cx, startY + (spacingY * 5));
 }
 
-// Keypress listener to trigger the wheel spin
+// Keypress listener event to trigger the wheel spin
+
 function keyPressed() {
-    if (key === ' ' && gameState !== "SPINNING") {
+    if (key === ' ' && gameState !== "SPINNING" && spinSpeed === 0) {
         spinSpeed = random(18, 28); // Give it a random high initial speed
         gameState = "SPINNING";
     }

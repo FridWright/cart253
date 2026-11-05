@@ -157,3 +157,11 @@ function drawInstructions() {
     text("press spacebar to blink", width / 2, 20);
     pop();
 }
+
+// Keyboard interaction (press spacebar to blink)
+function keyPressed() {
+    if (key === ' ' && !isBlinking) {
+        isBlinking = true;
+        blinkProgress = 0.0;
+    }
+}

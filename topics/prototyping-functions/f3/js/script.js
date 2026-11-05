@@ -107,7 +107,7 @@ function drawAbstractFish(x, y, sz, bodyCol, accentCol, facingLeft) {
 
     // 3. Face Accent 
     fill(accentCol);
-    arc(sz * 0.2, 0, sz * 0.35, sz * 0.82, -HALF_PI, HALF_PI);
+    arc(sz * 0.18, 0, sz * 0.48, sz * 0.65, -HALF_PI, HALF_PI);
 
     // 4. Eye
     fill(255);

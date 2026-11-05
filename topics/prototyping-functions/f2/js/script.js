@@ -9,7 +9,7 @@
 "use strict";
 
 
-let gameState = "RESULT"; // Can be "SPINNING" or "RESULT"
+let gameState = "SPINNING"; // Start directly on the spinning wheel
 let currentFuture;
 
 // Wheel animation variables
@@ -154,12 +154,12 @@ function getRandomSpouse() {
 }
 
 function getRandomJob() {
-    let jobs = ["ENT Doctor", "Sky Marshall", "Sky Dive Instructor", "Gardener", "Interior Designer", "Food Critic", "Life-long Student", "Touring Back-up Dancer"];
+    let jobs = ["an ENT Doctor", "a Sky Marshall", "a Sky Dive Instructor", "a Gardener", "an Interior Designer", "a Food Critic", "a Life-long Student", "a Touring Back-up Dancer"];
     return random(jobs);
 }
 
 function getRandomVehicle() {
-    let vehicles = ["A sensible sedan", "A private helicopter", "A unicycle", "A cybertruck", "a Porsche 911", "BIXI forever", "an off-road Jeep", "a pink convertible"];
+    let vehicles = ["sensible sedan", "private helicopter", "unicycle", "cybertruck", "Porsche 911", "BIXI forever", "off-road Jeep", "pink convertible"];
     return random(vehicles);
 }
 

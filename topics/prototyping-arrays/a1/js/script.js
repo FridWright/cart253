@@ -95,9 +95,12 @@ if (isBlinking) {
         isBlinking = false;
         blinkProgress = 0.0;
     }
-
 }
 
+// 7. Eye outlines & UI prompt
+drawEyeRim(leftX, eyeY, eyeW, eyeH);
+drawEyeRim(rightX, eyeY, eyeW, eyeH);
+drawInstructions();
 
 
 function resetVision() {

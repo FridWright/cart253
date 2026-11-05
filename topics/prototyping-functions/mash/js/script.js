@@ -2,8 +2,11 @@
  * Prototyping - Functions: M.A.S.H
  * Fridrikka Wright
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * M.A.S.H. is a prototype of the childhood game we maybe all know 
+ * and love. In this version, the user spins the wheel, and their 
+ * "future life" is revealed to them - at least in terms of marriage, 
+ * house, job, salary, luck, and car. If they don't love it, they can 
+ * always re-spin by hitting the space bar. Bonne chance!
  */
 
 "use strict";
@@ -47,7 +50,7 @@ function draw() {
     fill(255);
     textSize(36);
     textStyle(BOLD);
-    text("M . A . S . H .", width / 2, 60);
+    text(" M . A . S . H .", width / 2, 60);
 
 
     // Render based on current game state

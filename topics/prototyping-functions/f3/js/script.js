@@ -46,6 +46,9 @@ function draw() {
     if (activeShark) {
         updateAndDrawShark();
     }
+
+    // Draw UI prompt at top center
+    drawInstructions();
 }
 /**
  * Reset and poplate the fish list
@@ -179,6 +182,20 @@ function drawShark(x, y, sz, facingLeft) {
     fill(eyeCol);
     ellipse(sz * 0.26, -sz * 0.08, sz * 0.08, sz * 0.08);
 
+    pop();
+}
+
+/**
+ * Draw bottom-center user instructions
+ */
+function drawInstructions() {
+    push();
+    textAlign(CENTER, TOP);
+    textFont('sans-serif');
+    textSize(13);
+    fill(130, 130, 130, 180); // muted grey
+    noStroke();
+    text("press spacebar", width / 2, 550);
     pop();
 }
 

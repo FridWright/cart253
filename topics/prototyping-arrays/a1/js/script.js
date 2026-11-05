@@ -127,3 +127,11 @@ function drawStars() {
         ellipse(s.x, s.y, s.size);
     }
 }
+
+// (Modular Helper Function) EYE RIM OUTLINES
+function drawEyeRim(x, y, w, h) {
+    noFill();
+    stroke(45, 42, 52);
+    strokeWeight(4);
+    drawAlmondPath(x, y, w, h);
+}

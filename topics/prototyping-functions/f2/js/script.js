@@ -23,7 +23,7 @@ function setup() {
     createCanvas(800, 600);
     textAlign(CENTER, CENTER);
     rectMode(CENTER);
-    textFont('Courier New');
+
 
     // Generate initial future
     currentFuture = generateMashPrediction();
@@ -45,12 +45,26 @@ function draw() {
 
     // Title and Instructions
     fill(255);
+    textFont('Courier New');
     textSize(36);
     textStyle(BOLD);
     text("M . A . S . H .", width / 2, 60);
 
+    textFont('script');
     textSize(13);
     fill(200);
     text("♡ predict your future ♡", width / 2, 95);
 
+    // Render based on current game state
+    if (gameState === "SPINNING") {
+        updateAndDrawWheel();
+        textSize(16);
+        fill(255, 200, 100);
+        text("spinning destiny...", width / 2, 530);
+    } else {
+        drawMashCard(currentFuture);
+        textSize(14);
+        fill(180);
+        text("Press [SPACEBAR] to spin the wheel again", width / 2, 545);
+    }
 }

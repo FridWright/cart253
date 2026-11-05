@@ -26,3 +26,19 @@ function setup() {
     textFont('Courier New');
 
 }
+
+/**
+ * DESCRIBE DRAW
+ */
+function draw() {
+    background(45, 15, 30);
+
+    // Border frame
+    push();
+    stroke(240, 100, 150);
+    strokeWeight(6);
+    noFill();
+    rect(width / 2, height / 2, width - 40, height - 40, 12);
+    pop();
+
+}

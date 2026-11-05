@@ -39,6 +39,13 @@ function draw() {
     }
 }
 
+// Eye coordinates on the 1000x500 canvas
+let leftX = 260;
+let rightX = 740;
+let eyeY = 250;
+let eyeW = 400;
+let eyeH = 300;
+
 function resetVision() {
     stars = [];
 }

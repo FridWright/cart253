@@ -59,7 +59,7 @@ My first prototype created for this assignment is the *Noise Machine*. Noise mac
 
 The second prototype is *M.A.S.H.*, which is originally a pen-and-paper game from my childhood where we are told our future through the process of elimation by tally ticks. This re-imagining gets there instead by random(), return statements and other p5.js functions. The prototype uses specialized helper functions with return statements to pull together random future predictions. When you hit the spacebar, a physics-based wheel spins around using translate, rotate, and arc. Once friction slows it to a stop, the app switches states and calls drawMashCard() to display your new destiny on a retro arcade style card.
 
-My third prototype, 
+My third prototype, *Aquarium*, is a simulation of an aquarium where the user watches colourful swim by peacefully, but when the spacebar is pressed, an event is triggered where a shark swims across the screen and the fish swim faster til he's gone. The code relies on modular functions like updateAndDrawFish(), drawAbstractFish(), and drawGiantShark() to separate motion physics, screen boundaries, and geometric drawing, in the spirit of *refractoring* and keeping an neatly code. 
 
 7. ### <u>Seventh Journal Entry ⏰</u>
 

@@ -2,8 +2,10 @@
  * Prototyping - Functions: Aquarium
  * Fridrikka Wright
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * This prototype is a simulation of an aquarium where the 
+ * user can watch 6 different colours of fish swim peacefully by. 
+ * If the user presses the spacebar, a shark enters the screen 
+ * making the fish swim faster until he's swam off screen. 
  */
 
 "use strict";
@@ -11,7 +13,7 @@
 let fishList = [];
 let activeShark = null;
 
-// Fish colour paris: accents and primaries
+// Fish colour pairs: accents and primaries
 let colorPairs = [
     { name: "red", primary: "#A3361C", accent: "#782411" },
     { name: "blue", primary: "#1C78A3", accent: "#14167A" },
@@ -50,6 +52,7 @@ function draw() {
     // Draw UI prompt at top center
     drawInstructions();
 }
+
 /**
  * Reset and poplate the fish list
  */

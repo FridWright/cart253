@@ -20,9 +20,9 @@
 
 
 
-### 3. Prototype Three - Paddleball [view here](https://fridwright.github.io/cart253/topics/prototyping-events/paddleball/)
+### 3. Prototype Three - Aquarium [view here](https://fridwright.github.io/cart253/topics/prototyping-functions/aquarium/)
 
-<img src="topics/prototyping-events/paddleball/assets/images/paddleball.png">
+<img src="topics/prototyping-functions/aquarium/assets/images/aquarium.png">
 
 
 

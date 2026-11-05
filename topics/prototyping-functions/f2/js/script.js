@@ -8,3 +8,14 @@
 
 "use strict";
 
+
+/**
+ * DESCRIBE SETUP
+ */
+function setup() {
+    createCanvas(800, 600);
+    textAlign(CENTER, CENTER);
+    rectMode(CENTER);
+    textFont('Courier New');
+
+}

@@ -116,3 +116,14 @@ function drawAlmondPath(x, y, w, h) {
     bezierVertex(x + w / 4, y + h / 2, x - w / 4, y + h / 2, x - w / 2, y);
     endShape(CLOSE);
 }
+
+// (Modular Helper Function) DRAW STARS
+function drawStars() {
+    for (let i = 0; i < stars.length; i++) {
+        let s = stars[i];
+        let alpha = map(sin(frameCount * s.twinkleSpeed), -1, 1, 100, 255);
+        fill(255, 255, 240, alpha);
+        noStroke();
+        ellipse(s.x, s.y, s.size);
+    }
+}

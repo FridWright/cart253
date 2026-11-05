@@ -32,7 +32,7 @@ The third prototype, *Bloom*, is an interactive growth sketch where a flower spr
 
 Throughout the *Prototyping: Variables* Assignment, I relied heavily on p5.js references and found it essential for implementing functions like dist(), lerpColor(), and mousePressed().
 
-4. ### <u>Fourth Journal Entry </u>
+4. ### <u>Fourth Journal Entry </u> *07/10/2026*
 This journal entry reflects on my process of the [Prototyping: Conditionals assignment.](https://github.com/FridWright/cart253/blob/main/prototyping-conditionals.md)
 
 My first prototype, *Match Game*, is a classic pair matching game where the user tries to flip cards to find colour matches. I used mousePressed() and dist() to detect player clicks on individual grid cards, triggering a flipped state for revealed colours. For the core memory logic, I utilized setTimeout() to pause face-up cards before flipping mismatched pairs back over. Conditionals were very essential evluating matchs, keeping cards flipped up if so or fipping them back facedown if not. 
@@ -41,7 +41,7 @@ My second prototype, *Crosswalk*, is a simulation that relies on conditional log
 
 The third prototype is *Ghosts*, uses conditionals to tell a group of curious ghosts whether its safe to approach a lamp they are interested in haunting, based on whether or not its illuminated by the user (..they are scared of the light). If the lamp is switched on, the ghosts hang back in the corner of the screen and are red and angry. Elsewise, when the lamp is off, the ghosts travel down to check out the lamp and are white and at ease. The lamp being on or off also triggers other rules regarding the state of the surrounding environment. 
 
-5. ### <u>Fifth Journal Entry </u>
+5. ### <u>Fifth Journal Entry </u> *21/10/2026*
 This journal entry reflects on my process for the [Prototyping: Events assignment.](https://github.com/FridWright/cart253/blob/main/prototyping-events.md)
 
 The theme for these prototypes took on an arcade theme as they progressed, and I realized I was doing my renditions of classic games. I suppose that these classic are a good vessel in which to explore Events.
@@ -52,12 +52,14 @@ The second prototype, *Twister*, is a reimagiing of the classic board/body game 
 
 The third prototype, *Paddleball*, was inspired by the similar in-class assignment. This is a simple paddleball game that utilizes user input events, temporal triggers, and collision physics. Continuous key polling is used for dual-paddle movement, while discrete listeners (keyPressed) handle game-state transitions via the spacebar. Time-based events tracked through millis() automatically introduce new balls at regular intervals, and physics-based collision and out-of-bounds triggers manage ball trajectories and game-over states.
 
-6. ### <u>Sixth Journal Entry ⏰</u>
+6. ### <u>Sixth Journal Entry </u> *30/10/2026*
 This journal entry reflects on my process for the [Prototyping: Functions assignment.](https://github.com/FridWright/cart253/blob/main/prototyping-functions.md)
 
 My first prototype created for this assignment is the *Noise Machine*. Noise machine is designed to look like an old-school synth pad, and works by having the user click buttons on the 4x4 grid pad to play corresponding audio. The prototype uses p5.js lifecycle functions (setup, draw, mousePressed) alongside custom parameterized functions like drawButton() and drawSimpleKnob() which was used to try and keep the code organized. I started by calculating layout coordinates and assigning audio files to each button in a grid. During execution, the program continuously renders the visual interface, which features hardware-esque border, typography, amp knobs, and the interactive buttons themselves.
 
 The second prototype is *M.A.S.H.*, which is originally a pen-and-paper game from my childhood where we are told our future through the process of elimation by tally ticks. This re-imagining gets there instead by random(), return statements and other p5.js functions. The prototype uses specialized helper functions with return statements to pull together random future predictions. When you hit the spacebar, a physics-based wheel spins around using translate, rotate, and arc. Once friction slows it to a stop, the app switches states and calls drawMashCard() to display your new destiny on a retro arcade style card.
+
+My third prototype, 
 
 7. ### <u>Seventh Journal Entry ⏰</u>
 

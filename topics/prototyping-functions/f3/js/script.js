@@ -1,5 +1,5 @@
 /**
- * Prototyping - Functions: Aquarium 
+ * Prototyping - Functions: Aquarium
  * Fridrikka Wright
  * 
  * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
@@ -30,10 +30,28 @@ function setup() {
 }
 
 /**
- * DESCRIBE DRAW
+ * Background, describe fish generator loop
  */
 function draw() {
     background(248, 247, 244); // off-white
+
+    function resetScene() {
+        fishList = [];
+
+        let totalFish = 18; // 18 fish total (3 of each color set)
+        for (let i = 0; i < totalFish; i++) {
+            let pair = colorPairs[i % colorPairs.length]; // Cycles through all 6 pairs
+            fishList.push({
+                x: random(-50, width + 50),
+                y: random(60, height - 60),
+                baseSpeed: random(1.0, 2.4),
+                size: random(40, 70),
+                bodyCol: color(pair.primary),
+                accentCol: color(pair.accent),
+                facingLeft: random() > 0.5
+            });
+        }
+    }
 
 }
 

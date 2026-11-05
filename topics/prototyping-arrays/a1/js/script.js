@@ -135,3 +135,13 @@ function drawEyeRim(x, y, w, h) {
     strokeWeight(4);
     drawAlmondPath(x, y, w, h);
 }
+
+// (Modular Helper Function) THE BLINK: TOP TO BOTTOM
+function drawEyelids(x, y, w, h, progress) {
+    fill('#9DA0A3'); // light grey
+    noStroke();
+    let closureFactor = progress <= 1.0 ? progress : 2.0 - progress;
+    let lidY = (y - h / 2) + (h * closureFactor);
+    rectMode(CORNERS);
+    rect(x - w / 2 - 20, y - h / 2 - 20, x + w / 2 + 20, lidY);
+}

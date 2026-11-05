@@ -88,30 +88,29 @@ function setup() {
     }
 }
 
-
 /**
  * Draw background, title, instructions and buttons
 */
 function draw() {
-    background("#752515");
+    background("#A3361C");
 
     // Draw border around the canvas
     stroke(40, 30, 30);
-    strokeWeight(12);
+    strokeWeight(18);
     noFill();
     rect(6, 6, width - 12, height - 12, 16); //  rounded corners
 
     // Title and Instructions
     fill(255);
     textFont('Courier New')
-    textSize(24);
+    textSize(35);
     textStyle(BOLD);
-    text("NOISE MACHINE", width / 2, 35);
+    text("NOISE MACHINE", width / 2, 60);
 
     textSize(14);
     textStyle(NORMAL);
-    fill(180);
-    text("Click a button to toggle sound ON / OFF", width / 2, 530);
+    fill('white');
+    text("☆ click around to make some beautiful noise ☆", width / 2, 530);
 
     // Draw all buttons from the array
     for (let i = 0; i < gridData.length; i++) {

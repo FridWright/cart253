@@ -87,6 +87,7 @@ function updateAndDrawWheel() {
     translate(cx, cy);
     rotate(wheelAngle);
 }
+
 // Draw wheel segments (MASH categories)
 let categories = ["HOME", "SPOUSE", "JOB", "VEHICLE", "FORTUNE", "LUCK"];
 let sliceAngle = TWO_PI / categories.length;
@@ -95,6 +96,7 @@ let sliceColors = [
     color(255, 200, 100), color(150, 255, 150),
     color(220, 100, 255), color(255, 150, 200)
 ];
+
 // Re-worked wheel code from my Twister prototype
 for (let i = 0; i < categories.length; i++) {
     push();
@@ -114,3 +116,27 @@ for (let i = 0; i < categories.length; i++) {
     pop();
 }
 pop();
+
+// Center cap of the wheel
+fill(30, 10, 20);
+stroke(255);
+strokeWeight(3);
+ellipse(cx, cy, 50, 50);
+
+// Pointer marker at the top
+fill(255, 230, 50);
+noStroke();
+triangle(cx, cy - wheelRadius - 15, cx - 10, cy - wheelRadius - 35, cx + 10, cy - wheelRadius - 35);
+}
+
+// CORE FUNCTION WITH RETURN VALUES 
+function generateMashPrediction() {
+    return {
+        home: getRandomHome(),
+        spouse: getRandomSpouse(),
+        job: getRandomJob(),
+        vehicle: getRandomVehicle(),
+        magicNumber: getMagicNumber()
+    };
+}
+

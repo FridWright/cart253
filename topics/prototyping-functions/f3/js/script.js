@@ -195,7 +195,7 @@ function drawInstructions() {
     textSize(13);
     fill(130, 130, 130, 180); // muted grey
     noStroke();
-    text("press spacebar", width / 2, 550);
+    text("press spacebar", width / 2, 560);
     pop();
 }
 

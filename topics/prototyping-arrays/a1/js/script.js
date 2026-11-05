@@ -1,5 +1,5 @@
 /**
- * Prototyping - Arrays:
+ * Prototyping - Arrays: Night Adaptation
  * Fridrikka Wright
  * 
  * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
@@ -8,17 +8,25 @@
 
 "use strict";
 
+let stars = [];
+let isBlinking = false;
+let blinkProgress = 0.0; // 0.0 = open, 1.0 = fully closed
+
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
+ * DESCRIBE SETUP
+ */
 function setup() {
+    createCanvas(1000, 500);
+    resetVision();
+}
+
+/**
+ * DESCRIBE DRAW
+ */
+function draw() {
 
 }
 
-
-/**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
-*/
-function draw() {
-
+function resetVision() {
+    stars = [];
 }

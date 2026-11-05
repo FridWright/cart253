@@ -95,3 +95,22 @@ let sliceColors = [
     color(255, 200, 100), color(150, 255, 150),
     color(220, 100, 255), color(255, 150, 200)
 ];
+// Re-worked wheel code from my Twister prototype
+for (let i = 0; i < categories.length; i++) {
+    push();
+    rotate(i * sliceAngle);
+    fill(sliceColors[i]);
+    stroke(45, 15, 30);
+    strokeWeight(3);
+    arc(0, 0, wheelRadius * 2, wheelRadius * 2, 0, sliceAngle, PIE);
+
+    // Segment text label
+    rotate(sliceAngle / 2);
+    fill(255);
+    noStroke();
+    textSize(12);
+    textStyle(BOLD);
+    text(categories[i], wheelRadius * 0.65, 0);
+    pop();
+}
+pop();

@@ -79,11 +79,20 @@ if (isBlinking) {
     drawEyelids(leftX, eyeY, eyeW, eyeH, blinkProgress);
     pop();
 
+    // Right eyelid
+    push();
+    drawAlmondPath(rightX, eyeY, eyeW, eyeH);
+    drawingContext.clip();
+    drawEyelids(rightX, eyeY, eyeW, eyeH, blinkProgress);
+    pop();
 
 
 
+}
 
-    function resetVision() {
-        stars = [];
-    }
+
+
+function resetVision() {
+    stars = [];
+}
 

@@ -49,27 +49,24 @@ function draw() {
     textStyle(BOLD);
     text("M . A . S . H .", width / 2, 60);
 
-    textSize(13);
-    fill(200);
-    text("♡ predict your future ♡", width / 2, 95);
 
     // Render based on current game state
     if (gameState === "SPINNING") {
         updateAndDrawWheel();
         textSize(16);
-        fill(255, 200, 100);
+        fill(240, 100, 150);
 
         if (spinSpeed > 0) {
             text("spinning destiny...", width / 2, 530);
         } else {
-            text("Press [SPACEBAR] to spin the wheel!", width / 2, 530);
+            text("♡ press spacebar to predict your future ♡", width / 2, 530);
         }
 
     } else {
         drawMashCard(currentFuture);
-        textSize(14);
-        fill(180);
-        text("Press [SPACEBAR] to spin the wheel again", width / 2, 545);
+        textSize(16);
+        fill(240, 100, 150);
+        text("♡ press spacebar to predict your alternate future ♡", width / 2, 545);
     }
 }
 

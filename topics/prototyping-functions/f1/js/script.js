@@ -95,6 +95,12 @@ function setup() {
 function draw() {
     background("#752515");
 
+    // Draw border around the canvas
+    stroke(40, 30, 30);
+    strokeWeight(12);
+    noFill();
+    rect(6, 6, width - 12, height - 12, 16); //  rounded corners
+
     // Title and Instructions
     fill(255);
     textFont('Courier New')

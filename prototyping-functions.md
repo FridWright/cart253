@@ -14,9 +14,9 @@
 
 
 
-### 2. Prototype Two - Twister [view here](https://fridwright.github.io/cart253/topics/prototyping-events/twister/)
+### 2. Prototype Two - M.A.S.H. [view here](https://fridwright.github.io/cart253/topics/prototyping-functions/mash/)
 
-<img src="topics/prototyping-events/twister/assets/images/twister.png">
+<img src="topics/prototyping-functions/mash/assets/images/mash.png">
 
 
 

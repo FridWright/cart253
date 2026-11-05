@@ -24,9 +24,10 @@ function setup() {
  * DESCRIBE DRAW
  */
 function draw() {
-    background(248, 247, 244); // off-white
+    // 1.Background (off-white)
+    background(248, 247, 244);
 
-    // Dark Adaptation: Add new star objects to the array over time
+    // 2. Dark Adaptation: Add new star objects to the array over time
     if (!isBlinking) {
         if (frameCount % 5 === 0 && stars.length < 350) {
             stars.push({
@@ -45,6 +46,15 @@ let rightX = 740;
 let eyeY = 250;
 let eyeW = 400;
 let eyeH = 300;
+
+// 3. Fill interior of eye sockets with pitch black (night sky)
+fill(10, 12, 18);
+noStroke();
+drawAlmondPath(leftX, eyeY, eyeW, eyeH);
+drawAlmondPath(rightX, eyeY, eyeW, eyeH);
+
+
+
 
 function resetVision() {
     stars = [];

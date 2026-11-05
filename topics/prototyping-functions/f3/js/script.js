@@ -152,7 +152,7 @@ function drawShark(x, y, sz, facingLeft) {
 
     noStroke();
 
-    let sharkBody = color("#B0B0B0");
+    let sharkBody = color("#99B1C4");
     let sharkAccent = color("#1C1C1C");
     let eyeCol = color("#781D1D");
 
@@ -163,9 +163,9 @@ function drawShark(x, y, sz, facingLeft) {
 
     // 2. Dorsal Fin
     fill(sharkAccent);
-    triangle(-sz * 0.1, -sz * 0.42, -sz * 0.25, -sz * 0.85, sz * 0.15, -sz * 0.42);
+    triangle(-sz * 0.25, -sz * 0.01, -sz * 0.25, -sz * 0.85, sz * 0.15, -sz * 0.42);
 
-    // 3. Main Body
+    // 3. Body
     fill(sharkBody);
     ellipse(0, 0, sz, sz * 0.85);
 
@@ -180,4 +180,21 @@ function drawShark(x, y, sz, facingLeft) {
     ellipse(sz * 0.26, -sz * 0.08, sz * 0.08, sz * 0.08);
 
     pop();
+}
+
+/**
+ * Trigger to spawn the giant shark (spacebar)
+ */
+function keyPressed() {
+    if (key === ' ' && !activeShark) {
+        let facingLeft = random() > 0.5;
+        let startX = facingLeft ? width + 250 : -250;
+        activeShark = {
+            x: startX,
+            y: random(120, height - 120),
+            speed: 5.5,
+            size: 240,
+            facingLeft: facingLeft
+        };
+    }
 }

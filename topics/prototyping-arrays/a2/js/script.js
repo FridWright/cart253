@@ -8,12 +8,15 @@
 
 "use strict";
 
-
+let apples = [];
+const COLS = 12;
+const ROWS = 12;
 /**
  * DESCRIBE SETUP
  */
 function setup() {
     createCanvas(600, 600);
+    initializeGrid();
 }
 
 /**

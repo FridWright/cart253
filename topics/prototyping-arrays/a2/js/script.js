@@ -2,8 +2,7 @@
  * Prototyping - Arrays: Apples
  * Fridrikka Wright
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * 144 apples
  */
 
 "use strict";
@@ -24,4 +23,22 @@ function setup() {
  */
 function draw() {
     background(245, 243, 238); // off-white
+}
+
+function initializeGrid() {
+    apples = [];
+    let spacingX = width / COLS;
+    let spacingY = height / ROWS;
+
+    for (let row = 0; row < ROWS; row++) {
+        for (let col = 0; col < COLS; col++) {
+            apples.push({
+                x: col * spacingX + spacingX / 2,
+                y: row * spacingY + spacingY / 2,
+                size: 26,
+                color: color(210, 50, 45), //  red
+                state: "fresh" // initial apple state
+            });
+        }
+    }
 }

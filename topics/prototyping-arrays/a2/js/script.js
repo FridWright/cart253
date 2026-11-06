@@ -10,6 +10,7 @@
 let apples = [];
 const COLS = 12;
 const ROWS = 12;
+
 /**
  * DESCRIBE SETUP
  */
@@ -23,7 +24,14 @@ function setup() {
  */
 function draw() {
     background(245, 243, 238); // off-white
+
+    // Draw apple loop from array
+    for (let i = 0; i < apples.length; i++) {
+        let a = apples[i];
+        drawApple(a.x, a.y, a.size, a.color);
+    }
 }
+
 
 function initializeGrid() {
     apples = [];

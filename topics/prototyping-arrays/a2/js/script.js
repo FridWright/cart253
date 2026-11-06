@@ -1,5 +1,5 @@
 /**
- * Prototyping - Arrays: 
+ * Prototyping - Arrays: Apples
  * Fridrikka Wright
  * 
  * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
@@ -8,17 +8,17 @@
 
 "use strict";
 
-/**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
-function setup() {
 
+/**
+ * DESCRIBE SETUP
+ */
+function setup() {
+    createCanvas(600, 600);
 }
 
-
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
-*/
+ * DESCRIBE DRAW
+ */
 function draw() {
-
+    background(245, 243, 238); // off-white
 }

@@ -2,8 +2,10 @@
  * Prototyping - Arrays: Night Adaptation
  * Fridrikka Wright
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Night Adaptation is a prototype that illustrates the process of your eyes 
+ * adjusting to the night sky over time. The longer you look at the night
+ * sky, the more stars appear. The user can reset the adjustment by 
+ * hitting spacebar to blink.
  */
 
 "use strict";
@@ -13,7 +15,7 @@ let isBlinking = false;
 let blinkProgress = 0.0; // 0.0 = open, 1.0 = fully closed
 
 /**
- * DESCRIBE SETUP
+ * Create canvas
  */
 function setup() {
     createCanvas(1000, 500);
@@ -21,7 +23,8 @@ function setup() {
 }
 
 /**
- * DESCRIBE DRAW
+ * Background, dark adaptation, eye coordinates, eye sockets, render stars
+ * inside the eyes, blibking progress, eye outlines
  */
 function draw() {
     // 1.Background (off-white)

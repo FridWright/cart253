@@ -20,9 +20,9 @@ The purpose of this website is to collect my Prototyping work for this course & 
 
 4. **Prototyping: Events** [click here](prototyping-events.md)
 
-5. **Prototyping: Functions**[click here](prototyping-functions.md)
+5. **Prototyping: Functions** [click here](prototyping-functions.md)
 
-6. **Prototyping: Arrays**[click here](prototyping-arrays.md)
+6. **Prototyping: Arrays** [click here](prototyping-arrays.md)
 
 7. *Coming Soon*- **Prototyping: Loops**[⏰](https://www.example.com)
 

@@ -57,3 +57,11 @@ function initializeGrid() {
 }
 
 // (Modular Helper Function) Human outline (top-down view lying down)
+function drawHumanOutline(x, y, sc, sColor, fColor) {
+    push();
+    translate(x, y);
+    scale(sc);
+
+    stroke(sColor);
+    strokeWeight(1.5);
+    fill(fColor);

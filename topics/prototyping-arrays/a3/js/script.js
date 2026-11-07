@@ -68,5 +68,8 @@ function drawHumanOutline(x, y, sc, sColor, fColor) {
 
     // Head
     ellipse(0, -32, 14, 16);
+    // Torso & Legs silhouette
+    beginShape();
+
 
 }

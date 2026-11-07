@@ -10,13 +10,13 @@
 
 let figures = [];
 const COLS = 4;
-const ROWS = 8;
+const ROWS = 6;
 
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
 function setup() {
-    createCanvas(400, 800);
+    createCanvas(400, 600);
     initializeGrid();
 }
 
@@ -55,3 +55,5 @@ function initializeGrid() {
         }
     }
 }
+
+// (Modular Helper Function) Human outline (top-down view lying down)

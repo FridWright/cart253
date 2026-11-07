@@ -20,7 +20,7 @@ function setup() {
 }
 
 /**
- * Draw background and loop apples
+ * Draw background, loop apples, check mouse hover
  */
 function draw() {
     background(245, 243, 238); // off-white
@@ -28,6 +28,14 @@ function draw() {
     // Draw apple loop from array
     for (let i = 0; i < apples.length; i++) {
         let a = apples[i];
+
+        // Check if the mouse is hovering over this specific apple
+        let d = dist(mouseX, mouseY, a.x, a.y);
+        if (d < a.size) {
+            // Assign a random rainbow/vibrant color while the mouse is over it
+            a.color = color(random(50, 255), random(50, 255), random(50, 255));
+        }
+
         drawApple(a.x, a.y, a.size, a.color);
     }
 }

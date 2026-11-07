@@ -65,3 +65,8 @@ function drawHumanOutline(x, y, sc, sColor, fColor) {
     stroke(sColor);
     strokeWeight(1.5);
     fill(fColor);
+
+    // Head
+    ellipse(0, -32, 14, 16);
+
+}

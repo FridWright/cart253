@@ -61,6 +61,12 @@ The second prototype is *M.A.S.H.*, which is originally a pen-and-paper game fro
 
 My third prototype, *Aquarium*, is a simulation of an aquarium where the user watches colourful swim by peacefully, but when the spacebar is pressed, an event is triggered where a shark swims across the screen and the fish swim faster til he's gone. The code relies on modular functions like updateAndDrawFish(), drawAbstractFish(), and drawGiantShark() to separate motion physics, screen boundaries, and geometric drawing, in the spirit of *refractoring* and keeping an neatly code. 
 
-7. ### <u>Seventh Journal Entry ⏰</u>
+7. ### <u>Seventh Journal Entry ⏰</u> *06/11/2026
+This journal entry reflects on my process for the [Prototyping: Arrays assignment.](https://github.com/FridWright/cart253/blob/main/prototyping-arrays.md)
+
+My first prototype is *Night Adaptation*, a piece exploring how our eyes adjust to darkness. Two almond-shaped eye portals act as windows into a night sky, where, over time, an array continuously accumulates custom star objects with randomized spatial coordinates, sizes, and twinkle frequencies to simulate the eye slowly adjusting to low light. Hitting the spacebar triggers a top-to-bottom blink animation that clears the array, resetting the viewer's virtual vision to readjust again.
+
+*Apples*, the second prototype, plays with spatial grid layouts and real-time mouse interaction. A single array stores a 12x12 grid of 144 apple objects across the canvas. As the mouse cursor moves across the canvas, proximity calculations (dist()) evaluate mouse coordinates against each element in the array to dynamically mutate the targeted apple's color property to a randomized RGB value. Pressing the spacebar iterates through the array to reset all object color properties back to the baseline red.
+
 
 8. ### <u>Eigth Journal Entry ⏰</u>

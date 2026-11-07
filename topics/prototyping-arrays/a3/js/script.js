@@ -70,6 +70,7 @@ function drawHumanOutline(x, y, sc, sColor, fColor) {
     ellipse(0, -32, 14, 16);
     // Torso & Legs silhouette
     beginShape();
-
+    // Neck left
+    vertex(-3, -24);
 
 }

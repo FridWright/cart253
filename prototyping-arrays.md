@@ -9,15 +9,15 @@
 
 ## Deliverables
 
-### 1. Prototype One - Noise Machine  [view here](https://fridwright.github.io/cart253/topics/prototyping-functions/noisemachine/)
+### 1. Prototype One - Night Adaptation  [view here](https://fridwright.github.io/cart253/topics/prototyping-arrays/adaptation/)
 
-<img src="topics/prototyping-functions/noisemachine/assets/images/noisemachine.png">
+<img src="topics/prototyping-arrays/adaptation/assets/images/adaptation.png">
 
 
 
-### 2. Prototype Two - M.A.S.H. [view here](https://fridwright.github.io/cart253/topics/prototyping-functions/mash/)
+### 2. Prototype Two - Apples [view here](https://fridwright.github.io/cart253/topics/prototyping-arrays/apples/)
 
-<img src="topics/prototyping-functions/mash/assets/images/mash.png">
+<img src="topics/prototyping-arrays/apples/assets/images/apples.png">
 
 
 

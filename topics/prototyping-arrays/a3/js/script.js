@@ -27,4 +27,11 @@ function setup() {
 */
 function draw() {
     background(245, 243, 238); // off-white
+
+    // Loop through the array to display all figures
+    for (let i = 0; i < figures.length; i++) {
+        let f = figures[i];
+        drawHumanOutline(f.x, f.y, f.scale, f.strokeColor, f.fillColor);
+    }
+
 }

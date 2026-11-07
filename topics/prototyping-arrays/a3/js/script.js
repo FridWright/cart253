@@ -79,5 +79,8 @@ function drawHumanOutline(x, y, sc, sColor, fColor) {
     vertex(-7, 38);
     // Left foot
     vertex(-2, 38);
+    // Crotch separation notch
+    vertex(0, 26);
+
 
 }

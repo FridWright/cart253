@@ -72,5 +72,8 @@ function drawHumanOutline(x, y, sc, sColor, fColor) {
     beginShape();
     // Neck left
     vertex(-3, -24);
+    // Left shoulder & arm
+    vertex(-10, -20);
+    bezierVertex(-14, -10, -12, 5, -8, 15);
 
 }

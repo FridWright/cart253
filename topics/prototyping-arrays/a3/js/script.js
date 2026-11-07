@@ -8,6 +8,10 @@
 
 "use strict";
 
+let figures = [];
+const COLS = 4;
+const ROWS = 8;
+
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */

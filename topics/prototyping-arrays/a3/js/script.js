@@ -83,5 +83,7 @@ function drawHumanOutline(x, y, sc, sColor, fColor) {
     vertex(0, 26);
     // Right foot
     vertex(2, 38);
+    // Right leg outer
+    vertex(7, 38);
 
 }

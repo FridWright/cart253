@@ -49,7 +49,7 @@ function initializeGrid() {
                 y: row * spacingY + spacingY / 2,
                 scale: 0.85,
                 strokeColor: color(60, 55, 65),
-                fillColor: color(0, 0), // Transparent fill initially
+                fillColor: color('black'),
                 state: "resting"
             });
         }
@@ -66,32 +66,40 @@ function drawHumanOutline(x, y, sc, sColor, fColor) {
     strokeWeight(1.5);
     fill(fColor);
 
-    // Head
-    ellipse(0, -32, 14, 16);
-    // Torso & Legs silhouette
+    // 1. Head
+    ellipse(0, -30, 14, 16);
+
+    // 2. Torso & Legs (Central Body)
     beginShape();
-    // Neck left
-    vertex(-3, -24);
-    // Left shoulder & arm
-    vertex(-10, -20);
-    bezierVertex(-14, -10, -12, 5, -8, 15);
-    // Left leg outer
-    vertex(-7, 38);
-    // Left foot
-    vertex(-2, 38);
-    // Crotch separation notch
-    vertex(0, 26);
-    // Right foot
-    vertex(2, 38);
-    // Right leg outer
-    vertex(7, 38);
-    // Right arm & shoulder
-    vertex(8, 15);
-    bezierVertex(12, 5, 14, -10, 10, -20);
-    // Neck right
-    vertex(3, -24);
+    vertex(-8, -20); // Left shoulder joint
+    vertex(-6, 2);   // Waist left
+    vertex(-7, 36);  // Left foot outer
+    vertex(-2, 36);  // Left foot inner
+    vertex(0, 22);   // Crotch
+    vertex(2, 36);   // Right foot inner
+    vertex(7, 36);   // Right foot outer
+    vertex(6, 2);    // Waist right
+    vertex(8, -20);  // Right shoulder joint
+    endShape(CLOSE);
+
+    // 3. Left Arm 
+    beginShape();
+    vertex(-8, -18);   // Shoulder side
+    vertex(-18, -8);   // Outer side
+    vertex(-20, -6);   // Hand side
+    vertex(-16, -2);   // Inner side
+    vertex(-6, -14);   // Back to shoulder joint
+    endShape(CLOSE);
+
+    // 4. Right Arm 
+    beginShape();
+    vertex(8, -18);    // Shoulder side
+    vertex(18, -8);    // Outer side
+    vertex(20, -6);    // Hand side
+    vertex(16, -2);    // Inner side
+    vertex(6, -14);    // Back to shoulder joint
     endShape(CLOSE);
 
     pop();
-
 }
+

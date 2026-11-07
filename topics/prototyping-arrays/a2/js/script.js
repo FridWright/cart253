@@ -32,7 +32,7 @@ function draw() {
         // Check if the mouse is hovering over this specific apple
         let d = dist(mouseX, mouseY, a.x, a.y);
         if (d < a.size) {
-            // Assign a random rainbow/vibrant color while the mouse is over it
+            // Assign a random rainbow colour while the mouse is over it
             a.color = color(random(50, 255), random(50, 255), random(50, 255));
         }
 

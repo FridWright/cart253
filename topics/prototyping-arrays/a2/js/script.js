@@ -80,3 +80,12 @@ function drawApple(x, y, size, col) {
     ellipse(size * 0.2, 0, size * 0.8, size);
     pop();
 }
+
+// Keyboard interaction: press spacebar to reset all apples back to red
+function keyPressed() {
+    if (key === ' ') {
+        for (let i = 0; i < apples.length; i++) {
+            apples[i].color = color(210, 50, 45);
+        }
+    }
+}

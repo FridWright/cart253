@@ -20,7 +20,7 @@ function setup() {
 }
 
 /**
- * DESCRIBE DRAW
+ * Draw background and loop apples
  */
 function draw() {
     background(245, 243, 238); // off-white
@@ -31,7 +31,6 @@ function draw() {
         drawApple(a.x, a.y, a.size, a.color);
     }
 }
-
 
 function initializeGrid() {
     apples = [];
@@ -49,4 +48,27 @@ function initializeGrid() {
             });
         }
     }
+}
+
+// (Modular Helper Function) APPLE GRAPHIC
+function drawApple(x, y, size, col) {
+    push();
+    translate(x, y);
+
+    // Stem
+    stroke(80, 55, 35);
+    strokeWeight(2);
+    line(0, -size / 2, 2, -size / 2 - 6);
+
+    // Leaf
+    noStroke();
+    fill(85, 140, 60);
+    ellipse(4, -size / 2 - 4, 6, 3);
+
+    // Apple Body 
+    fill(col);
+    noStroke();
+    ellipse(-size * 0.2, 0, size * 0.8, size);
+    ellipse(size * 0.2, 0, size * 0.8, size);
+    pop();
 }

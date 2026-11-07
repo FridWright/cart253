@@ -1,8 +1,9 @@
 /**
  * Prototyping - Arrays: Apples
  * Fridrikka Wright
- * 
- * 144 apples
+ *
+ * 144 apples! Hover over them to change to a random colour. 
+ * Press the spacebar to reset all apples back to red.
  */
 
 "use strict";
@@ -12,7 +13,7 @@ const COLS = 12;
 const ROWS = 12;
 
 /**
- * DESCRIBE SETUP
+ * Create canvas, initialize grid
  */
 function setup() {
     createCanvas(600, 600);

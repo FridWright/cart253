@@ -16,11 +16,12 @@ const ROWS = 6;
 /// Scene states: baseline, yoga studio, pool scene
 let sceneMode = 0;
 
+
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
 function setup() {
-    createCanvas(400, 600);
+    createCanvas(400, 640);
     initializeGrid();
 }
 
@@ -63,8 +64,9 @@ function draw() {
 // Populate the array with a 4x8 grid of figure object literals
 function initializeGrid() {
     figures = [];
-    let spacingX = width / COLS;  // 100px
-    let spacingY = height / ROWS; // 100px
+    let spacingX = width / COLS; // 100px
+    let spacingY = 95;           // vertical cell height for 640px canvas
+    let startY = 40;             // offset downward to clear UI header space
 
     // Colour palette for yoga mats
     let matPalette = [
@@ -88,7 +90,7 @@ function initializeGrid() {
         for (let col = 0; col < COLS; col++) {
             figures.push({
                 x: col * spacingX + spacingX / 2,
-                y: row * spacingY + spacingY / 2,
+                y: startY + row * spacingY + spacingY / 2,
                 scale: 0.85,
                 strokeColor: color(60, 55, 65),
                 fillColor: color('black'), // human figure fill colour
@@ -192,7 +194,7 @@ function drawInstructions() {
 
     fill(sceneMode === 1 ? color(230, 225, 220) : color(100, 95, 105));
     noStroke();
-    text(`prototype 3 • ${modeLabel} (press spacebar)`, width / 2, 12);
+    text(`prototype 3 • ${modeLabel} (press spacebar)`, width / 2, 16);
     pop();
 }
 

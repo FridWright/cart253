@@ -53,10 +53,18 @@ function draw() {
         } else if (sceneMode === 2) {
             // Pool scene: draw floaties
             drawFloatie(f.x, f.y, f.floatieWidth, f.floatieHeight, f.floatieColor);
+        } else if (sceneMode === 3) {
+            // Beach scene: draw striped beach towel
+            drawBeachTowel(f.x, f.y, f.towelColor1, f.towelColor2);
         }
 
         // Loop through the array to display human outline on top
         drawHumanOutline(f.x, f.y, f.scale, f.strokeColor, f.fillColor);
+
+        // 3. Overlay asunglasses for beach mode
+        if (sceneMode === 3) {
+            drawSunglasses(f.x, f.y, f.scale);
+        }
     }
 
     // UI Instruction Prompt
@@ -88,6 +96,10 @@ function initializeGrid() {
         color(147, 112, 219)  // purple
     ];
 
+    // Colour palette for striped beach towels
+    let towelPalette1 = [color(235, 90, 80), color(50, 130, 200), color(245, 170, 50), color(60, 160, 110)];
+    let towelPalette2 = [color(255, 240, 220), color(240, 240, 250), color(255, 245, 210), color(220, 245, 230)];
+
     for (let row = 0; row < ROWS; row++) {
         for (let col = 0; col < COLS; col++) {
             figures.push({
@@ -100,6 +112,8 @@ function initializeGrid() {
                 floatieWidth: random(65, 85), // floatie width
                 floatieHeight: random(75, 98), // floatie height
                 floatieColor: random(floatiePalette) // random colour assigned to floaties
+                towelColor1: towelPalette1[tIdx],
+                towelColor2: towelPalette2[tIdx]
             });
         }
     }
@@ -133,6 +147,22 @@ function drawFloatie(x, y, w, h, col) {
     stroke(255, 255, 255, 120);
     strokeWeight(3);
     ellipse(x, y, w - 14, h - 14);
+    pop();
+}
+
+// (Modular Helper Function) Striped Beach Towel
+function drawBeachTowel(x, y, c1, c2) {
+    push();
+    rectMode(CENTER);
+    noStroke();
+    // Base towel background
+    fill(c1);
+    rect(x, y, 68, 92, 10);
+
+    // Vertical stripes overlay
+    fill(c2);
+    rect(x - 14, y, 16, 92);
+    rect(x + 14, y, 16, 92);
     pop();
 }
 

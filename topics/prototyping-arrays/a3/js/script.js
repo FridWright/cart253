@@ -2,8 +2,9 @@
  * Prototyping - Arrays: The Resort
  * Fridrikka Wright
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * 24 people on holiday at a resort, user can press the spacebar
+ * to put the resort-goers into different vacation scenes to see
+ * how they will spend their time.
  */
 
 "use strict";
@@ -28,7 +29,7 @@ function setup() {
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Dynamic backgrounds, render mats/floaties/towels/figures, UI text
 */
 function draw() {
 
@@ -169,7 +170,8 @@ function drawForestScenery() {
             ellipse(item.x - 6, item.y + 4, item.size * 0.6, item.size * 0.5);
             ellipse(item.x + 6, item.y + 4, item.size * 0.6, item.size * 0.5);
         } else if (item.type === 'flower') {
-            // Draw a cute minimalist flower blossom
+            // Draw a flower blossom
+            /// Reference for flower drawing from https://editor.p5js.org/caleececconi/sketches/_jZDWqLqc
             fill(34, 84, 61); // stem
             rect(item.x - 1, item.y, 2, 10);
 

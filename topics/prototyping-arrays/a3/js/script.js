@@ -81,11 +81,11 @@ function initializeGrid() {
 
     // Colour palette for yoga mats
     let matPalette = [
-        color(210, 180, 140), // tan
-        color(165, 190, 185), // sage
-        color(200, 175, 190), // plum
-        color(180, 195, 210), // blue
-        color(215, 200, 185)  // sand
+        color('#D1A5C2'), // pink
+        color('#A1BFA1'), // sage
+        color('#7A638A'), // plum
+        color('#6DAEB0'), // blue
+        color('#E8E199')  // sand
     ];
 
     // Colour palette for pool floaties
@@ -291,7 +291,7 @@ function drawInstructions() {
     if (sceneMode === 1) modeLabel = "savasana at the yoga studio?";
     if (sceneMode === 2) modeLabel = "floaties at the pool?";
     if (sceneMode === 3) modeLabel = "sunbathe at the beach?";
-    if (sceneMode === 4) modeLabel = "guided hike through the jungle?";
+    if (sceneMode === 4) modeLabel = "guided hike through the woods?";
 
     // Set text color to white for the dark/vibrant scenes (1 = yoga, 2 = pool, 4 = forest)
     let isDarkScene = (sceneMode === 1 || sceneMode === 2 || sceneMode === 4);

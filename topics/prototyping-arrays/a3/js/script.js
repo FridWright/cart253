@@ -108,8 +108,8 @@ function initializeGrid() {
                 strokeColor: color(60, 55, 65),
                 fillColor: color('black'), // human figure fill colour
                 matColor: random(matPalette), // random colour assigned to yoga mats
-                floatieWidth: random(65, 85), // floatie width
-                floatieHeight: random(75, 98), // floatie height
+                floatieWidth: random(50, 68), // floatie width
+                floatieHeight: random(65, 80), // floatie height
                 floatieColor: random(floatiePalette), // random colour assigned to floaties
                 towelColor1: towelPalette1[tIdx],
                 towelColor2: towelPalette2[tIdx]
@@ -124,8 +124,8 @@ function drawYogaMat(x, y, col) {
     rectMode(CENTER);
     noStroke();
     fill(col);
-    // An elongated rounded rectangle for a yoga mat
-    rect(x, y, 68, 92, 12);
+    // elongated rounded rectangle for a yoga mat
+    rect(x, y, 54, 85, 10);
     pop();
 }
 
@@ -156,7 +156,7 @@ function drawBeachTowel(x, y, c1, c2) {
     noStroke();
     // Base towel background
     fill(c1);
-    rect(x, y, 68, 92, 10);
+    rect(x, y, 60, 85, 5);
 
     // Vertical stripes overlay
     fill(c2);

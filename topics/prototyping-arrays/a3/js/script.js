@@ -236,14 +236,14 @@ function drawInstructions() {
     textFont('sans-serif');
     textSize(11);
 
-    let modeLabel = "1/4: gallery grid";
-    if (sceneMode === 1) modeLabel = "2/4: yoga studio mode";
-    if (sceneMode === 2) modeLabel = "3/4: pool scene mode";
-    if (sceneMode === 3) modeLabel = "4/4: beach sunbathing mode";
+    let modeLabel = "press spacebar to see";
+    if (sceneMode === 1) modeLabel = "savasana at the yoga studio?";
+    if (sceneMode === 2) modeLabel = "floaties at the pool?";
+    if (sceneMode === 3) modeLabel = "sunbathe at the beach?";
 
     fill(sceneMode === 1 ? color(230, 225, 220) : color(100, 95, 105));
     noStroke();
-    text(`prototype 3 • ${modeLabel} (press spacebar)`, width / 2, 14);
+    text(`what will the resort-goers get up to? • ${modeLabel} `, width / 2, 14);
     pop();
 }
 

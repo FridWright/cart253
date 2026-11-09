@@ -24,13 +24,13 @@ function setup() {
 
 /**
  * Background, dark adaptation, eye coordinates, eye sockets, render stars
- * inside the eyes, blibking progress, eye outlines
+ * inside the eyes, blinking progress, eye outlines
  */
 function draw() {
     // 1.Background (purply blue)
     background('#252B4D');
 
-    // 2. Dark Adaptation: Add new star objects to the array over time
+    // 2. Dark Adaptation: add new star objects to the array over time
     if (!isBlinking) {
         if (frameCount % 3 === 0 && stars.length < 500) {
             stars.push({

@@ -43,7 +43,7 @@ function draw() {
         background(230, 196, 145); // sandy beach
     }
 
-    // 2. Render mats/floaties/figures across the array
+    // 2. Render mats/floaties/towels/figures across the array
     for (let i = 0; i < figures.length; i++) {
         let f = figures[i];
 
@@ -70,6 +70,7 @@ function draw() {
     // UI Instruction Prompt
     drawInstructions();
 }
+
 
 // Populate the array with a 4x8 grid of figure object literals
 function initializeGrid() {
@@ -102,6 +103,8 @@ function initializeGrid() {
 
     for (let row = 0; row < ROWS; row++) {
         for (let col = 0; col < COLS; col++) {
+            let tIdx = floor(random(towelPalette1.length));
+
             figures.push({
                 x: col * spacingX + spacingX / 2,
                 y: startY + row * spacingY + spacingY / 2,
@@ -111,7 +114,7 @@ function initializeGrid() {
                 matColor: random(matPalette), // random colour assigned to yoga mats
                 floatieWidth: random(65, 85), // floatie width
                 floatieHeight: random(75, 98), // floatie height
-                floatieColor: random(floatiePalette) // random colour assigned to floaties
+                floatieColor: random(floatiePalette), // random colour assigned to floaties
                 towelColor1: towelPalette1[tIdx],
                 towelColor2: towelPalette2[tIdx]
             });
@@ -233,19 +236,20 @@ function drawInstructions() {
     textFont('sans-serif');
     textSize(11);
 
-    let modeLabel = "1/3: gallery grid";
-    if (sceneMode === 1) modeLabel = "2/3: yoga studio mode";
-    if (sceneMode === 2) modeLabel = "3/3: pool scene mode";
+    let modeLabel = "1/4: gallery grid";
+    if (sceneMode === 1) modeLabel = "2/4: yoga studio mode";
+    if (sceneMode === 2) modeLabel = "3/4: pool scene mode";
+    if (sceneMode === 3) modeLabel = "4/4: beach sunbathing mode";
 
     fill(sceneMode === 1 ? color(230, 225, 220) : color(100, 95, 105));
     noStroke();
-    text(`prototype 3 • ${modeLabel} (press spacebar)`, width / 2, 16);
+    text(`prototype 3 • ${modeLabel} (press spacebar)`, width / 2, 14);
     pop();
 }
 
 // Keyboard interaction: spacebar toggles through scenes
 function keyPressed() {
     if (key === ' ') {
-        sceneMode = (sceneMode + 1) % 3;
+        sceneMode = (sceneMode + 1) % 4;
     }
 }

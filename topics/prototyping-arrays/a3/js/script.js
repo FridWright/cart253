@@ -13,7 +13,7 @@ const COLS = 4;
 const ROWS = 6;
 
 // State tracking for keyboard interaction 
-/// Scene states: baseline, yoga studio, pool scene
+/// Scene states: baseline, yoga studio, pool scene, sunbathing
 let sceneMode = 0;
 
 
@@ -39,6 +39,8 @@ function draw() {
         background(74, 59, 50);    // yoga studio brown
     } else if (sceneMode === 2) {
         background(40, 160, 175);  // turquoise pool water
+    } else if (sceneMode === 3) {
+        background(230, 196, 145); // sandy beach
     }
 
     // 2. Render mats/floaties/figures across the array

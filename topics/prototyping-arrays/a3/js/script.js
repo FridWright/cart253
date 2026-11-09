@@ -75,6 +75,15 @@ function initializeGrid() {
         color(215, 200, 185)  // sand
     ];
 
+    // Colour palette for pool floaties
+    let floatiePalette = [
+        color(255, 105, 180), // pink
+        color(255, 215, 0),   // yellow
+        color(0, 220, 255),   // cyan
+        color(255, 99, 71),   // red
+        color(147, 112, 219)  // purple
+    ];
+
     for (let row = 0; row < ROWS; row++) {
         for (let col = 0; col < COLS; col++) {
             figures.push({
@@ -84,13 +93,15 @@ function initializeGrid() {
                 strokeColor: color(60, 55, 65),
                 fillColor: color('black'), // human figure fill colour
                 matColor: random(matPalette), // random colour assigned to yoga mats
-                state: "resting"
+                floatieWidth: random(65, 85), // floatie width
+                floatieHeight: random(75, 98), // floatie height
+                floatieColor: random(floatiePalette) // random colour assigned to floaties
             });
         }
     }
 }
 
-// Modular Helper: Draw the yoga mat rectangle underneath with pill corners
+// (Modular Helper Function) Draw the yoga mat rectangle underneath with pill corners
 function drawYogaMat(x, y, col) {
     push();
     rectMode(CENTER);
@@ -98,6 +109,26 @@ function drawYogaMat(x, y, col) {
     fill(col);
     // An elongated rounded rectangle for a yoga mat
     rect(x, y, 68, 92, 12);
+    pop();
+}
+
+// (Modular Helper Function) Pool floatie (varying ellipse with inner highlight ring)
+function drawFloatie(x, y, w, h, col) {
+    push();
+    noStroke();
+    // Soft shadow under water
+    fill(20, 120, 135, 150);
+    ellipse(x, y + 4, w, h);
+
+    // Main floatie body
+    fill(col);
+    ellipse(x, y, w, h);
+
+    // Inner highlight ring
+    noFill();
+    stroke(255, 255, 255, 120);
+    strokeWeight(3);
+    ellipse(x, y, w - 14, h - 14);
     pop();
 }
 

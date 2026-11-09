@@ -30,7 +30,8 @@ function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
-    // Dynamic background
+
+    // 1. Render dynamic background
     if (sceneMode === 0) {
         background(245, 243, 238); // off-white
     } else if (sceneMode === 1) {
@@ -39,13 +40,16 @@ function draw() {
         background(40, 160, 175);  // turquoise pool water
     }
 
-    // Loop through the array to display all yoga mats and figures
+    // 2. Render mats/floaties/figures across the array
     for (let i = 0; i < figures.length; i++) {
         let f = figures[i];
 
-        // 1. Draw yoga mat underneath only if toggle is active
-        if (showMats) {
+        if (sceneMode === 1) {
+            // Yoga studio: draw yoga mat
             drawYogaMat(f.x, f.y, f.matColor);
+        } else if (sceneMode === 2) {
+            // Pool scene: draw floaties
+            drawFloatie(f.x, f.y, f.floatieWidth, f.floatieHeight, f.floatieColor);
         }
 
         // Loop through the array to display human outline on top

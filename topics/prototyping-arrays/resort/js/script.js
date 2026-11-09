@@ -229,8 +229,8 @@ function drawBeachTowel(x, y, c1, c2) {
 
     // Vertical stripes overlay
     fill(c2);
-    rect(x - 14, y, 16, 92);
-    rect(x + 14, y, 16, 92);
+    rect(x - 14, y, 16, 85);
+    rect(x + 14, y, 16, 85);
     pop();
 }
 

@@ -12,8 +12,9 @@ let figures = [];
 const COLS = 4;
 const ROWS = 6;
 
-// State tracking for keyboard interaction (yoga mats)
-let showMats = false;
+// State tracking for keyboard interaction 
+/// Scene states: baseline, yoga studio, pool scene
+let sceneMode = 0;
 
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
@@ -30,10 +31,12 @@ function setup() {
 */
 function draw() {
     // Dynamic background
-    if (showMats) {
-        background(74, 59, 50); // brown yoga studio floor
-    } else {
+    if (sceneMode === 0) {
         background(245, 243, 238); // off-white
+    } else if (sceneMode === 1) {
+        background(74, 59, 50);    // yoga studio brown
+    } else if (sceneMode === 2) {
+        background(40, 160, 175);  // turquoise pool water
     }
 
     // Loop through the array to display all yoga mats and figures

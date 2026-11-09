@@ -44,6 +44,7 @@ function draw() {
     } else if (sceneMode === 4) {
         background(45, 106, 79);    // forest green
         drawForestPaths();         // render swervy vertical hiking trails underneath
+        drawForestScenery();       // render shrubs and colorful wildflowers in the background
     }
 
     // 2. Render mats/floaties/towels/figures across the array
@@ -137,6 +138,50 @@ function drawForestPaths() {
             curveVertex(baseX + swerve, y);
         }
         endShape();
+    }
+    pop();
+}
+
+// (Modular Helper Function) Draw shrubs and wildflowers in the forest
+function drawForestScenery() {
+    push();
+    noStroke();
+
+    // Determine positions for shrubs and flowers
+    let sceneryItems = [
+        { x: 100, y: 80, type: 'shrub', size: 24 }, // top green shrub
+        { x: 350, y: 130, type: 'flower', col: color(255, 220, 100) }, // yellow flower
+        { x: 30, y: 220, type: 'flower', col: color(255, 140, 160) }, // warm pink flower
+        { x: 370, y: 290, type: 'shrub', size: 28 }, // middle green shrub
+        { x: 70, y: 380, type: 'flower', col: color(255, 255, 255) }, // white flower
+        { x: 325, y: 450, type: 'flower', col: color(255, 180, 100) }, // orange flower
+        { x: 25, y: 530, type: 'shrub', size: 22 }, // lower shrub
+        { x: 380, y: 590, type: 'flower', col: color(240, 130, 200) } // cool pink flower
+    ];
+
+    for (let i = 0; i < sceneryItems.length; i++) {
+        let item = sceneryItems[i];
+        if (item.type === 'shrub') {
+            // Draw clustered green shrub layers
+            fill('#41B555');
+            ellipse(item.x, item.y, item.size, item.size * 0.8);
+            fill('#349945');
+            ellipse(item.x - 6, item.y + 4, item.size * 0.6, item.size * 0.5);
+            ellipse(item.x + 6, item.y + 4, item.size * 0.6, item.size * 0.5);
+        } else if (item.type === 'flower') {
+            // Draw a cute minimalist flower blossom
+            fill(34, 84, 61); // stem
+            rect(item.x - 1, item.y, 2, 10);
+
+            fill(item.col); // petals
+            ellipse(item.x - 4, item.y, 6, 6);
+            ellipse(item.x + 4, item.y, 6, 6);
+            ellipse(item.x, item.y - 4, 6, 6);
+            ellipse(item.x, item.y + 4, 6, 6);
+
+            fill(255, 240, 150); // center center
+            ellipse(item.x, item.y, 4, 4);
+        }
     }
     pop();
 }

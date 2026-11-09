@@ -29,7 +29,12 @@ function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
-    background(245, 243, 238); // off-white
+    // Dynamic background
+    if (showMats) {
+        background(74, 59, 50); // brown yoga studio floor
+    } else {
+        background(245, 243, 238); // off-white
+    }
 
     // Loop through the array to display all yoga mats and figures
     for (let i = 0; i < figures.length; i++) {

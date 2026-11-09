@@ -127,13 +127,13 @@ function drawForestPaths() {
     push();
     noFill();
     stroke(198, 139, 89, 220); // dirth path colour
-    strokeWeight(16);
+    strokeWeight(26);
     strokeCap(ROUND);
 
     for (let col = 0; col < COLS; col++) {
         let baseX = (col + 0.5) * (width / COLS);
         beginShape();
-        for (let y = 30; y <= height - 20; y += 10) {
+        for (let y = -30; y <= height + 30; y += 10) {
             let swerve = sin(y * 0.015 + col * 2) * 18;
             curveVertex(baseX + swerve, y);
         }

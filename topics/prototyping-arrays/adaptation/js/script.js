@@ -27,8 +27,8 @@ function setup() {
  * inside the eyes, blibking progress, eye outlines
  */
 function draw() {
-    // 1.Background (off-white)
-    background(248, 247, 244);
+    // 1.Background (purply blue)
+    background('#252B4D');
 
     // 2. Dark Adaptation: Add new star objects to the array over time
     if (!isBlinking) {
@@ -152,9 +152,9 @@ function drawEyelids(x, y, w, h, progress) {
 function drawInstructions() {
     push();
     textAlign(CENTER, TOP);
-    textFont('sans-serif');
-    textSize(13);
-    fill(120, 115, 125, 200);
+    textFont('cursive');
+    textSize(20);
+    fill('white');
     noStroke();
     text("press spacebar to blink", width / 2, 20);
     pop();

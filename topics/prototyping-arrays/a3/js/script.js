@@ -42,7 +42,7 @@ function draw() {
     } else if (sceneMode === 3) {
         background(230, 196, 145); // sandy beach
     } else if (sceneMode === 4) {
-        background(52, 78, 65);    // forest green
+        background(45, 106, 79);    // forest green
         drawForestPaths();         // render swervy vertical hiking trails underneath
     }
 
@@ -125,7 +125,7 @@ function initializeGrid() {
 function drawForestPaths() {
     push();
     noFill();
-    stroke(115, 95, 75, 180); // dirth path colour
+    stroke(198, 139, 89, 220); // dirth path colour
     strokeWeight(16);
     strokeCap(ROUND);
 

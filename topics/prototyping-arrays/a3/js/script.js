@@ -19,7 +19,7 @@ let sceneMode = 0;
 
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Create canvas, initialize grid
 */
 function setup() {
     createCanvas(400, 640);
@@ -27,15 +27,14 @@ function setup() {
 }
 
 
-
 /**
- * Dynamic backgrounds, render mats/floaties/towels/figures, UI text
+ * Draw dynamic backgrounds, render mats/floaties/towels/figures, UI text
 */
 function draw() {
 
     // 1. Render dynamic background
     if (sceneMode === 0) {
-        background(245, 243, 238); // off-white
+        background(245, 243, 238); // off-white baseline
     } else if (sceneMode === 1) {
         background(74, 59, 50);    // yoga studio brown
     } else if (sceneMode === 2) {
@@ -45,7 +44,7 @@ function draw() {
     } else if (sceneMode === 4) {
         background(45, 106, 79);    // forest green
         drawForestPaths();         // render swervy vertical hiking trails underneath
-        drawForestScenery();       // render shrubs and colorful wildflowers in the background
+        drawForestScenery();       // render shrubs and wildflowers in the background
     }
 
     // 2. Render mats/floaties/towels/figures across the array

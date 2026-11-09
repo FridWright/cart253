@@ -61,10 +61,6 @@ function draw() {
         // Loop through the array to display human outline on top
         drawHumanOutline(f.x, f.y, f.scale, f.strokeColor, f.fillColor);
 
-        // 3. Overlay asunglasses for beach mode
-        if (sceneMode === 3) {
-            drawSunglasses(f.x, f.y, f.scale);
-        }
     }
 
     // UI Instruction Prompt
@@ -166,19 +162,6 @@ function drawBeachTowel(x, y, c1, c2) {
     fill(c2);
     rect(x - 14, y, 16, 92);
     rect(x + 14, y, 16, 92);
-    pop();
-}
-
-// (Modular Helper Function) Sunglasses for beach mode
-function drawSunglasses(x, y, sc) {
-    push();
-    translate(x, y);
-    scale(sc);
-    // Positioned right over the head area (-30 vertical offset)
-    fill(30);
-    noStroke();
-    rectMode(CENTER);
-    rect(0, -31, 10, 4, 2);
     pop();
 }
 

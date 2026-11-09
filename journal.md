@@ -68,5 +68,6 @@ My first prototype is *Night Adaptation*, a piece exploring how our eyes adjust 
 
 *Apples*, the second prototype, plays with spatial grid layouts and real-time mouse interaction. A single array stores a 12x12 grid of 144 apple objects across the canvas. As the mouse cursor moves across the canvas, proximity calculations (dist()) evaluate mouse coordinates against each element in the array to dynamically mutate the targeted apple's color property to a randomized RGB value. Pressing the spacebar iterates through the array to reset all object color properties back to the baseline red.
 
+My third prototype is *The Resort*, which is a 4x6 grid of 24 minimalist human figures, storing individual properties like coordinates, scales, and randomized color attributes directly inside object literal arrays alongside palette arrays for yoga mats, floaties, and towels. Event handling via keyPressed() spacebar shows the user five distinct resort environments they can cycle through.
 
 8. ### <u>Eigth Journal Entry ⏰</u>

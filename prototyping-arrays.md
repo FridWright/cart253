@@ -21,9 +21,9 @@
 
 
 
-### 3. Prototype Three - Aquarium [view here](https://fridwright.github.io/cart253/topics/prototyping-functions/aquarium/)
+### 3. Prototype Three - The Resort [view here](https://fridwright.github.io/cart253/topics/prototyping-arrays/resort/)
 
-<img src="topics/prototyping-functions/aquarium/assets/images/aquarium.png">
+<img src="topics/prototyping-arrays/resort/assets/images/resort.png">
 
 
 

@@ -185,15 +185,20 @@ function drawInstructions() {
     textAlign(CENTER, TOP);
     textFont('sans-serif');
     textSize(11);
-    fill(130, 125, 135, 200);
+
+    let modeLabel = "1/3: gallery grid";
+    if (sceneMode === 1) modeLabel = "2/3: yoga studio mode";
+    if (sceneMode === 2) modeLabel = "3/3: pool scene mode";
+
+    fill(sceneMode === 1 ? color(230, 225, 220) : color(100, 95, 105));
     noStroke();
-    text("press spacebar", width / 2, 12);
+    text(`prototype 3 • ${modeLabel} (press spacebar)`, width / 2, 12);
     pop();
 }
 
-// Keyboard interaction: spacebar toggles yoga mats on/off
+// Keyboard interaction: spacebar toggles through scenes
 function keyPressed() {
     if (key === ' ') {
-        showMats = !showMats; // Flips between true and false
+        sceneMode = (sceneMode + 1) % 3;
     }
 }

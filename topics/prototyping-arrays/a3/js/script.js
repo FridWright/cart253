@@ -1,5 +1,5 @@
 /**
- * Prototyping - Arrays:
+ * Prototyping - Arrays: The Resort
  * Fridrikka Wright
  * 
  * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
@@ -13,7 +13,7 @@ const COLS = 4;
 const ROWS = 6;
 
 // State tracking for keyboard interaction 
-/// Scene states: baseline, yoga studio, pool scene, sunbathing
+/// Scene states: baseline, yoga studio, pool scene, sunbathing, hiking
 let sceneMode = 0;
 
 
@@ -41,6 +41,9 @@ function draw() {
         background(40, 160, 175);  // turquoise pool water
     } else if (sceneMode === 3) {
         background(230, 196, 145); // sandy beach
+    } else if (sceneMode === 4) {
+        background(52, 78, 65);    // forest green
+        drawForestPaths();         // render swervy vertical hiking trails underneath
     }
 
     // 2. Render mats/floaties/towels/figures across the array

@@ -293,7 +293,10 @@ function drawInstructions() {
     if (sceneMode === 3) modeLabel = "sunbathe at the beach?";
     if (sceneMode === 4) modeLabel = "guided hike through the jungle?";
 
-    fill(sceneMode === 1 ? color(230, 225, 220) : color(100, 95, 105));
+    // Set text color to white for the dark/vibrant scenes (1 = yoga, 2 = pool, 4 = forest)
+    let isDarkScene = (sceneMode === 1 || sceneMode === 2 || sceneMode === 4);
+    fill(isDarkScene ? color(255, 255, 255) : color(100, 95, 105));
+
     noStroke();
     text(`what will the resort-goers get up to? • ${modeLabel} `, width / 2, 14);
     pop();

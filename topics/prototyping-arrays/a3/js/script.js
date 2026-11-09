@@ -166,6 +166,19 @@ function drawBeachTowel(x, y, c1, c2) {
     pop();
 }
 
+// (Modular Helper Function) Sunglasses for beach mode
+function drawSunglasses(x, y, sc) {
+    push();
+    translate(x, y);
+    scale(sc);
+    // Positioned right over the head area (-30 vertical offset)
+    fill(30);
+    noStroke();
+    rectMode(CENTER);
+    rect(0, -31, 10, 4, 2);
+    pop();
+}
+
 // (Modular Helper Function) Human outline (top-down view lying down)
 function drawHumanOutline(x, y, sc, sColor, fColor) {
     push();

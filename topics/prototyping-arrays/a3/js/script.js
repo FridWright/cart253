@@ -121,6 +121,26 @@ function initializeGrid() {
     }
 }
 
+// (Modular Helper Function) Draw swervy vertical hiking paths for Scene 4 
+function drawForestPaths() {
+    push();
+    noFill();
+    stroke(115, 95, 75, 180); // dirth path colour
+    strokeWeight(16);
+    strokeCap(ROUND);
+
+    for (let col = 0; col < COLS; col++) {
+        let baseX = (col + 0.5) * (width / COLS);
+        beginShape();
+        for (let y = 30; y <= height - 20; y += 10) {
+            let swerve = sin(y * 0.015 + col * 2) * 18;
+            curveVertex(baseX + swerve, y);
+        }
+        endShape();
+    }
+    pop();
+}
+
 // (Modular Helper Function) Draw the yoga mat rectangle underneath with pill corners
 function drawYogaMat(x, y, col) {
     push();
@@ -226,6 +246,7 @@ function drawInstructions() {
     if (sceneMode === 1) modeLabel = "savasana at the yoga studio?";
     if (sceneMode === 2) modeLabel = "floaties at the pool?";
     if (sceneMode === 3) modeLabel = "sunbathe at the beach?";
+    if (sceneMode === 4) modeLabel = "guided hike through the jungle?";
 
     fill(sceneMode === 1 ? color(230, 225, 220) : color(100, 95, 105));
     noStroke();
@@ -236,6 +257,6 @@ function drawInstructions() {
 // Keyboard interaction: spacebar toggles through scenes
 function keyPressed() {
     if (key === ' ') {
-        sceneMode = (sceneMode + 1) % 4;
+        sceneMode = (sceneMode + 1) % 5;
     }
 }

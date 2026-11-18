@@ -20,4 +20,13 @@ function setup() {
  */
 function draw() {
     background("beige");
+
+    // DINNER TABLE
+    let backY = 260;      // Far end of the table
+    let frontY = 660;     // Near edge of the table
+    let backHalfW = 75;   // Half-width at the far end
+    let frontHalfW = 280; // Half-width at the front edge
+
+
+
 }

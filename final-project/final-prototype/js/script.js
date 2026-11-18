@@ -53,4 +53,14 @@ function draw() {
         width / 2 - frontHalfW, frontY
     );
 
+    // 3. Wood planks definition (tabletop)
+    /// Reference for lerp() from https://p5js.org/reference/p5/lerp/
+    stroke(185, 130, 75);
+    strokeWeight(2);
+    let planks = 8;
+    for (let i = 1; i < planks; i++) {
+        let topX = lerp(width / 2 - backHalfW, width / 2 + backHalfW, i / planks);
+        let botX = lerp(width / 2 - frontHalfW, width / 2 + frontHalfW, i / planks);
+        line(topX, backY, botX, frontY);
+    }
 }

@@ -63,4 +63,12 @@ function draw() {
         let botX = lerp(width / 2 - frontHalfW, width / 2 + frontHalfW, i / planks);
         line(topX, backY, botX, frontY);
     }
+
+    // 4. Front table lip & apron (closest to viewer)
+    noStroke();
+    fill(175, 120, 68);
+    rect(width / 2 - frontHalfW, frontY, frontHalfW * 2, 16, 3);
+
+    fill(150, 98, 52);
+    rect(width / 2 - frontHalfW + 25, frontY + 16, (frontHalfW - 25) * 2, 18);
 }

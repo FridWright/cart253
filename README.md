@@ -24,7 +24,7 @@ The purpose of this website is to collect my Prototyping work for this course & 
 
 6. **Prototyping: Arrays** [click here](prototyping-arrays.md)
 
-7. *Coming Soon*- **FINAL PROJECT: PROTOTYPE** [⏰](https://www.example.com)
+7. *Coming Soon*- **FINAL PROJECT: PROTOTYPE** [⏰](final-prototype.md)
 
 
 

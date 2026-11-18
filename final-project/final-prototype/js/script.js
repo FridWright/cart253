@@ -27,6 +27,14 @@ function draw() {
     let backHalfW = 75;   // Half-width at the far end
     let frontHalfW = 280; // Half-width at the front edge
 
-
+    // 1. Table legs & shadow
+    noStroke();
+    fill(0, 0, 0, 25);
+    quad(
+        width / 2 - frontHalfW + 30, frontY + 25,
+        width / 2 + frontHalfW - 30, frontY + 25,
+        width / 2 + frontHalfW - 10, height,
+        width / 2 - frontHalfW + 10, height
+    );
 
 }

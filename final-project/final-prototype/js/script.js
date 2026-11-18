@@ -1,6 +1,6 @@
 /**
- * Title of Project
- * Author Name
+ * Final Project: Prototype
+ * Fridrikka Wright
  * 
  * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
  * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
@@ -9,16 +9,15 @@
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
+ * DESCRIBE SETUP
+ */
 function setup() {
-
+    createCanvas(600, 800);
 }
 
-
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
-*/
+ * DESCRIBE DRAW
+ */
 function draw() {
-
+    background("beige");
 }

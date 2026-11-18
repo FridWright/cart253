@@ -42,4 +42,15 @@ function draw() {
     rect(width / 2 - frontHalfW + 45, frontY + 25, 36, height - frontY);
     rect(width / 2 + frontHalfW - 81, frontY + 25, 36, height - frontY);
 
+    // 2. Tabletop surface (from user's perspective)
+    fill(205, 148, 90);
+    stroke(150, 100, 52);
+    strokeWeight(2);
+    quad(
+        width / 2 - backHalfW, backY,
+        width / 2 + backHalfW, backY,
+        width / 2 + frontHalfW, frontY,
+        width / 2 - frontHalfW, frontY
+    );
+
 }

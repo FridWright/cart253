@@ -70,4 +70,8 @@ My first prototype is *Night Adaptation*, a piece exploring how our eyes adjust 
 
 My third prototype is *The Resort*, which is a 4x6 grid of 24 minimalist human figures, storing individual properties like coordinates, scales, and randomized color attributes directly inside object literal arrays alongside palette arrays for yoga mats, floaties, and towels. Event handling via keyPressed() spacebar shows the user five distinct resort environments they can cycle through.
 
-8. ### <u>Eigth Journal Entry ⏰</u>
+8. ### <u>Eighth Journal Entry </u> *18/11/2026*
+This is a journal entry to reflect on Week 1's progress of the Final Project Prototype. 
+
+8. ### <u>Ninth Journal Entry </u> *00/11/2026*
+This is a journal entry to reflect on Week 2's progress of the Final Project Prototype.  

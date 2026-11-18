@@ -21,7 +21,15 @@ function setup() {
 function draw() {
     background("beige");
 
-    // DINNER TABLE
+    // Call draw table function
+    drawTable();
+
+}
+
+
+
+// DRAW DINNER TABLE
+function drawTable() {
     let backY = 260;      // Far end of the table
     let frontY = 660;     // Near edge of the table
     let backHalfW = 75;   // Half-width at the far end

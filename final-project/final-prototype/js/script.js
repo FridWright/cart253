@@ -37,4 +37,9 @@ function draw() {
         width / 2 - frontHalfW + 10, height
     );
 
+    // Front left and right legs
+    fill(145, 95, 50);
+    rect(width / 2 - frontHalfW + 45, frontY + 25, 36, height - frontY);
+    rect(width / 2 + frontHalfW - 81, frontY + 25, 36, height - frontY);
+
 }

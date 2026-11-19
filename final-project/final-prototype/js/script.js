@@ -79,6 +79,13 @@ function drawSingleSeat(x, y, w, h) {
     fill(0, 0, 0, 20);
     rect(x, y + h * 0.12, w, h, 8);
 
+    // Seat cushion/base
+    fill(125, 82, 52);
+    stroke(85, 52, 30);
+    strokeWeight(2);
+    rect(x, y, w, h, 8);
+
+    pop();
 }
 
 /**

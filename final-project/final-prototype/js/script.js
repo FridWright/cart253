@@ -27,6 +27,20 @@ function initGuests() {
 
     guests = [];
 
+    // 1. Far-end figure (opposite the viewer)
+    let farScale = 0.52;
+    let farW = 90 * farScale;
+    let farH = 125 * farScale;
+    guests.push({
+        name: "Guest 5",
+        x: width / 2,
+        y: backY - farH * 0.35,
+        w: farW,
+        h: farH,
+        expression: "neutral"
+    });
+
+
 }
 
 /**

@@ -38,6 +38,11 @@ function drawSeats() {
     let backHalfW = 75;
     let frontHalfW = 280;
 
+    // 1. Far-end seat (back edge of table)
+    let farScale = 0.55;
+    let farW = 70 * farScale;
+    let farH = 55 * farScale;
+    drawSingleSeat(width / 2, backY - farH * 0.45, farW, farH);
 
 }
 

@@ -44,6 +44,27 @@ function drawSeats() {
     let farH = 55 * farScale;
     drawSingleSeat(width / 2, backY - farH * 0.45, farW, farH);
 
+
+    // 2. Two seats on each side of table 
+    /// (t = 0.35 toward back, t = 0.72 toward front)
+    let sidePositions = [0.35, 0.72];
+
+    for (let i = 0; i < sidePositions.length; i++) {
+        let t = sidePositions[i];
+        let y = lerp(backY, frontY, t);
+        let halfW = lerp(backHalfW, frontHalfW, t);
+
+        // Scale seats slightly larger based on perspective
+        let seatScale = lerp(0.65, 1.05, t);
+        let seatW = 85 * seatScale;
+        let seatH = 75 * seatScale;
+
+        // Left side seat (just outside the left edge of the table)
+        drawSingleSeat(width / 2 - halfW - seatW * 0.35, y, seatW, seatH);
+
+        // Right side seat (just outside the right edge of the table)
+        drawSingleSeat(width / 2 + halfW + seatW * 0.35, y, seatW, seatH);
+    }
 }
 
 // DRAW DINNER TABLE

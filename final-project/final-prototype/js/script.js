@@ -12,7 +12,7 @@
  * DESCRIBE SETUP
  */
 function setup() {
-    createCanvas(600, 800);
+    createCanvas(700, 700);
 }
 
 /**
@@ -21,12 +21,25 @@ function setup() {
 function draw() {
     background("beige");
 
-    // Call draw table function
+    // // Draw seats call function
+    drawSeats();
+    // Draw table call function
     drawTable();
 
 }
 
 
+/**
+ * DRAW SEATS (2 per side, one at opposite helm)
+ */
+function drawSeats() {
+    let backY = 260;
+    let frontY = 660;
+    let backHalfW = 75;
+    let frontHalfW = 280;
+
+
+}
 
 // DRAW DINNER TABLE
 function drawTable() {

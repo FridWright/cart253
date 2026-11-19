@@ -67,6 +67,15 @@ function drawSeats() {
     }
 }
 
+/**
+ * DRAW SEATS at (x, y)
+ */
+function drawSingleSeat(x, y, w, h) {
+    push();
+    rectMode(CENTER);
+
+}
+
 // DRAW DINNER TABLE
 function drawTable() {
     let backY = 260;      // Far end of the table

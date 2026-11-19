@@ -74,9 +74,16 @@ function drawSingleSeat(x, y, w, h) {
     push();
     rectMode(CENTER);
 
+    // Shadow under seat
+    noStroke();
+    fill(0, 0, 0, 20);
+    rect(x, y + h * 0.12, w, h, 8);
+
 }
 
-// DRAW DINNER TABLE
+/**
+ * DRAW DINNER TABLE
+ */
 function drawTable() {
     let backY = 260;      // Far end of the table
     let frontY = 660;     // Near edge of the table

@@ -13,6 +13,20 @@
  */
 function setup() {
     createCanvas(700, 700);
+    initGuests();
+}
+
+/**
+ * Initialize the 5 figures around the table (2 left, 2 right, 1 far end)
+ */
+function initGuests() {
+    let backY = 260;
+    let frontY = 660;
+    let backHalfW = 75;
+    let frontHalfW = 280;
+
+    guests = [];
+
 }
 
 /**
@@ -29,64 +43,8 @@ function draw() {
 }
 
 
-/**
- * DRAW SEATS (2 per side, one at opposite helm)
- */
-function drawSeats() {
-    let backY = 260;
-    let frontY = 660;
-    let backHalfW = 75;
-    let frontHalfW = 280;
-
-    // 1. Far-end seat (back edge of table)
-    let farScale = 0.55;
-    let farW = 70 * farScale;
-    let farH = 55 * farScale;
-    drawSingleSeat(width / 2, backY - farH * 0.45, farW, farH);
 
 
-    // 2. Two seats on each side of table 
-    /// (t = 0.35 toward back, t = 0.72 toward front)
-    let sidePositions = [0.35, 0.72];
-
-    for (let i = 0; i < sidePositions.length; i++) {
-        let t = sidePositions[i];
-        let y = lerp(backY, frontY, t);
-        let halfW = lerp(backHalfW, frontHalfW, t);
-
-        // Scale seats slightly larger based on perspective
-        let seatScale = lerp(0.65, 1.05, t);
-        let seatW = 85 * seatScale;
-        let seatH = 75 * seatScale;
-
-        // Left side seat (just outside the left edge of the table)
-        drawSingleSeat(width / 2 - halfW - seatW * 0.35, y, seatW, seatH);
-
-        // Right side seat (just outside the right edge of the table)
-        drawSingleSeat(width / 2 + halfW + seatW * 0.35, y, seatW, seatH);
-    }
-}
-
-/**
- * DRAW SEATS at (x, y)
- */
-function drawSingleSeat(x, y, w, h) {
-    push();
-    rectMode(CENTER);
-
-    // Shadow under seat
-    noStroke();
-    fill(0, 0, 0, 20);
-    rect(x, y + h * 0.12, w, h, 8);
-
-    // Seat cushion/base
-    fill(125, 82, 52);
-    stroke(85, 52, 30);
-    strokeWeight(2);
-    rect(x, y, w, h, 8);
-
-    pop();
-}
 
 /**
  * DRAW DINNER TABLE

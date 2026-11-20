@@ -30,13 +30,13 @@ function initGuests() {
     guests = [];
 
     // 1. Far-end figure (opposite the viewer)
-    let farScale = 0.52;
+    let farScale = 0.65;
     let farW = 90 * farScale;
-    let farH = 125 * farScale;
+    let farH = 210 * farScale;
     guests.push({
         name: "Guest 5",
         x: width / 2,
-        y: backY - farH * 0.35,
+        y: backY - farH * 0.42,
         w: farW,
         h: farH,
         expression: "neutral"
@@ -48,9 +48,9 @@ function initGuests() {
         let t = sidePositions[i];
         let y = lerp(backY, frontY, t);
         let halfW = lerp(backHalfW, frontHalfW, t);
-        let figScale = lerp(0.62, 1.0, t);
-        let figW = 90 * figScale;
-        let figH = 125 * figScale;
+        let figScale = lerp(0.75, 1.15, t);
+        let figW = 92 * figScale;
+        let figH = 225 * figScale;
 
         // Left side figure
         guests.push({
@@ -65,8 +65,8 @@ function initGuests() {
         // Right side figure
         guests.push({
             name: `Guest ${i * 2 + 2}`,
-            x: width / 2 + halfW + figW * 0.32,
-            y: y - figH * 0.12,
+            x: width / 2 + halfW + figW * 0.35,
+            y: y - figH * 0.28,
             w: figW,
             h: figH,
             expression: "neutral"

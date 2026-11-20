@@ -40,8 +40,39 @@ function initGuests() {
         expression: "neutral"
     });
 
+    // 2. Two figures on each side
+    let sidePositions = [0.35, 0.72];
+    for (let i = 0; i < sidePositions.length; i++) {
+        let t = sidePositions[i];
+        let y = lerp(backY, frontY, t);
+        let halfW = lerp(backHalfW, frontHalfW, t);
+        let figScale = lerp(0.62, 1.0, t);
+        let figW = 90 * figScale;
+        let figH = 125 * figScale;
 
+        // Left side figure
+        guests.push({
+            name: `Guest ${i * 2 + 1}`,
+            x: width / 2 - halfW - figW * 0.32,
+            y: y - figH * 0.12,
+            w: figW,
+            h: figH,
+            expression: "neutral"
+        });
+
+        // Right side figure
+        guests.push({
+            name: `Guest ${i * 2 + 2}`,
+            x: width / 2 + halfW + figW * 0.32,
+            y: y - figH * 0.12,
+            w: figW,
+            h: figH,
+            expression: "neutral"
+        });
+    }
 }
+
+
 
 /**
  * DESCRIBE DRAW

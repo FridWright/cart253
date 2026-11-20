@@ -80,14 +80,21 @@ function initGuests() {
 function draw() {
     background("beige");
 
-    // // Draw seats call function
-    drawSeats();
+    // Draw figures
+    drawGuests();
     // Draw table call function
     drawTable();
 
 }
 
-
+/**
+ * DRAW FIGURES/GUESTS
+ */
+function drawGuests() {
+    for (let i = 0; i < guests.length; i++) {
+        drawSingleFigure(guests[i]);
+    }
+}
 
 
 

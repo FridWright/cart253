@@ -8,11 +8,13 @@
 
 "use strict";
 
+let guests = [];
+
 /**
  * DESCRIBE SETUP
  */
 function setup() {
-    createCanvas(700, 700);
+    createCanvas(600, 800);
     initGuests();
 }
 
@@ -88,7 +90,7 @@ function draw() {
 }
 
 /**
- * DRAW FIGURES/GUESTS
+ * DRAW GUESTS
  */
 function drawGuests() {
     for (let i = 0; i < guests.length; i++) {
@@ -96,6 +98,56 @@ function drawGuests() {
     }
 }
 
+/**
+ * DRAW SINGLE FIGURE
+ */
+function drawSingleFigure(guest) {
+    push();
+    let cx = guest.x;
+    let topY = guest.y - guest.h / 2;
+    let botY = guest.y + guest.h / 2;
+
+    // 1. Solid black figure body (hooded/pointed top + body)
+    fill(0);
+    noStroke();
+
+    // Pointed top / hood peak
+    triangle(
+        cx - guest.w * 0.36, topY + guest.h * 0.28,
+        cx + guest.w * 0.36, topY + guest.h * 0.28,
+        cx, topY
+    );
+
+    // Rounded upper shoulders/head area
+    ellipse(cx, topY + guest.h * 0.34, guest.w * 0.78, guest.h * 0.34);
+
+    // Main body column down to the base
+    rectMode(CORNERS);
+    rect(cx - guest.w * 0.41, topY + guest.h * 0.34, cx + guest.w * 0.41, botY, 6);
+
+    // 2. White facial features
+    let faceY = topY + guest.h * 0.32;
+    let eyeOffsetX = guest.w * 0.17;
+    let eyeW = guest.w * 0.14;
+    let eyeH = guest.h * 0.09;
+
+    stroke(255);
+    strokeWeight(max(1.5, guest.w * 0.025));
+    fill(255);
+
+    if (guest.expression === "neutral") {
+        // Two white eyes
+        ellipse(cx - eyeOffsetX, faceY, eyeW, eyeH);
+        ellipse(cx + eyeOffsetX, faceY, eyeW, eyeH);
+
+        // Flat horizontal mouth bar
+        noFill();
+        rectMode(CENTER);
+        rect(cx, faceY + guest.h * 0.11, guest.w * 0.28, guest.h * 0.03, 1);
+    }
+
+    pop();
+}
 
 
 /**
